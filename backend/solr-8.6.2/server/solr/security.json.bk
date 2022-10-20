@@ -1,0 +1,30 @@
+{
+  "authentication":{
+    "class":"solr.BasicAuthPlugin",
+    "blockUnknown":false,
+    "credentials":{
+      "admin":"06Kci2krtq39D1WRX646bCH+KfFQcFfHVNoyESnRHrk= tKZUUV1HPJho07aHk6ecoUrYy1Oe1udkn7G2dp7uuFI=",
+      "blacklight":"Vmrx9eSH5wHjwmWnzjL01e7kQI8L3memBzhbLBKAtM8= OY/PDGy3YSJmgOZGY3zi1bJc9xmysFmdG/RkucRZrJQ="},
+    "":{"v":0}},
+  "authorization":{
+    "class":"solr.RuleBasedAuthorizationPlugin",
+    "permissions":[
+	{    
+        "name":"all",
+        "role":"admin",
+        "index":1},
+        {
+        "name":"open_select",
+        "collection":"*",
+        "path":"/select",
+        "role":null,
+        "index":2},
+        {
+        "name":"extract",
+        "collection":"*",
+        "path":"/update/extract",
+        "role":admin,
+        "index":3}],
+    "user-role":{
+      "admin":["admin"]},
+    "":{"v":0}}}

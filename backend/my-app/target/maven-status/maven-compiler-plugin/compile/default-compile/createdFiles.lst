@@ -1,0 +1,10 @@
+com/mycompany/app/Api.class
+com/mycompany/app/ApiRequest.class
+com/mycompany/app/imagesimilarity/TestSimilarity.class
+com/mycompany/app/imagesimilarity/Rmse.class
+com/mycompany/app/ElasticClient.class
+com/mycompany/app/imagesimilarity/Similarity.class
+com/mycompany/app/Filter.class
+com/mycompany/app/Page.class
+com/mycompany/app/imagesimilarity/Rmse$FastRGB.class
+com/mycompany/app/imagesimilarity/WordSimilarity.class
