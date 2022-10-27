@@ -1,49 +1,7 @@
-
-export type DocumentElement = {
-    emplacement: string
-    thumbnail:string
-    modtime : string
-    _root_ : string
-    link : string
-    affaire: string
-    ftype : string
-    filename: string
-    content_type:string
-    _version_:string
-    racifile: string
-    id: string
-    kh: string
-}
+import type { CardElement } from "./type"
 
 
-export type DetailElement = {
-    id: string
-    fileName: string
-    filePath: string
-    affaire: string
-    modtime: String,
-    sambaLink: String
-    knowHow: Boolean
-    jpgName: string
-}
-
-export type Element = DocumentElement | DetailElement;
-
-
-
-export interface Page {
-
-    fileName: string
-    filePath: string
-    pageNumber: number
-    jpgName: string
-    lastModificationDate: number
-    echelle: number
-    wordList: string[]
-}
-
-
-export function getDocument(keyWord: string, core:string,start:string,rows:string): Promise<Element[]> {
+export function getSolrDocument(keyWord: string, core:string,start:string,rows:string): Promise<Element[]> {
 
     let params = new URLSearchParams({
         q: keyWord,
@@ -52,6 +10,7 @@ export function getDocument(keyWord: string, core:string,start:string,rows:strin
         rows: rows
     }).toString()
     
+    console.log("OH")
     return fetch('http://localhost:4567/query/solr/string?' + params, {
       method: "POST",
   
@@ -67,8 +26,77 @@ export function getDocument(keyWord: string, core:string,start:string,rows:strin
     })
 }
 
-export function getDetail(keyWord: string){
+export function getElastic(keyWord: string, index:string,min:string,max:string){
 
+    let params = new URLSearchParams({
+        q: keyWord,
+        index: index,
+        size : "50",
+        min: min,
+        max: max,
+        all: "true"
+    }).toString()
+
+
+    let cards : Array<CardElement> = [{
+        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
+        filename: "filenameB",
+        affaire: "affaireB",
+        echelle: 1,
+        id: "idB",
+        pageNumber: 1,
+        price: 1,
+        wordList: ["wordListB"],
+        modtime: "modtimeB",
+        kh: true,
+        jpgname: "jpgnameB",
+        lastModificationDate: 1,
+        score: 1
+
+    },];
+
+     return fetch('http://localhost:4567/query/elastic/string?' + params, {
+        method: "POST",
+    
+      })
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+          return res as Array<CardElement>
+      })
+
+      /*
+      .then( res => {
+          const jsonArray :any  = res;
+          return jsonArray["documents"] 
+      })*/
+
+
+}
+
+export function getElasticPlan(keyWord: string, index:string,min:string,max:string){
+
+    
+    let params = new URLSearchParams({
+        q: keyWord,
+        index: index,
+        min: min,
+        rows: max
+    }).toString()
+
+    return fetch('http://localhost:4567/query/elastic/plan/string?' + params, {
+        method: "POST",
+    
+      })
+        .then(res => res.json())
+        .then(res => {
+          console.log(res)
+          return res as Array<Element>
+      })
+      .then( res => {
+          const jsonArray :any  = res;
+          return jsonArray["documents"] 
+      })
 }
 
   

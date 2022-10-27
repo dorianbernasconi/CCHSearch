@@ -85,19 +85,17 @@ public class Page {
     public JSONObject pageToJson() {
         JSONObject pageObj = new JSONObject();
         pageObj.put("id", this.id);
-        pageObj.put("fileName", this.fileName);
-        pageObj.put("pageNumber", this.pageNumber);
+        pageObj.put("filename", this.fileName);
+        pageObj.put("pagenumber", this.pageNumber);
         pageObj.put("filePath", this.filePath);
         pageObj.put("score", this.score);
         pageObj.put("affaire", this.affaireName);
         pageObj.put("lastModificationDate", this.lastModificationDate);
-        pageObj.put("affaireName", this.affaireName);
-        pageObj.put("jpgName", this.jpgName);
+        pageObj.put("affairename", this.affaireName);
+        pageObj.put("jpgname", this.jpgName);
         pageObj.put("echelle", stringMatches(this.wordList));
-        pageObj.put("wordList", this.wordList);
-        pageObj.put("wordPerTfIdf", this.wordPerTfIdf);
-        pageObj.put("isFavoris", this.isFavoris);
-        pageObj.put("authorProject", this.authorProject);
+        pageObj.put("wordlist", this.wordList);
+        pageObj.put("kh", this.isFavoris);
         pageObj.put("price", this.price);
 
         return pageObj;

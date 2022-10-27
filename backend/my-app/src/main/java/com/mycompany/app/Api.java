@@ -8,6 +8,7 @@ import org.json.JSONObject;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 
+import java.util.List;
 import java.util.Optional;
 import com.mycompany.app.*;
 
@@ -26,7 +27,10 @@ public class Api {
         });
 
         post("query/solr/:query:q:core:start?:rows?", (req, res) -> {
+            System.out.println("EZ");
+
             String core = req.queryParams("core");
+
             Optional<String> keyword = Optional.ofNullable(req.queryParams("q"));
             Optional<String> start = Optional.ofNullable(req.queryParams("start"));
             Optional<String> rows = Optional.ofNullable(req.queryParams("rows"));
@@ -44,29 +48,38 @@ public class Api {
             return response;
         });
 
-        post("query/elastic/:query:q:min:max", (req, res) -> {
+
+ 
+
+        post("query/elastic/:query:q:all:min:max:size", (req, res) -> {
+            System.out.println("OH");
 
             String keyWord = req.queryParams("q");
-            Optional<String> min = Optional.ofNullable(req.queryParams("min"));
-            Optional<String> max = Optional.ofNullable(req.queryParams("max"));
-            Integer size = 50;
+            Integer size = Integer.parseInt(req.queryParams("size")); 
+            Integer min = Integer.parseInt(req.queryParams("min")); 
+            Integer max = Integer.parseInt(req.queryParams("max")); 
+            Boolean allFields = Boolean.valueOf(req.queryParams("all"));
+            JSONObject response = new JSONObject();
+            JSONArray arrayJson = new JSONArray();
+            System.out.println("OH_2");
+
 
             try {
-                ElasticClient client = ElasticClient.getElasticClient();
-                client.queryStringRangeAll(keyWord, "home2", 50, min, max);
+                ElasticClient client = new ElasticClient();
+                List<Page> pageList =  client.query(keyWord,size,allFields,min,max);
+                for (Page page : pageList) {
+                    arrayJson.add(page.pageToJson());
+                }
+                response.put("documents", arrayJson);
 
-                SolrjClient client = SolrjMap.getSolrClient(core);
-                response = client.solrRequest(keyword, start, rows,"");
             } catch (Exception e) {
                 System.out.println(e);
             }
+            System.out.println(response);
+
 
             return response;
         });
-
-
-        // SolrjClient client = SolrjClient.getSolrClient();
-
     }
 
 }

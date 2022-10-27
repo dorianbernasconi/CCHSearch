@@ -1,6 +1,14 @@
 # cche-engine-frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+CARD : 
+- src : string
+- filename: string
+- affaire: string 
+- echelle: number
+
+DOCUMENT:
+
+
 
 ## Recommended IDE Setup
 

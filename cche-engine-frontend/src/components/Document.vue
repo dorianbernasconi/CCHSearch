@@ -1,3 +1,26 @@
+<script setup lang="ts">
+
+const props = defineProps(
+{
+    ind: Number,   
+    emplacement: String,
+    thumbnail:String,
+    modtime : String,
+    _root_ : String,
+    link : Array<String>,
+    affaire: String,
+    ftype : String,
+    filename: String,
+    content_type:String,
+    _version_:Number,
+    racifile: String,
+    id: String,
+    kh: String,
+});
+
+</script>
+  
+
 <template>
     <div class="item ">
         <dl>
@@ -29,27 +52,7 @@
 </template>
 
 
-<script setup lang="ts">
 
-const props = defineProps(
-{
-    ind: Number,   
-    emplacement: String,
-    thumbnail:String,
-    modtime : String,
-    _root_ : String,
-    link : Array<String>,
-    affaire: String,
-    ftype : String,
-    filename: String,
-    content_type:String,
-    _version_:Number,
-    racifile: String,
-    id: String,
-    kh: String,
-});
-</script>
-  
 <style scoped>
 
 

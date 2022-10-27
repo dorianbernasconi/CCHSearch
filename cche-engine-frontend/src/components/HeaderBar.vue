@@ -6,8 +6,8 @@ import { ref } from 'vue'
 
 const store = searchStore();
 let value = ref("");
-function test(){
-  console.log("enter")
+
+function search(){
   store.keyword = value.value;
 }
 </script>
@@ -21,7 +21,7 @@ function test(){
     <div class="nav-bar-el ">
       <input  v-model="value"  id="search_box" type="text" placeholder='&#x1F50E'>
     </div>
-    <button @click="test()" > TEST </button>
+    <button @click="search()" > SEARCH </button>
   </div>
 
 </template>

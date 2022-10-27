@@ -2,317 +2,59 @@
 
 
 <script setup lang="ts">
-  import Card from "../components/Card.vue";
-  import { ref } from 'vue'
+import Card from "../components/Card.vue";
+import { ref } from 'vue'
+import { getElastic } from "../api/apiService"
+import Preview from "../components/Preview.vue";
+import Cards from "../components/Cards.vue";
 
-    //const pages : Page[] = getPages();
-    const cards = ref([
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    },
-    {
-      src:"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-      filename:"filename",
-      affaire:"affaire",
-      echelle:1
-    }
-  ])
+let previewOpen = ref(true)
 
 
-  </script>
+</script>
 <template>
-  <div class="cards">
-    <Card v-for="(page,i) in cards" v-bind="page"></Card>
+
+  <div class="cards-container" :class="{'cards-container-half':previewOpen, 'cards-container-full':!previewOpen, }">
+    <Cards />
   </div>
+  <div class="preview-container"  :class="{'preview-container-half':previewOpen, 'preview-container-none':!previewOpen, }">
+    <Preview @close="previewOpen = false" />
+  </div>
+
 </template>
  
 <style scoped>
 
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  grid-auto-rows: var(10px);
-  grid-gap: 2rem;
-  right: 0;
-  left: 0;
-  padding-bottom: 200px;
+
+.cards-container{
+  display: inline;
+  float: left;
+  overflow-y: scroll;
+  height: 100%;
 }
+
+.preview-container{
+  display: inline;
+  float: right;
+  overflow-y: scroll;
+}
+.cards-container-full{
+  width: 100%;
+}
+.cards-container-half{
+  width: 50%;
+}
+
+.preview-container-half{
+  width: 50%;
+  height: 100%;
+}
+
+.preview-container-none{
+  width: 0%;
+  height: 0%;
+}
+
+
 
 </style>

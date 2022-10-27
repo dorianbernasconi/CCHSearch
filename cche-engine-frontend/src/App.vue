@@ -4,10 +4,11 @@
 import HeaderBar from "./components/HeaderBar.vue";
 import Detail from "./views/Detail.vue";
 import All from "./views/All.vue";
+
 import { ref,shallowRef} from 'vue'
 import SwitchBar from "./components/SwitchBar.vue";
 import FilterMenu from "./components/FilterMenu.vue";
-import {getDocument, type Element} from "@/api/apiService";
+import {type Element} from "@/api/type";
 
 let currentComponent = shallowRef(All)
 
@@ -50,6 +51,9 @@ let lines = ref();
       <RouterView />
     </div>
 
+    
+
+
 
 
   </div>
@@ -69,11 +73,15 @@ let lines = ref();
   
 }
 .main-container {
-  min-width: 1400px;
+  display: inline;
+  min-width: 600px;
   overflow-y: scroll;
   width: 100%;
+  float:left;
   height: 100%;
 }
+
+
 </style>
 
 

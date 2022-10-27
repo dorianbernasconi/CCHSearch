@@ -21,6 +21,7 @@ import java.text.*;
 
 import com.google.common.collect.Multiset.Entry;
 
+
 import co.elastic.clients.elasticsearch.core.search.Hit;
 import co.elastic.clients.elasticsearch.core.termvectors.FieldStatistics;
 import co.elastic.clients.elasticsearch.core.termvectors.TermVector;
@@ -43,45 +44,43 @@ import org.json.simple.*;
 
 public class ElasticClient {
 
-        // Create the transport with a Jackson mapper
+        RestClient restClient;
+        ElasticsearchClient client;
 
-        // And create the API client
+        public ElasticClient() {
+                this.restClient = RestClient.builder(
+                                new HttpHost("localhost", 9200)).build();
 
-        private RestClient restClient = RestClient.builder(
-                        new HttpHost("localhost", 9200)).build();
-        private ElasticsearchTransport transport = new RestClientTransport(
-                        restClient, new JacksonJsonpMapper());
+                // Create the transport with a Jackson mapper
+                ElasticsearchTransport transport = new RestClientTransport(
+                                restClient, new JacksonJsonpMapper());
 
-        private ElasticsearchClient client = new ElasticsearchClient(transport);
-
-        private static ElasticClient elasticClient = new ElasticClient();
-
-        private ElasticClient() {
-
+                // And create the API client
+                this.client = new ElasticsearchClient(transport);
         }
 
-        public static ElasticClient getElasticClient() {
-                return elasticClient;
-        }
+        public List<Page> query(String keyword,Integer size, Boolean allFields,Integer min,Integer max ) {
 
-
-        public List<Page> queryDetails(){
                 List<String> fields = new ArrayList<>();
                 fields.add("affaireName");
-                fields.add("wordList");
                 fields.add("filePathDecomposed");
 
                 fields.add("fileNameDecomposed");
                 fields.add("filePath");
+                
+                if (allFields) {
+                        fields.add("wordList");
+                }
+
+                return queryStringRangeAll(keyword,fields,"home2",size,min,max);
+               
         }
 
-        public List<Page> queryStringRangeAll(String s, String index, List<String> fields, int size , int echelleMin, int echelleMax) {
-                
-                
-                
+
+        public List<Page> queryStringRangeAll(String s, List<String> fields,String index , int size, int echelleMin, int echelleMax) {
                 List<Page> pageList = new ArrayList();
                 try {
-  
+
 
                         QueryStringQuery queryString = QueryBuilders.queryString()
                                         .query(s)
@@ -93,7 +92,7 @@ public class ElasticClient {
                                         .lt(JsonData.of(echelleMax))
                                         .build();
 
-                        BoolQuery boolQuery = new BoolQuery.Builder()
+                                        BoolQuery boolQuery = new BoolQuery.Builder()
                                         .filter(new Query.Builder().range(range).build())
                                         .must(new Query.Builder().queryString(queryString).build())
                                         .build();
@@ -111,7 +110,7 @@ public class ElasticClient {
                         for (Hit<Page> p : search.hits().hits()) {
                                 Page page = p.source();
                                 page.setScore(p.score());
-                                // page.setWordPerTfIdf(this.documentInformationQuery(p.id()));
+                                //page.setWordPerTfIdf(this.documentInformationQuery(p.id()));
                                 page.setId(p.id());
                                 pageList.add(page);
 
@@ -146,7 +145,7 @@ public class ElasticClient {
                                         .lt(JsonData.of(echelleMax))
                                         .build();
 
-                        BoolQuery boolQuery = new BoolQuery.Builder()
+                                        BoolQuery boolQuery = new BoolQuery.Builder()
                                         .filter(new Query.Builder().range(range).build())
                                         .must(new Query.Builder().queryString(queryString).build())
                                         .build();
@@ -164,7 +163,7 @@ public class ElasticClient {
                         for (Hit<Page> p : search.hits().hits()) {
                                 Page page = p.source();
                                 page.setScore(p.score());
-                                // page.setWordPerTfIdf(this.documentInformationQuery(p.id()));
+                                //page.setWordPerTfIdf(this.documentInformationQuery(p.id()));
                                 page.setId(p.id());
 
                                 pageList.add(page);
