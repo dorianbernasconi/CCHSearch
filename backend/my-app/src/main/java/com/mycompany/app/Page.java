@@ -9,6 +9,7 @@ public class Page {
     private String id;
     private String fileName;
     private String filePath;
+    private String src;
     private List<String> affaireName;
     private List<String> fileNameDecomposed;
     private List<String> filePathDecomposed;
@@ -97,6 +98,7 @@ public class Page {
         pageObj.put("wordlist", this.wordList);
         pageObj.put("kh", this.isFavoris);
         pageObj.put("price", this.price);
+        pageObj.put("src","pdfJpg/" + this.jpgName );
 
         return pageObj;
     }

@@ -23,8 +23,8 @@ import { RouterLink } from 'vue-router'
   <nav>
         <RouterLink class="switch-button" to="/">Tous</RouterLink>
         <RouterLink class="switch-button" to="/detail">Detail</RouterLink>
+        <RouterLink class="switch-button" to="/plan">Plan</RouterLink>
         <RouterLink class="switch-button" to="/image">Image</RouterLink>
-
         <RouterLink class="switch-button" to="/autre">Autre</RouterLink>
 
       </nav>

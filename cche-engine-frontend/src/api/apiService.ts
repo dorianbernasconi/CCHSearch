@@ -37,24 +37,6 @@ export function getElastic(keyWord: string, index:string,min:string,max:string){
         all: "true"
     }).toString()
 
-
-    let cards : Array<CardElement> = [{
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filenameB",
-        affaire: "affaireB",
-        echelle: 1,
-        id: "idB",
-        pageNumber: 1,
-        price: 1,
-        wordList: ["wordListB"],
-        modtime: "modtimeB",
-        kh: true,
-        jpgname: "jpgnameB",
-        lastModificationDate: 1,
-        score: 1
-
-    },];
-
      return fetch('http://localhost:4567/query/elastic/string?' + params, {
         method: "POST",
     
@@ -62,14 +44,12 @@ export function getElastic(keyWord: string, index:string,min:string,max:string){
         .then(res => res.json())
         .then(res => {
           console.log(res)
-          return res as Array<CardElement>
+          return res 
       })
-
-      /*
       .then( res => {
           const jsonArray :any  = res;
-          return jsonArray["documents"] 
-      })*/
+          return jsonArray["documents"] as Array<CardElement>
+      })
 
 
 }
@@ -90,7 +70,6 @@ export function getElasticPlan(keyWord: string, index:string,min:string,max:stri
       })
         .then(res => res.json())
         .then(res => {
-          console.log(res)
           return res as Array<Element>
       })
       .then( res => {

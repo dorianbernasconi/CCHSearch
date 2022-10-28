@@ -8,7 +8,6 @@ import All from "./views/All.vue";
 import { ref,shallowRef} from 'vue'
 import SwitchBar from "./components/SwitchBar.vue";
 import FilterMenu from "./components/FilterMenu.vue";
-import {type Element} from "@/api/type";
 
 let currentComponent = shallowRef(All)
 
@@ -61,8 +60,13 @@ let lines = ref();
 </template>
 
 
-<style scoped>
+<style >
 
+
+.text{
+    color:rgb(65, 65, 65);
+    font-family:  Arial, sans-serif;
+}
 .main {
   top: 0;
   right: 0;

@@ -17,7 +17,7 @@ const preview = previewStore();
 const search = searchStore();
 
 function getNewDetails() {
-  getElastic(search.keyword, "home2", "0", "50").then((o => {
+  getElastic(search.keyword, "home2", "50", "2000").then((o => {
     cards.value = o;
     }))
   }

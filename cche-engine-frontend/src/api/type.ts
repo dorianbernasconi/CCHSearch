@@ -12,9 +12,8 @@ export type CardElement = {
     pageNumber: number
     lastModificationDate:number,
     affaire:string,
-    echelle: number
+    echelle: string
     price:number,
-
     wordList: string[]
     modtime: String,
     kh: Boolean

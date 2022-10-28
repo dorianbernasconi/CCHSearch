@@ -2,112 +2,27 @@
 
 
 <script setup lang="ts">
-import Card from "../components/Card.vue";
-import { ref } from 'vue'
-import { getElastic } from "../api/apiService"
-import { previewStore} from "../stores/preview"
-import type {CardElement} from "../api/type"
+    import Card from "../components/Card.vue";
+    import type {CardElement} from "../api/type"
+    import type { PropType } from "vue";
 
-
-
-const preview = previewStore();
-
-function updatePreview(page:CardElement){
-    console.log(page.filename)
-}
-
-function getNewDetails() {
-    getElastic("porte", "home2", "0", "50").then((o => {
-        cards = o;
-    }))
-}
-getNewDetails();
-let cards : CardElement[] = new Array<CardElement>();
-
-
-//cards.push(el)
-/*, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filenameB",
-        affaire: "affaireB",
-        echelle: 2
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filenameC",
-        affaire: "affaireC",
-        echelle: 3
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    }, {
-        src: "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg",
-        filename: "filename",
-        affaire: "affaire",
-        echelle: 1
-    },
-*/
+    let props = defineProps({
+        callback : Function as PropType<Function>,
+        cards : Array as PropType<Array<CardElement>> 
+    })
+    
 
 </script>
+
 <template>
     <div class="cards">
-        <Card @click="updatePreview(page)" v-for="(page, i) in cards" v-bind="page"></Card>
+        <Card @click="props.callback!(page)"  v-for="(page, i) in props.cards!" :obj="page" :key="page.id"/>
 
     </div>
 </template>
 
 <style scoped>
+
 .cards {
     width: 100%;
     display: grid;
@@ -116,6 +31,7 @@ let cards : CardElement[] = new Array<CardElement>();
     grid-gap: 2rem;
     right: 0;
     left: 0;
+    padding: 50px;
     padding-bottom: 200px;
 }
 </style>

@@ -8,6 +8,8 @@ import org.json.JSONObject;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
 
+import java.util.Map;
+
 import java.util.List;
 import java.util.Optional;
 import com.mycompany.app.*;
@@ -18,6 +20,9 @@ import com.mycompany.app.*;
  * Contient toutes les routes mise à disposition
  */
 public class Api {
+
+    private static Map<Page, List<Page>> map;
+
 
     public static void main(String[] args) {
 
@@ -66,16 +71,23 @@ public class Api {
 
             try {
                 ElasticClient client = new ElasticClient();
-                List<Page> pageList =  client.query(keyWord,size,allFields,min,max);
-                for (Page page : pageList) {
-                    arrayJson.add(page.pageToJson());
-                }
+                List<Page> pageList =  client.query(keyWord,10,allFields,min,max);
+
+            WordSimilarity ws = new WordSimilarity();
+            ws.removeListSimilarity(pageList);
+            map = ws.getMap();
+            List<Page> lsPageRes = ws.getSortList();
+
+            for (Page page : lsPageRes) {
+                arrayJson.add(page.pageToJson());
+            }
+
                 response.put("documents", arrayJson);
 
             } catch (Exception e) {
                 System.out.println(e);
             }
-            System.out.println(response);
+            System.out.println("SEND RESPONSE SIZE : " + response.getJSONArray("documents").length());
 
 
             return response;
