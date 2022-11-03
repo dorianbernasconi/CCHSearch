@@ -5,18 +5,18 @@
 import { ref } from 'vue'
 import type {PropType} from "vue";
 
-
-
 const props = defineProps({
+    labelId : String,
     dropdownArray : Array as PropType<Array<string>>
 })
+defineEmits(["fieldSelector"])
 
-function changeSpanValue(o: string) {
-    label.value = o
-}
-
+let isDroping = ref(false)
 let label = ref(props.dropdownArray![0])
-const emit = defineEmits(["fieldSelector"])
+
+function changeSpanValue(spanName: string) {
+    label.value = spanName
+}
 
 </script>
 
@@ -25,10 +25,10 @@ const emit = defineEmits(["fieldSelector"])
 
     <nav>
 
-        <label for="touch"><span>{{ label }}</span></label>
-        <input type="checkbox" id="touch">
+        <label  @click="isDroping = !isDroping" ><span>{{ label }}</span></label>
+        <input  type="checkbox"  class="touch" id="touch ">
 
-        <ul class="slide">
+        <ul class="slide" :class="{'drop' : isDroping } ">
             <li @click="$emit('fieldSelector',element),changeSpanValue(element)"  v-for="element in dropdownArray">{{ element }}</li>
         </ul>
 
@@ -96,14 +96,19 @@ span::after {
 
 }
 
-#touch {
+.drop {
+    height: 140px;
+}
+.touch {
     position: absolute;
     opacity: 0;
     height: 0px;
 }
 
-#touch:checked+.slide {
+</style>
+
+
+.touch:checked+.slide {
     height: 140px;
 
 }
-</style>

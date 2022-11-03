@@ -1,12 +1,13 @@
 <script setup lang="ts">
-import CCHEWhiteIcon from "./icons/CcheWhite.vue";
-import { getElasticDetail } from "../api/apiService"
-
 import type {CardElement} from "../api/type"
-import {getSimilarity} from "../api/apiService";
+import {getSimilarity} from "../api/elasticService";
 import { previewStore } from "../stores/preview"
 import Cards from "../components/Cards.vue";
 import { ref } from 'vue'
+
+defineEmits(["close"])
+
+const preview = previewStore();
 
 let img_preview = ref<String>("-")
 let titre = ref<String>("-")
@@ -14,20 +15,8 @@ let affaire = ref<String>("-")
 let emplacement = ref<String>("-")
 let lastModificationDate = ref(0)
 let echelle = ref<String>("-")
-
-
-const preview = previewStore();
-let img_val: string = "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg"
+//let img_val: string = "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg"
 let cards = ref<Array<CardElement>>([])
-
-function getSimilarityCard() {
-  getSimilarity(preview.card.id).then((o => {
-    console.log(o);
-    cards.value = o;
-  }))
-}
-
-getSimilarityCard();
 
 
 function getPreviewInfo() {
@@ -39,10 +28,19 @@ function getPreviewInfo() {
     emplacement.value = preview.card?.filepath
 }
 
+
+function getSimilarityCard() {
+  getSimilarity(preview.card.id).then((o => {
+    console.log(o);
+    cards.value = o;
+  }))
+}
+
 preview.$subscribe(() => {
     getPreviewInfo();
 })
-defineEmits(["close"])
+
+getSimilarityCard();
 
 </script>
 
@@ -52,7 +50,7 @@ defineEmits(["close"])
         <div class="preview-top">
 
             <div class="img-container">
-                <img class="img-main" :src=img_val alt="" />
+                <img class="img-main" :src=img_preview.valueOf() alt="" />
             </div>
 
             <p class="titre"> Titre : {{ titre }}</p>

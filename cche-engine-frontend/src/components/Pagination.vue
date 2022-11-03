@@ -19,17 +19,15 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
-const emit = defineEmits(
-    ["onClickNextPage","selectPage"]
-)
-
-let inputValue = ref("");
 
 const props = defineProps({
     maxVisibleButtons: Number,
     totalPages: Number,
     currentPage: Number
 });
+defineEmits( ["onClickNextPage","selectPage"])
+
+let inputValue = ref("");
 
 function isPageActive(page: any) {
     return props.currentPage === page;

@@ -3,8 +3,8 @@ import CCHEWhiteIcon from "./icons/CcheWhite.vue";
 import {searchStore} from "../stores/search"
 import { ref } from 'vue'
 
-
 const store = searchStore();
+
 let value = ref("");
 
 function search(){

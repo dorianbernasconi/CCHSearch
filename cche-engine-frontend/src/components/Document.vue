@@ -4,6 +4,7 @@ import type { PropType } from "vue";
 
 const props = defineProps(
 {
+    ind :Number,
     obj: Object as PropType<SolrElement>
 
 });
@@ -15,7 +16,7 @@ const props = defineProps(
     <div class="item ">
         <dl>
             <div class="element">
-                <h1 class="is-size-4" text-element>{{ props.obj!.ind }}. {{ props.obj!.filename }}</h1>
+                <h1 class="is-size-4" text-element>{{ props.ind }}. {{ props.obj!.filename }}</h1>
                 <div class="el">                
                     <dt class="">Affaire:  </dt>
                     <dd class="text-element">{{ props.obj!.affaire }}</dd>

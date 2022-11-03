@@ -3,37 +3,36 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from 'vue'
-import { getElasticDetail } from "../api/apiService"
+import { getDocuments } from "../api/elasticService"
 import Preview from "../components/Preview.vue";
 import Cards from "../components/Cards.vue";
 import { previewStore } from "../stores/preview"
 import { searchStore } from "../stores/search"
 import type { CardElement } from "../api/type"
 
+const preview = previewStore();
+const search = searchStore();
 
 let previewOpen = ref<Boolean>(false)
 let cards = ref<Array<CardElement>>([])
 
-const preview = previewStore();
-const search = searchStore();
-
 function getNewDetails() {
-  getElasticDetail(search.keyword, "home2", "0", "50",search.fieldSelector).then((o => {
+  getDocuments(search.keyword, "home2", "0", "50",search.fieldSelector).then((o => {
     console.log(o);
     cards.value = o;
   }))
 }
 
+function updatePreview(page: CardElement) {
+  preview.card = page
+}
 
 onMounted(() => {
   search.filterType = "elastic";
 })
 
 
-function updatePreview(page: CardElement) {
-  preview.card = page
-}
-
+// TODO
 preview.$subscribe(() => {
   previewOpen.value = true;
 })

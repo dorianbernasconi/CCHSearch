@@ -42,7 +42,7 @@ public class ApiRequest {
 
     private Map<Page, List<Page>> map;
 
-    public JSONObject SolrRequest(String core, String keyword, String start, String rows) {
+    public JSONObject solrRequest(String core, String keyword, String start, String rows) {
 
         JSONObject response = new JSONObject();
         try {
@@ -56,7 +56,7 @@ public class ApiRequest {
 
     }
 
-    public JSONObject ElasticRequest(String keyword, Integer size, String field, Integer min, Integer max) {
+    public JSONObject elasticRequest(String keyword, Integer size, String field, Integer min, Integer max) {
 
         List<Page> pageList = new ArrayList<>();
 
@@ -75,7 +75,7 @@ public class ApiRequest {
         return pageListToJsonObject(ws.getSortList());
     }
 
-    public JSONObject ElasticSimilitude(String query) {
+    public JSONObject elasticSimilitude(String query) {
 
         List<Page> lsP = new ArrayList<>();
         for (Map.Entry<Page, List<Page>> entry : map.entrySet()) {
@@ -95,8 +95,10 @@ public class ApiRequest {
         JSONArray array = new JSONArray();
 
         for (Page page : pageList) {
+
             array.add(page.pageToJson());
         }
+        
         json.put("documents", array);
         return json;
     }

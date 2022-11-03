@@ -7,11 +7,8 @@ const props = defineProps({
 });
 
 //props.obj!.src  
-let img_val: string = "src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg"
-
-
-
-console.log("CQRD")
+let img_val: string = props.obj!.src  
+//"src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg"
 
 function a() {
   console.log("ADD")
@@ -33,8 +30,8 @@ function a() {
 
 <style scoped>
 .card_medium {
-  box-shadow: 5px 3px 15px 1px #c2c2c2;
-
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.13);
+  
   border: 1px solid rgb(0, 0, 0);
   border-radius: var(--card_border_radius);
   background-color: white;
@@ -42,7 +39,7 @@ function a() {
 
 .card {
   border: 2px solid #e7e7e7;
-  border-radius: 20px;
+  border-radius: 5px;
   padding: 0.5rem;
   height: 420px;
 

@@ -5,7 +5,6 @@ export function useless(){
 
 
 export type SolrElement = {
-    ind: Number,   
     emplacement: String,
     thumbnail:String,
     modtime : String,

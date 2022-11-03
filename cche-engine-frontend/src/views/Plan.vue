@@ -3,21 +3,22 @@
 
 <script setup lang="ts">
 import { ref } from 'vue'
-import { getElasticPlan } from "../api/apiService"
+import { getDocuments } from "../api/elasticService"
 import Preview from "../components/Preview.vue";
 import Cards from "../components/Cards.vue";
 import { previewStore } from "../stores/preview"
 import { searchStore } from "../stores/search"
 import type { CardElement } from "../api/type"
 
-let previewOpen = ref<Boolean>(false)
-let cards = ref<Array<CardElement>>([])
-
 const preview = previewStore();
 const search = searchStore();
 
+let previewOpen = ref<Boolean>(false)
+let cards = ref<Array<CardElement>>([])
+
+
 function getNewDetails() {
-  getElasticPlan(search.keyword, "home2", "50", "2000").then((o => {
+  getDocuments(search.keyword, "home2", "50", "2000",search.fieldSelector).then((o => {
     cards.value = o;
   }))
 }
@@ -34,6 +35,7 @@ search.$subscribe(() => {
 })
 
 getNewDetails();
+
 </script>
 <template>
 

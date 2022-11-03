@@ -4,15 +4,21 @@ import { ref } from 'vue'
 import Dropdown from '../Dropdown.vue'
 import { searchStore } from '@/stores/search';
 
-
 const search = searchStore();
+
+const fieldArray = ["Tous","Titre"]
+const knowHow = ["Know","Unknow"]
 
 function modifyfieldSelector(field:string){
     search.fieldSelector = field;
     console.log(field)
 }
 
-const fieldArray = ["Tous","Titre"]
+function modifyKnowHow(field:string){
+    // Modify here to add know how elastic   
+}
+
+
 
 </script>
 
@@ -20,13 +26,13 @@ const fieldArray = ["Tous","Titre"]
 <template>
 
     <div class="filter">
-        <Dropdown :dropdown-array="fieldArray" @field-selector="modifyfieldSelector" class="filter-element" id="field-dropdown"/>
+        <Dropdown id="field-dropdown" class="filter-element" :dropdown-array="fieldArray" @field-selector="modifyfieldSelector" />
+        <Dropdown id="knowhow-dropdown" class="filter-element"  :dropdown-array="knowHow" @field-selector="modifyKnowHow" />
 
 
     </div>
 
     
-    <p id="auteur" class="input_box_name text">ELLLLLLLLl</p>
 
 
 </template>
@@ -40,9 +46,9 @@ const fieldArray = ["Tous","Titre"]
     margin-top: 10px;
     margin-left: 10px;
     margin-right: 10px;
+    
 }
 .filter{
-    display: flex;
     margin-left: 0;
 }
 

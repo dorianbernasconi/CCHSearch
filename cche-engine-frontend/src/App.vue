@@ -1,33 +1,9 @@
 <script setup lang="ts">
-  import { RouterLink, RouterView } from 'vue-router'
 
+import { RouterView } from 'vue-router'
 import HeaderBar from "./components/HeaderBar.vue";
-import Detail from "./views/Detail.vue";
-import All from "./views/All.vue";
-
-import { ref,shallowRef} from 'vue'
 import SwitchBar from "./components/SwitchBar.vue";
 import FilterMenu from "./components/FilterMenu.vue";
-
-let currentComponent = shallowRef(All)
-
-/*
-function loadComponent(component : string){
-  if(component == "All"){
-    currentComponent.value = All;
-    getDocument("fenetre","01_MANDATS_VAL_A","0","10").then(o =>{
-      const jsonArray :any  = o;
-      console.log(jsonArray)
-      lines.value = jsonArray["documents"] 
-     });
-    console.log(lines)
-  }
-  else if(component == "Detail"){
-    currentComponent.value = Detail;
-  }
-}*/
-
-let lines = ref();
 
 </script>
 

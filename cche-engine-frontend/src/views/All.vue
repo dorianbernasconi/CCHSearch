@@ -2,52 +2,28 @@
 import Document from "../components/Document.vue";
 import { searchStore } from "../stores/search"
 import { ref } from 'vue'
-import { getSolrDocument } from "../api/apiService";
+import { getDocuments } from "../api/solrService";
 import Pagination from "../components/Pagination.vue";
 import { onMounted } from "vue";
 
+
+const store = searchStore()
+
+const lines: any = ref("");
 const rows = 10;
-
-
-// Variable use in Pagination
-
-// max button to display
 let maxVisibleButtons = 3;
+let currentPage = ref<Number>(1)
 // Max page to display
 let totalPages = ref(0)
 // number of element per page
 let per = 10;
-// current page
-let currentPage = ref<Number>(1)
-
-let numberOfDocumentFound = ref(0)
-
 
 function getNewDocument() {
-  getSolrDocument(store.keyword, store.manda,  ((currentPage.value.valueOf() - 1)* rows).toString(), rows.toString()).then( (documentsJson : any) => {
+  getDocuments(store.manda,store.keyword,   ((currentPage.value.valueOf() - 1)* rows).toString(), rows.toString()).then( (documentsJson : any) => {
     lines.value = documentsJson["documents"];
     totalPages.value = Math.round(documentsJson["nbFound"] / 10)
   })
 }
-const store = searchStore()
-
-
-onMounted(() => {
-  console.log("ALL MOUNTED")
-  store.filterType = "solr";
-  console.log(store.filterType)
-})
-
-// lines is a json that contains a list of Element
-const lines: any = ref("");
-
-getNewDocument();
-
-// Maybe subscribe to a specific variable and not to the store itself
-// Because we want an update only in the situation where the keyword is modified ??
-store.$subscribe(() => {
-  getNewDocument();
-})
 
 function onClickNextPage(currentPageEmit: number) {
   currentPage.value = currentPageEmit.valueOf()
@@ -60,6 +36,19 @@ function selectPage(newCurrentPage: number) {
     getNewDocument();
   }
 }
+onMounted(() => {
+  store.filterType = "solr";
+  console.log(store.filterType)
+})
+
+store.$subscribe(() => {
+  getNewDocument();
+})
+
+getNewDocument();
+
+
+
 
 
 </script>

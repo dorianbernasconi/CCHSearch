@@ -5,25 +5,12 @@ import ElasticFilter from "./filter/ElasticFilter.vue";
 import SolrFilter from "./filter/SolrFilter.vue";
 import {searchStore} from "../stores/search";
 
+const search = searchStore();
+
 let isSidenavOpen = ref(false);
 let sidenavClass = ref("sidenav-close")
 let closeButtonValue = ref('&#9776;')
-
 let filterMenu = shallowRef(SolrFilter)
-
-
-const search = searchStore();
-
-search.$subscribe(() => {
-  console.log(search.filterType);
-  if(search.filterType == 'elastic'){
-    filterMenu.value = ElasticFilter
-}
-  else{
-    filterMenu.value = SolrFilter
-  }
-});
-
 
 function switchStateFilterWindow() {
   if(isSidenavOpen.value){
@@ -35,6 +22,16 @@ function switchStateFilterWindow() {
   }
   isSidenavOpen.value = !isSidenavOpen.value;
 }
+
+search.$subscribe(() => {
+  console.log(search.filterType);
+  if(search.filterType == 'elastic'){
+    filterMenu.value = ElasticFilter
+}
+  else{
+    filterMenu.value = SolrFilter
+  }
+});
 
 </script>
 

@@ -1,24 +1,11 @@
 <script setup lang="ts">
-import CCHEWhiteIcon from "./icons/CcheWhite.vue";
-import All from "../views/All.vue";
-import Detail from "../views/Detail.vue";
 import { RouterLink } from 'vue-router'
 
 
 </script>
     
 <template>
-  
-  <!--
-  <div id="bar">
-      <div class="micro-bar">
-        <button @click="$emit('switchMain', 'All')" class="switch-button"> Tous </button>
-        <button @click="$emit('switchMain', 'Detail')" class="switch-button"> Detail </button>
-        <button @click="$emit('switchMain','Plan')" class="switch-button"> Plan </button>
-        <button @click="$emit('switchMain','Image')" class="switch-button"> Image </button>
-      </div>
-  </div>
--->
+
 <div id="bar">
       <div class="micro-bar">
   <nav>

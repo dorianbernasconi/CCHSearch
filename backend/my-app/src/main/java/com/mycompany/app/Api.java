@@ -46,6 +46,11 @@ public class Api {
 
     public static void main(String[] args) {
 
+        SolrjClient s = new SolrjClient("01_MANDATS_VAL_A");
+        System.out.println(s.getAllAffaire());
+        System.out.println(s.querySpecificField());
+
+
         ApiRequest apiRequest = new ApiRequest();
 
         after((Filter) (request, response) -> {
@@ -60,7 +65,7 @@ public class Api {
             String start = req.queryParams("start");
             String rows = req.queryParams("rows");
 
-            JSONObject response = apiRequest.SolrRequest(core,keyword,start,rows);
+            JSONObject response = apiRequest.solrRequest(core,keyword,start,rows);
             return response;
         });
 
@@ -75,7 +80,7 @@ public class Api {
 
             System.out.println("Request Elastic");
 
-            JSONObject response = apiRequest.ElasticRequest(keyword, 10, field, min, max);
+            JSONObject response = apiRequest.elasticRequest(keyword, 10, field, min, max);
             System.out.println(response);
             return response;
         });
@@ -86,7 +91,7 @@ public class Api {
 
             String documentPath = req.queryParams("documentPath");
 
-            JSONObject response = apiRequest.ElasticSimilitude(documentPath);
+            JSONObject response = apiRequest.elasticSimilitude(documentPath);
             return response;
         });
     }
