@@ -88,7 +88,7 @@ public class Page {
         pageObj.put("id", this.id);
         pageObj.put("filename", this.fileName);
         pageObj.put("pagenumber", this.pageNumber);
-        pageObj.put("filePath", this.filePath);
+        pageObj.put("filepath", this.filePath);
         pageObj.put("score", this.score);
         pageObj.put("affaire", this.affaireName);
         pageObj.put("lastModificationDate", this.lastModificationDate);

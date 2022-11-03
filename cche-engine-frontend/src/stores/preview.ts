@@ -5,13 +5,15 @@ import type {CardElement} from "../api/type"
 export const previewStore = defineStore('preview', () => {
 
   // how to define object ref
+  // src is the path of the image
   const card  = ref<CardElement>({    score:0,
     id: "",
     filename: "",
+    filepath: "",
     src: "",
     pageNumber: 0,
     lastModificationDate:0,
-    affaire:"",
+    affaire:[""],
     echelle: "",
     price:0,
     wordList: [""],

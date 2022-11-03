@@ -1,21 +1,11 @@
 <script setup lang="ts">
+import type { SolrElement } from "../api/type"
+import type { PropType } from "vue";
 
 const props = defineProps(
 {
-    ind: Number,   
-    emplacement: String,
-    thumbnail:String,
-    modtime : String,
-    _root_ : String,
-    link : Array<String>,
-    affaire: String,
-    ftype : String,
-    filename: String,
-    content_type:String,
-    _version_:Number,
-    racifile: String,
-    id: String,
-    kh: String,
+    obj: Object as PropType<SolrElement>
+
 });
 
 </script>
@@ -25,22 +15,22 @@ const props = defineProps(
     <div class="item ">
         <dl>
             <div class="element">
-                <h1 class="is-size-4" text-element>{{ ind }}. {{ filename }}</h1>
+                <h1 class="is-size-4" text-element>{{ props.obj!.ind }}. {{ props.obj!.filename }}</h1>
                 <div class="el">                
                     <dt class="">Affaire:  </dt>
-                    <dd class="text-element">{{ affaire }}</dd>
+                    <dd class="text-element">{{ props.obj!.affaire }}</dd>
                 </div>
                 <div class="el">
                     <dt class="">Emplacement: </dt>
-                    <dd class="text-element">{{ emplacement }}</dd>
+                    <dd class="text-element">{{ props.obj!.emplacement }}</dd>
                 </div>
 
                 <div class="el">
                     <dt class="">Date de Modification: </dt>
-                    <dd class="text-element">{{ modtime }}</dd>
+                    <dd class="text-element">{{ props.obj!.modtime }}</dd>
                 </div>
                 <div class="el download">
-                    <a :href="`${link}`">Télécharger le fichier</a>
+                    <a :href="`${props.obj!.link}`">Télécharger le fichier</a>
                 </div>
             </div>
 

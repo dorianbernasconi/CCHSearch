@@ -32,6 +32,8 @@ let lines = ref();
 </script>
 
 <template >
+  <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
+
   <head>
 
   </head>
@@ -42,7 +44,6 @@ let lines = ref();
     </div>
 
     <div class="">
-      <!--<SwitchBar @switchMain="loadComponent"  />  -->
       <SwitchBar /> 
     </div>
     <FilterMenu/>
@@ -65,7 +66,7 @@ let lines = ref();
 
 .text{
     color:rgb(65, 65, 65);
-    font-family:  Arial, sans-serif;
+    font-family: Inter;
 }
 .main {
   top: 0;

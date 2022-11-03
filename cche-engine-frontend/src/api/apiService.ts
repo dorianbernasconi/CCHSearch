@@ -17,27 +17,25 @@ export function getSolrDocument(keyWord: string, core:string,start:string,rows:s
     })
       .then(res => res.json())
       .then(res => {
-        console.log(res)
-        return res as Array<Element>
+        return res
     })
     .then( res => {
-        const jsonArray :any  = res;
-        return jsonArray["documents"] 
+
+        return res as any
     })
 }
 
-export function getElastic(keyWord: string, index:string,min:string,max:string){
+export function getElasticDetail(keyWord: string, index:string,min:string,max:string,field:string){
 
     let params = new URLSearchParams({
         q: keyWord,
         index: index,
-        size : "50",
         min: min,
         max: max,
-        all: "true"
+        field: field
     }).toString()
 
-     return fetch('http://localhost:4567/query/elastic/string?' + params, {
+     return fetch('http://localhost:4567/query/elastic/request/string?' + params, {
         method: "POST",
     
       })
@@ -54,17 +52,18 @@ export function getElastic(keyWord: string, index:string,min:string,max:string){
 
 }
 
-export function getElasticPlan(keyWord: string, index:string,min:string,max:string){
+export function getElasticPlan(keyWord: string, index:string,min:string,max:string, field:string){
 
-    
     let params = new URLSearchParams({
         q: keyWord,
         index: index,
         min: min,
-        rows: max
+        max: max,
+        field: field
+
     }).toString()
 
-    return fetch('http://localhost:4567/query/elastic/plan/string?' + params, {
+    return fetch('http://localhost:4567/query/elastic/request/string?' + params, {
         method: "POST",
     
       })
@@ -74,8 +73,28 @@ export function getElasticPlan(keyWord: string, index:string,min:string,max:stri
       })
       .then( res => {
           const jsonArray :any  = res;
-          return jsonArray["documents"] 
+          return jsonArray["documents"]
       })
 }
 
+
+export function getSimilarity(filepath: string,){
+
+  let params = new URLSearchParams({
+      q: filepath
+  }).toString()
+
+  return fetch('http://localhost:4567/query/elastic/request/string?' + params, {
+      method: "POST",
+  
+    })
+      .then(res => res.json())
+      .then(res => {
+        return res as Array<Element>
+    })
+    .then( res => {
+        const jsonArray :any  = res;
+        return jsonArray["documents"]
+    })
+}
   

@@ -4,6 +4,7 @@ import All from "../views/All.vue";
 import Detail from "../views/Detail.vue";
 import { RouterLink } from 'vue-router'
 
+
 </script>
     
 <template>
@@ -39,7 +40,6 @@ import { RouterLink } from 'vue-router'
   align-items: center;
   height: 60px;
   z-index: 1;
-  border-bottom: 1px solid #dadada;
 }
 
 .micro-bar {
@@ -53,7 +53,7 @@ import { RouterLink } from 'vue-router'
   color: #969ba1;
   border: none;
   margin :  10px;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .switch-button:focus {
@@ -63,6 +63,11 @@ import { RouterLink } from 'vue-router'
 
 .switch-button:hover {
   cursor: pointer;
+
+}
+
+.active{
+  color: #4f92ff;
 
 }
 </style>

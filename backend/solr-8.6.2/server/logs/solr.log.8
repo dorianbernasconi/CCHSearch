@@ -1,92 +1,931 @@
-2022-10-26 10:01:22.756 INFO  (main) [   ] o.e.j.u.log Logging initialized @7116ms to org.eclipse.jetty.util.log.Slf4jLog
-2022-10-26 10:01:22.874 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+2022-10-31 11:31:18.742 INFO  (main) [   ] o.e.j.u.log Logging initialized @1860ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-10-31 11:31:18.845 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
     <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
         <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
       </Arg></New>
   </Arg>
-2022-10-26 10:01:23.119 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 18+36-2087
-2022-10-26 10:01:23.156 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/contexts/] at interval 0
-2022-10-26 10:01:23.654 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
-2022-10-26 10:01:23.675 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
-2022-10-26 10:01:23.675 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
-2022-10-26 10:01:23.680 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
-2022-10-26 10:01:23.774 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
-2022-10-26 10:01:23.784 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.2
-2022-10-26 10:01:23.784 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2022-10-26 10:01:23.784 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2
-2022-10-26 10:01:23.785 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2022-10-26T10:01:23.785140229Z
-2022-10-26 10:01:23.811 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr
-2022-10-26 10:01:23.820 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/solr.xml
-2022-10-26 10:01:24.015 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753, but no JMX reporters were configured - adding default JMX reporter.
-2022-10-26 10:01:24.849 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
-2022-10-26 10:01:25.242 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@15f8701f[provider=null,keyStore=null,trustStore=null]
-2022-10-26 10:01:25.242 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@15f8701f[provider=null,keyStore=null,trustStore=null]
-2022-10-26 10:01:25.667 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@6438a7fe[provider=null,keyStore=null,trustStore=null]
-2022-10-26 10:01:25.667 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@6438a7fe[provider=null,keyStore=null,trustStore=null]
-2022-10-26 10:01:25.841 INFO  (main) [   ] o.a.s.c.CoreContainer Initializing authorization plugin: solr.RuleBasedAuthorizationPlugin
-2022-10-26 10:01:25.861 INFO  (main) [   ] o.a.s.c.CoreContainer Initializing authentication plugin: solr.BasicAuthPlugin
-2022-10-26 10:01:25.875 WARN  (main) [   ] o.a.s.c.CoreContainer Solr authentication is enabled, but SSL is off.  Consider enabling SSL to protect user credentials and data with encryption.
-2022-10-26 10:01:26.255 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
-2022-10-26 10:01:26.263 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
-2022-10-26 10:01:26.433 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-26 10:01:26.434 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-26 10:01:26.442 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-26 10:01:26.508 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr
-2022-10-26 10:01:26.509 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [04_KNOW_HOW_A, 01_MANDATS_VAL_A]
-2022-10-26 10:01:26.614 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrResourceLoader Added 63 libs to classloader, from paths: [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/clustering/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/extraction/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/langid/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/velocity/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/dist]
-2022-10-26 10:01:26.614 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrResourceLoader Added 63 libs to classloader, from paths: [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/clustering/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/extraction/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/langid/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/velocity/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/dist]
-2022-10-26 10:01:26.671 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@47605f2f{/solr,file:///home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr-webapp/webapp/,AVAILABLE}{/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr-webapp/webapp}
-2022-10-26 10:01:26.690 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@cd1d761{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
-2022-10-26 10:01:26.691 INFO  (main) [   ] o.e.j.s.Server Started @11054ms
-2022-10-26 10:01:27.192 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.3.0
-2022-10-26 10:01:27.194 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.3.0
-2022-10-26 10:01:27.543 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.s.IndexSchema Schema name=default-config
-2022-10-26 10:01:27.543 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.s.IndexSchema Schema name=default-config
-2022-10-26 10:01:27.693 WARN  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrResourceLoader Solr loaded a deprecated plugin/analysis class [solr.WordDelimiterFilterFactory]. Please consult documentation how to replace it accordingly.
-2022-10-26 10:01:27.693 WARN  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrResourceLoader Solr loaded a deprecated plugin/analysis class [solr.WordDelimiterFilterFactory]. Please consult documentation how to replace it accordingly.
-2022-10-26 10:01:27.945 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2022-10-26 10:01:27.945 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2022-10-26 10:01:28.112 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.CoreContainer Creating SolrCore '01_MANDATS_VAL_A' using configuration from instancedir /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A, trusted=true
-2022-10-26 10:01:28.113 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.CoreContainer Creating SolrCore '04_KNOW_HOW_A' using configuration from instancedir /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A, trusted=true
-2022-10-26 10:01:28.178 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.04_KNOW_HOW_A' (registry 'solr.core.04_KNOW_HOW_A') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-26 10:01:28.182 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.01_MANDATS_VAL_A' (registry 'solr.core.01_MANDATS_VAL_A') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-26 10:01:28.219 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrCore [[04_KNOW_HOW_A] ] Opening new SolrCore at [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A], dataDir=[/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A/data/]
-2022-10-26 10:01:28.219 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrCore [[01_MANDATS_VAL_A] ] Opening new SolrCore at [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A], dataDir=[/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A/data/]
-2022-10-26 10:01:28.296 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
-2022-10-26 10:01:28.296 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
-2022-10-26 10:01:29.437 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2022-10-26 10:01:29.437 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2022-10-26 10:01:29.437 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2022-10-26 10:01:29.437 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2022-10-26 10:01:29.464 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
-2022-10-26 10:01:29.464 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
-2022-10-26 10:01:29.464 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2022-10-26 10:01:29.464 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2022-10-26 10:01:29.667 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A/conf
-2022-10-26 10:01:29.725 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2022-10-26 10:01:29.738 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2022-10-26 10:01:29.785 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
-2022-10-26 10:01:29.790 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1747743921710039040
-2022-10-26 10:01:29.798 INFO  (searcherExecutor-16-thread-1-processing-x:04_KNOW_HOW_A) [   x:04_KNOW_HOW_A] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2022-10-26 10:01:29.798 INFO  (searcherExecutor-16-thread-1-processing-x:04_KNOW_HOW_A) [   x:04_KNOW_HOW_A] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2022-10-26 10:01:29.840 INFO  (searcherExecutor-16-thread-1-processing-x:04_KNOW_HOW_A) [   x:04_KNOW_HOW_A] o.a.s.c.SolrCore [04_KNOW_HOW_A]  Registered new searcher autowarm time: 0 ms
-2022-10-26 10:01:29.866 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A/conf
-2022-10-26 10:01:29.867 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2022-10-26 10:01:29.868 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2022-10-26 10:01:29.871 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
-2022-10-26 10:01:29.887 INFO  (searcherExecutor-17-thread-1-processing-x:01_MANDATS_VAL_A) [   x:01_MANDATS_VAL_A] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2022-10-26 10:01:29.888 INFO  (searcherExecutor-17-thread-1-processing-x:01_MANDATS_VAL_A) [   x:01_MANDATS_VAL_A] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2022-10-26 10:01:29.898 INFO  (searcherExecutor-17-thread-1-processing-x:01_MANDATS_VAL_A) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrCore [01_MANDATS_VAL_A]  Registered new searcher autowarm time: 0 ms
-2022-10-26 10:07:43.251 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=59
-2022-10-26 10:07:43.850 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=1
-2022-10-26 10:07:45.836 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=1
-2022-10-26 10:08:00.359 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=1
-2022-10-26 10:08:03.585 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=60
-2022-10-26 10:14:18.683 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-26 10:31:49.379 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-26 13:51:58.699 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=3
-2022-10-26 13:52:00.006 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=1
-2022-10-26 13:52:42.503 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=1
-2022-10-26 13:56:19.725 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=1
-2022-10-26 14:08:47.540 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
-2022-10-26 14:12:39.363 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 11:31:19.029 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 18+36-2087
+2022-10-31 11:31:19.058 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/contexts/] at interval 0
+2022-10-31 11:31:19.480 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2022-10-31 11:31:19.493 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2022-10-31 11:31:19.493 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2022-10-31 11:31:19.496 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
+2022-10-31 11:31:19.571 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2022-10-31 11:31:19.576 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.2
+2022-10-31 11:31:19.576 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
+2022-10-31 11:31:19.577 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2
+2022-10-31 11:31:19.577 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2022-10-31T11:31:19.577185142Z
+2022-10-31 11:31:19.588 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr
+2022-10-31 11:31:19.593 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/solr.xml
+2022-10-31 11:31:19.710 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753, but no JMX reporters were configured - adding default JMX reporter.
+2022-10-31 11:31:20.307 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2022-10-31 11:31:20.550 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@15f8701f[provider=null,keyStore=null,trustStore=null]
+2022-10-31 11:31:20.550 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@15f8701f[provider=null,keyStore=null,trustStore=null]
+2022-10-31 11:31:20.735 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@6438a7fe[provider=null,keyStore=null,trustStore=null]
+2022-10-31 11:31:20.735 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@6438a7fe[provider=null,keyStore=null,trustStore=null]
+2022-10-31 11:31:20.797 INFO  (main) [   ] o.a.s.c.CoreContainer Initializing authorization plugin: solr.RuleBasedAuthorizationPlugin
+2022-10-31 11:31:20.807 INFO  (main) [   ] o.a.s.c.CoreContainer Initializing authentication plugin: solr.BasicAuthPlugin
+2022-10-31 11:31:20.812 WARN  (main) [   ] o.a.s.c.CoreContainer Solr authentication is enabled, but SSL is off.  Consider enabling SSL to protect user credentials and data with encryption.
+2022-10-31 11:31:20.964 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2022-10-31 11:31:20.969 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2022-10-31 11:31:21.066 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
+2022-10-31 11:31:21.067 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
+2022-10-31 11:31:21.072 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
+2022-10-31 11:31:21.111 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr
+2022-10-31 11:31:21.111 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [04_KNOW_HOW_A, 01_MANDATS_VAL_A]
+2022-10-31 11:31:21.189 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrResourceLoader Added 63 libs to classloader, from paths: [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/clustering/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/extraction/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/langid/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/velocity/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/dist]
+2022-10-31 11:31:21.189 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrResourceLoader Added 63 libs to classloader, from paths: [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/clustering/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/extraction/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/langid/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/contrib/velocity/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/dist]
+2022-10-31 11:31:21.195 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@47605f2f{/solr,file:///home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr-webapp/webapp/,AVAILABLE}{/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr-webapp/webapp}
+2022-10-31 11:31:21.205 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@cd1d761{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-10-31 11:31:21.205 INFO  (main) [   ] o.e.j.s.Server Started @4325ms
+2022-10-31 11:31:21.487 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.3.0
+2022-10-31 11:31:21.488 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.3.0
+2022-10-31 11:31:21.644 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.s.IndexSchema Schema name=default-config
+2022-10-31 11:31:21.644 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.s.IndexSchema Schema name=default-config
+2022-10-31 11:31:21.724 WARN  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrResourceLoader Solr loaded a deprecated plugin/analysis class [solr.WordDelimiterFilterFactory]. Please consult documentation how to replace it accordingly.
+2022-10-31 11:31:21.724 WARN  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrResourceLoader Solr loaded a deprecated plugin/analysis class [solr.WordDelimiterFilterFactory]. Please consult documentation how to replace it accordingly.
+2022-10-31 11:31:21.853 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2022-10-31 11:31:21.853 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
+2022-10-31 11:31:21.920 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.CoreContainer Creating SolrCore '01_MANDATS_VAL_A' using configuration from instancedir /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A, trusted=true
+2022-10-31 11:31:21.920 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.CoreContainer Creating SolrCore '04_KNOW_HOW_A' using configuration from instancedir /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A, trusted=true
+2022-10-31 11:31:21.947 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.04_KNOW_HOW_A' (registry 'solr.core.04_KNOW_HOW_A') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
+2022-10-31 11:31:21.947 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.01_MANDATS_VAL_A' (registry 'solr.core.01_MANDATS_VAL_A') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
+2022-10-31 11:31:21.962 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrCore [[04_KNOW_HOW_A] ] Opening new SolrCore at [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A], dataDir=[/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A/data/]
+2022-10-31 11:31:21.962 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrCore [[01_MANDATS_VAL_A] ] Opening new SolrCore at [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A], dataDir=[/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A/data/]
+2022-10-31 11:31:22.002 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2022-10-31 11:31:22.002 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
+2022-10-31 11:31:22.607 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2022-10-31 11:31:22.607 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
+2022-10-31 11:31:22.607 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2022-10-31 11:31:22.607 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
+2022-10-31 11:31:22.619 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2022-10-31 11:31:22.619 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2022-10-31 11:31:22.623 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
+2022-10-31 11:31:22.623 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.CommitTracker Soft AutoCommit: disabled
+2022-10-31 11:31:22.716 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A/conf
+2022-10-31 11:31:22.741 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2022-10-31 11:31:22.746 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2022-10-31 11:31:22.759 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2022-10-31 11:31:22.761 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1748202561481998336
+2022-10-31 11:31:22.765 INFO  (searcherExecutor-17-thread-1-processing-x:04_KNOW_HOW_A) [   x:04_KNOW_HOW_A] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-10-31 11:31:22.765 INFO  (searcherExecutor-17-thread-1-processing-x:04_KNOW_HOW_A) [   x:04_KNOW_HOW_A] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2022-10-31 11:31:22.779 INFO  (searcherExecutor-17-thread-1-processing-x:04_KNOW_HOW_A) [   x:04_KNOW_HOW_A] o.a.s.c.SolrCore [04_KNOW_HOW_A]  Registered new searcher autowarm time: 0 ms
+2022-10-31 11:31:22.830 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A/conf
+2022-10-31 11:31:22.830 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
+2022-10-31 11:31:22.831 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+2022-10-31 11:31:22.833 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
+2022-10-31 11:31:22.842 INFO  (searcherExecutor-16-thread-1-processing-x:01_MANDATS_VAL_A) [   x:01_MANDATS_VAL_A] o.a.s.c.QuerySenderListener QuerySenderListener done.
+2022-10-31 11:31:22.842 INFO  (searcherExecutor-16-thread-1-processing-x:01_MANDATS_VAL_A) [   x:01_MANDATS_VAL_A] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
+2022-10-31 11:31:22.847 INFO  (searcherExecutor-16-thread-1-processing-x:01_MANDATS_VAL_A) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrCore [01_MANDATS_VAL_A]  Registered new searcher autowarm time: 0 ms
+2022-10-31 11:31:37.281 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=70
+2022-10-31 11:31:42.530 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 11:33:02.451 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=2
+2022-10-31 11:33:25.510 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 11:33:38.078 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 11:33:47.303 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 11:34:00.168 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 11:34:53.160 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 11:36:59.853 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=2
+2022-10-31 11:37:02.445 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 11:37:32.457 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 11:37:37.053 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 11:38:18.806 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 11:38:23.563 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 11:39:05.287 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 11:39:33.154 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 11:39:54.982 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 11:40:06.218 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 11:40:14.313 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 11:40:32.351 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=7
+2022-10-31 11:40:40.167 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 11:42:14.417 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 11:42:16.932 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 11:43:43.060 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 11:43:48.178 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 11:43:52.611 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 12:51:15.162 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=1
+2022-10-31 12:51:17.881 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=0&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=21
+2022-10-31 12:58:23.561 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 12:58:29.666 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:07:43.187 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:25:01.632 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 13:25:08.398 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=2
+2022-10-31 13:38:12.965 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:39:34.051 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:42:25.806 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:42:45.086 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 13:43:03.454 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 13:43:09.809 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:43:24.503 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:43:31.829 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:44:58.277 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=2
+2022-10-31 13:45:01.696 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:45:53.857 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 13:45:57.143 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:46:07.552 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:46:49.755 ERROR (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: For input string: "NaN"
+	at org.apache.solr.common.params.SolrParams.getInt(SolrParams.java:236)
+	at org.apache.solr.search.QParser.getSortSpec(QParser.java:271)
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:189)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:305)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2606)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:812)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:588)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NumberFormatException: For input string: "NaN"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:995)
+	at org.apache.solr.common.params.SolrParams.getInt(SolrParams.java:233)
+	... 46 more
+
+2022-10-31 13:46:49.756 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=NaN&rows=10&wt=javabin&version=2} status=400 QTime=13
+2022-10-31 13:46:54.725 ERROR (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: For input string: "NaN"
+	at org.apache.solr.common.params.SolrParams.getInt(SolrParams.java:236)
+	at org.apache.solr.search.QParser.getSortSpec(QParser.java:271)
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:189)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:305)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2606)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:812)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:588)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NumberFormatException: For input string: "NaN"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:995)
+	at org.apache.solr.common.params.SolrParams.getInt(SolrParams.java:233)
+	... 46 more
+
+2022-10-31 13:46:54.726 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=NaN&rows=10&wt=javabin&version=2} status=400 QTime=1
+2022-10-31 13:46:57.789 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:47:09.837 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:47:35.466 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:47:44.931 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:47:47.171 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:47:48.164 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=14
+2022-10-31 13:47:54.174 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:47:55.856 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:47:58.835 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:47:59.982 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:48:01.118 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:48:09.451 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:48:13.858 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:24.576 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=4
+2022-10-31 13:59:25.282 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:29.534 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:31.001 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:31.385 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:31.960 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:35.654 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:36.801 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:37.176 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:37.933 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:59:38.625 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:40.606 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:41.238 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:41.615 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 13:59:42.990 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:44.453 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 13:59:47.647 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:01:39.982 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=4
+2022-10-31 14:01:52.297 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:02:08.806 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:02:30.282 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:02:31.413 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:02:31.860 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:02:32.510 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:02:33.078 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:02:33.687 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:02:34.300 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:02:57.314 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:02:58.560 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:24:10.949 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:24:11.654 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:24:12.192 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:24:12.896 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:24:13.418 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:24:20.114 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:24:22.436 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:24:24.532 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:24:25.618 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:24:27.706 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:24:39.119 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:24:43.746 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:24:44.493 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:25:15.779 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:25:18.060 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:25:18.447 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:25:19.011 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:25:20.161 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:25:21.245 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:25:22.922 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:25:35.212 ERROR (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: For input string: "[object Object]"
+	at org.apache.solr.common.params.SolrParams.getInt(SolrParams.java:236)
+	at org.apache.solr.search.QParser.getSortSpec(QParser.java:271)
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:189)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:305)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2606)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:812)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:588)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: java.lang.NumberFormatException: For input string: "[object Object]"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Integer.parseInt(Integer.java:668)
+	at java.base/java.lang.Integer.valueOf(Integer.java:995)
+	at org.apache.solr.common.params.SolrParams.getInt(SolrParams.java:233)
+	... 46 more
+
+2022-10-31 14:25:35.213 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=[object+Object]&rows=10&wt=javabin&version=2} status=400 QTime=2
+2022-10-31 14:25:50.043 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:25:51.911 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:25:52.596 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:26:27.241 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:26:30.746 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:26:32.606 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:26:33.252 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:27:14.170 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:27:20.069 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:27:22.241 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:27:22.748 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:27:42.370 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:27:43.166 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:27:44.943 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:27:46.669 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:31:50.096 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:31:51.139 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:31:52.483 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=40&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:31:53.598 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:31:53.927 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:31:56.003 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:33:04.800 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:33:05.275 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:33:06.364 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:33:07.349 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:33:08.833 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:33:10.918 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:33:11.965 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:33:12.440 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:33:46.808 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:33:47.133 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:33:47.567 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:35:06.278 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:35:06.959 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=10&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:35:07.350 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:35:10.678 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:36:09.692 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:36:11.184 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:36:12.157 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:37:25.999 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=40&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:37:26.995 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:11.584 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=40&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:11.856 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=50&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:38:12.439 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=40&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:12.691 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:38:12.895 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:38:14.382 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:15.652 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:16.225 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:23.085 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:38:23.772 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:25.242 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:38:25.888 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:26.515 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:54.437 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=40&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:38:55.176 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:39:05.942 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:39:08.925 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:39:09.676 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=10&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:39:10.116 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:40:02.527 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=30&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:40:03.289 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:40:03.829 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=10&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:05.803 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:06.287 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:06.557 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=30&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:06.901 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=40&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:07.400 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=30&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:07.768 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:10.165 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=30&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:49.837 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=40&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:50.405 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=30&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:41:50.774 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:42:30.365 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=30&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:42:31.192 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:42:31.385 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=10&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:42:32.249 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:42:33.182 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:44:04.362 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=30&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:44:04.699 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=40&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:47:33.920 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:02.146 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:04.119 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=40&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:04.829 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=60&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:05.689 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=50&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:06.062 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=40&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:06.347 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=30&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:06.515 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:06.686 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=10&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:06.953 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:55:07.941 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=40&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:56:15.893 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:56:24.739 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:56:35.906 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:56:49.552 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:57:05.019 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:57:18.795 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:57:36.544 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:57:42.487 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:57:43.892 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=10&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:57:45.024 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:57:49.191 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:58:02.475 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:58:13.112 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:58:19.275 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 14:58:21.511 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:58:24.319 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=3
+2022-10-31 14:58:24.700 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:58:26.693 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:58:27.757 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 14:58:29.179 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 14:58:30.487 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:06:36.543 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=2
+2022-10-31 15:06:37.245 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:06:40.661 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:08:46.628 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:09:43.596 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:09:57.118 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:10:12.435 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:10:22.844 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:10:29.498 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:10:32.011 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:10:37.763 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:10:41.945 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:10:58.498 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:11:06.626 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:11:22.069 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:11:43.394 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:12:14.592 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:12:34.002 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:12:51.750 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:13:56.768 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=20&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:13:57.260 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=30&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:13:57.650 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=40&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:13:58.179 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=50&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:13:59.822 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=60&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:14:19.051 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:15:29.350 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:15:47.349 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:15:50.655 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:15:52.393 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:15:52.710 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:15:53.285 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:25:44.632 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:25:51.402 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:27:14.354 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:28:14.526 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:28:16.707 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:28:18.246 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:28:18.676 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:28:20.301 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:28:21.632 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=40&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:28:22.271 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:28:22.403 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:28:23.731 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:30:27.974 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:30:40.172 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:30:47.123 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:30:50.273 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=prote&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=2
+2022-10-31 15:30:53.246 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:31:19.520 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:31:22.949 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=40&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:31:26.069 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:31:27.643 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:31:29.789 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:31:31.219 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:31:32.045 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:31:33.473 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:31:34.587 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:31:36.274 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:31:41.686 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:31:44.368 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:31:45.658 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:32:04.882 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:32:06.751 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:32:09.786 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:32:15.004 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:32:17.778 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=50&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:32:40.416 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:32:49.975 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:32:51.446 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:32:54.446 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:33:07.827 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:33:12.015 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:34:29.702 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:34:33.989 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:34:42.235 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:34:46.437 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:35:21.281 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:35:24.525 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:35:28.902 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:35:31.340 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:35:34.564 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:35:50.483 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:35:52.588 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:35:55.840 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:36:02.793 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:36:06.404 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:36:08.215 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:36:49.398 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:36:54.158 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:37:31.892 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:37:36.890 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:37:39.505 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:37:44.657 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:38:02.821 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:38:12.324 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:38:14.277 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:38:16.947 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:39:25.583 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:39:25.942 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:39:28.213 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:39:28.938 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:39:29.199 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:39:29.409 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:39:29.606 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:39:32.491 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:39:34.957 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:39:35.760 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:39:36.109 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:39:44.123 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:39:44.577 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:39:45.222 ERROR (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: 'start' parameter cannot be negative
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:234)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:305)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2606)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:812)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:588)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2022-10-31 15:39:45.222 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=-10&rows=10&wt=javabin&version=2} status=400 QTime=1
+2022-10-31 15:39:52.660 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 15:39:56.462 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:39:59.756 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:40:00.297 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:40:01.855 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:03.527 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:40:03.995 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:40:04.440 ERROR (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: 'start' parameter cannot be negative
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:234)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:305)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2606)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:812)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:588)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2022-10-31 15:40:04.440 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=-10&rows=10&wt=javabin&version=2} status=400 QTime=1
+2022-10-31 15:40:10.773 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:12.538 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:13.104 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:40:15.015 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:16.833 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:17.729 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:19.040 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:21.462 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:23.059 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:40:24.321 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:30.352 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:31.097 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:40:47.925 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:53.387 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 15:40:54.969 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:40:57.739 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 15:42:59.758 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=20&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=6
+2022-10-31 15:43:01.625 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=30&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 15:43:02.159 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=40&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=4
+2022-10-31 15:43:02.535 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=50&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 15:43:03.258 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=60&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=3
+2022-10-31 15:43:03.607 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=70&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 15:43:03.808 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=80&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 15:43:03.941 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=90&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 15:43:04.147 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=100&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:04.537 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=110&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 15:43:04.714 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=120&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=4
+2022-10-31 15:43:04.827 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=130&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 15:43:04.963 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=140&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=3
+2022-10-31 15:43:05.125 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=150&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 15:43:05.260 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=160&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=3
+2022-10-31 15:43:05.466 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=170&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 15:43:05.702 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=180&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:05.850 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=190&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 15:43:06.051 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=200&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=4
+2022-10-31 15:43:06.185 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=210&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:06.393 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=220&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 15:43:06.698 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=230&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=3
+2022-10-31 15:43:06.832 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=240&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=3
+2022-10-31 15:43:06.987 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=250&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=3
+2022-10-31 15:43:07.127 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=260&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:07.313 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=270&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:07.497 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=280&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:07.655 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=290&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=3
+2022-10-31 15:43:08.363 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=280&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:09.695 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=290&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:10.040 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=280&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=3
+2022-10-31 15:43:11.071 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=290&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:11.575 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=280&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:12.911 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=290&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:13.748 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=280&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=3
+2022-10-31 15:43:14.787 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=290&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 15:43:20.182 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=260&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 16:02:47.683 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=0&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:03:21.509 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=0&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:03:44.497 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=0&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:03.263 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=0&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:39.327 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=0&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:42.913 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=10&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:43.352 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=20&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:43.901 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=10&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:44.143 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=0&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:44.958 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=10&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:45.533 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=0&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 16:04:46.063 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=10&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:46.614 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=20&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:04:47.350 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=30&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 16:07:22.182 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=40&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=2
+2022-10-31 16:07:22.961 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=30&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 16:07:23.476 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=20&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:07:24.065 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=10&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:39:15.471 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 16:41:48.476 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=0&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=1
+2022-10-31 16:41:50.072 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=10&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:41:51.947 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=10&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:41:54.570 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=20&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:41:55.013 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=30&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:42:09.055 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=40&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:42:09.873 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=30&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:42:10.220 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=20&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:42:16.308 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=30&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:42:17.214 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=facture&start=20&rows=10&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-10-31 16:42:20.524 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 16:42:22.640 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:42:23.916 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:42:24.445 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:42:24.867 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:42:27.103 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:42:27.998 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 16:44:37.391 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:44:39.304 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:44:42.052 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:45:59.278 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:46:11.942 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:46:24.126 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:46:24.556 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:46:26.468 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:46:29.197 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:47:09.077 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 16:47:11.075 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:47:11.932 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:47:14.285 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 16:47:15.048 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:47:15.831 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:47:18.466 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:47:21.509 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 16:47:25.757 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:47:49.613 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=3
+2022-10-31 17:47:51.553 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:47:53.833 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:47:55.026 ERROR (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.h.RequestHandlerBase org.apache.solr.common.SolrException: 'start' parameter cannot be negative
+	at org.apache.solr.handler.component.QueryComponent.prepare(QueryComponent.java:234)
+	at org.apache.solr.handler.component.SearchHandler.handleRequestBody(SearchHandler.java:305)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:214)
+	at org.apache.solr.core.SolrCore.execute(SolrCore.java:2606)
+	at org.apache.solr.servlet.HttpSolrCall.execute(HttpSolrCall.java:812)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:588)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:129)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:375)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+
+2022-10-31 17:47:55.027 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=-10&rows=10&wt=javabin&version=2} status=400 QTime=3
+2022-10-31 17:48:02.496 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 17:48:52.370 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:48:54.488 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:48:55.798 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:48:58.149 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 17:49:43.909 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:49:44.399 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:51:29.393 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 17:51:31.494 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:51:33.673 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:51:34.259 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:51:40.427 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:52:38.430 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:52:41.915 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:52:47.823 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 17:52:50.357 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:53:02.571 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:53:03.047 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:53:49.937 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 17:53:52.611 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:53:54.769 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:53:55.754 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:53:57.632 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:54:00.095 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:54:02.969 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:54:34.744 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 17:54:37.674 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:54:40.006 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:54:42.191 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:55:10.456 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:55:12.602 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:55:15.429 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:55:37.230 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:55:38.709 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:55:39.783 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:55:57.929 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:56:00.955 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:56:01.563 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:56:02.782 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=40&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:56:04.358 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:56:07.767 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:56:09.260 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:56:57.354 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=50&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 17:56:58.596 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=70&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 17:57:11.675 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-10-31 18:00:41.501 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=1
+2022-10-31 18:00:43.102 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:43.861 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:45.556 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=40&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:46.058 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:46.374 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:47.864 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:48.997 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:50.324 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:51.795 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:52.841 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:54.464 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:00:58.952 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:08.410 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:09.511 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:10.313 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:20.053 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:21.369 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:42.555 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:43.510 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:45.345 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:46.288 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=30&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:48.217 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:50.036 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=110&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:51.856 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:02:57.291 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:03:00.417 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:03:00.943 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:03:01.892 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:03:02.585 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:03:03.958 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:03:15.644 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:03:17.414 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:03:18.495 INFO  (qtp1168924571-20) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=10&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-10-31 18:03:20.685 INFO  (qtp1168924571-18) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=20&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-11-01 08:14:33.369 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-11-01 08:14:39.924 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte&start=0&rows=10&wt=javabin&version=2} hits=26 status=0 QTime=0
+2022-11-01 09:35:50.626 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=&start=0&rows=10&wt=javabin&version=2} hits=0 status=0 QTime=0
+2022-11-01 09:35:59.045 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=Facture&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-11-01 09:36:05.097 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte+fenetre+garage&start=0&rows=10&wt=javabin&version=2} hits=46 status=0 QTime=25
+2022-11-01 09:36:08.272 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte+fenetre+garage&start=10&rows=10&wt=javabin&version=2} hits=46 status=0 QTime=0
+2022-11-01 09:36:08.872 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte+fenetre+garage&start=20&rows=10&wt=javabin&version=2} hits=46 status=0 QTime=5
+2022-11-01 09:36:09.945 INFO  (qtp1168924571-25) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte+fenetre+garage&start=10&rows=10&wt=javabin&version=2} hits=46 status=0 QTime=0
+2022-11-01 09:36:10.792 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte+fenetre+garage&start=0&rows=10&wt=javabin&version=2} hits=46 status=0 QTime=0
+2022-11-01 10:17:21.324 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte+fenetre+garage&start=0&rows=10&wt=javabin&version=2} hits=46 status=0 QTime=5
+2022-11-01 10:17:57.237 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=Facture&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-11-01 10:18:59.609 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=Facture&wt=javabin&version=2} hits=298 status=0 QTime=0
+2022-11-01 10:20:10.756 INFO  (qtp1168924571-27) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=porte+fenetre&start=0&rows=10&wt=javabin&version=2} hits=43 status=0 QTime=10

@@ -59,7 +59,7 @@ public class ElasticClient {
                 this.client = new ElasticsearchClient(transport);
         }
 
-        public List<Page> query(String keyword,Integer size, Boolean allFields,Integer min,Integer max ) {
+        public List<Page> query(String keyword,Integer size, String field,Integer min,Integer max ) {
 
                 List<String> fields = new ArrayList<>();
                 fields.add("affaireName");
@@ -68,7 +68,7 @@ public class ElasticClient {
                 fields.add("fileNameDecomposed");
                 fields.add("filePath");
                 
-                if (allFields) {
+                if (field.equals("Tous")) {
                         fields.add("wordList");
                 }
 
@@ -116,7 +116,6 @@ public class ElasticClient {
 
                         }
 
-                        System.out.println("queryStringRangeALL : " + index);
 
                 } catch (Exception e) {
                         System.out.println(e);

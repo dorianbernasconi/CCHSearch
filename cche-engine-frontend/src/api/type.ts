@@ -4,14 +4,32 @@ export function useless(){
 }
 
 
+export type SolrElement = {
+    ind: Number,   
+    emplacement: String,
+    thumbnail:String,
+    modtime : String,
+    _root_ : String,
+    link : Array<String>,
+    affaire: String,
+    ftype : String,
+    filename: String,
+    content_type:String,
+    _version_:Number,
+    racifile: String,
+    id: String,
+    kh: String,
+}
+
 export type CardElement = {
     score:number,
+    filepath: "",
     id: string
     filename: string
     src: string
     pageNumber: number
     lastModificationDate:number,
-    affaire:string,
+    affaire:string[],
     echelle: string
     price:number,
     wordList: string[]

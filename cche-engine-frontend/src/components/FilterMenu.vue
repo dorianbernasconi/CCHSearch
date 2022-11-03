@@ -1,9 +1,29 @@
 <script setup lang="ts">
 
-import { ref } from 'vue'
+import { ref,shallowRef } from 'vue'
+import ElasticFilter from "./filter/ElasticFilter.vue";
+import SolrFilter from "./filter/SolrFilter.vue";
+import {searchStore} from "../stores/search";
+
 let isSidenavOpen = ref(false);
 let sidenavClass = ref("sidenav-close")
 let closeButtonValue = ref('&#9776;')
+
+let filterMenu = shallowRef(SolrFilter)
+
+
+const search = searchStore();
+
+search.$subscribe(() => {
+  console.log(search.filterType);
+  if(search.filterType == 'elastic'){
+    filterMenu.value = ElasticFilter
+}
+  else{
+    filterMenu.value = SolrFilter
+  }
+});
+
 
 function switchStateFilterWindow() {
   if(isSidenavOpen.value){
@@ -26,15 +46,7 @@ function switchStateFilterWindow() {
       <span class="slider round"></span>
     </label>
 
-    
-    <p id="auteur" class="input_box_name text">Auteur</p>
-    <input id="" class="input_box" type="text" placeholder="">
-    <p id="auteur" class="input_box_name text">Coût</p>
-    <input id="" class="input_box" type="text" placeholder="">
-    <p id="auteur" class="input_box_name text">Entreprise</p>
-    <input id="" class="input_box" type="text" placeholder="">
-
-
+    <component :is="filterMenu"></component>
   </div>
 </template>
 

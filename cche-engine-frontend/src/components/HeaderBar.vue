@@ -19,9 +19,9 @@ function search(){
       <CCHEWhiteIcon />
     </div>
     <div class="nav-bar-el ">
-      <input  v-model="value"  id="search_box" type="text" placeholder='&#x1F50E'>
+      <input  v-model="value" v-on:keyup.enter="search()"  id="search_box" type="text" placeholder='&#x1F50E'>
     </div>
-    <button @click="search()" > SEARCH </button>
+    <!--<button @click="search()" > SEARCH </button>-->
   </div>
 
 </template>

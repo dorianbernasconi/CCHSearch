@@ -11,7 +11,6 @@
         cards : Array as PropType<Array<CardElement>> 
     })
     
-
 </script>
 
 <template>
@@ -27,7 +26,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    grid-auto-rows: var(10px);
     grid-gap: 2rem;
     right: 0;
     left: 0;

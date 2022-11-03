@@ -1,218 +1,239 @@
-2022-10-17 06:52:45.313 INFO  (main) [   ] o.e.j.u.log Logging initialized @1850ms to org.eclipse.jetty.util.log.Slf4jLog
-2022-10-17 06:52:45.453 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
+2022-10-31 09:34:34.623 INFO  (main) [   ] o.e.j.u.log Logging initialized @1617ms to org.eclipse.jetty.util.log.Slf4jLog
+2022-10-31 09:34:34.727 WARN  (main) [   ] o.e.j.x.XmlConfiguration Ignored arg: <Arg name="threadpool">
     <New id="threadpool" class="com.codahale.metrics.jetty9.InstrumentedQueuedThreadPool"><Arg name="registry">
         <Call id="solrJettyMetricRegistry" name="getOrCreate" class="com.codahale.metrics.SharedMetricRegistries"><Arg>solr.jetty</Arg></Call>
       </Arg></New>
   </Arg>
-2022-10-17 06:52:45.686 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 18+36-2087
-2022-10-17 06:52:45.720 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/contexts/] at interval 0
-2022-10-17 06:52:46.222 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
-2022-10-17 06:52:46.243 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
-2022-10-17 06:52:46.243 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
-2022-10-17 06:52:46.247 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
-2022-10-17 06:52:46.354 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
-2022-10-17 06:52:46.367 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.2
-2022-10-17 06:52:46.367 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in standalone mode on port 8983
-2022-10-17 06:52:46.367 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2
-2022-10-17 06:52:46.368 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2022-10-17T06:52:46.368216541Z
-2022-10-17 06:52:46.395 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr
-2022-10-17 06:52:46.404 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr/solr.xml
-2022-10-17 06:52:46.591 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753, but no JMX reporters were configured - adding default JMX reporter.
-2022-10-17 06:52:47.361 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
-2022-10-17 06:52:47.703 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@15f8701f[provider=null,keyStore=null,trustStore=null]
-2022-10-17 06:52:47.704 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@15f8701f[provider=null,keyStore=null,trustStore=null]
-2022-10-17 06:52:47.980 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@6438a7fe[provider=null,keyStore=null,trustStore=null]
-2022-10-17 06:52:47.980 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@6438a7fe[provider=null,keyStore=null,trustStore=null]
-2022-10-17 06:52:48.105 INFO  (main) [   ] o.a.s.c.CoreContainer Initializing authorization plugin: solr.RuleBasedAuthorizationPlugin
-2022-10-17 06:52:48.120 INFO  (main) [   ] o.a.s.c.CoreContainer Initializing authentication plugin: solr.BasicAuthPlugin
-2022-10-17 06:52:48.131 WARN  (main) [   ] o.a.s.c.CoreContainer Solr authentication is enabled, but SSL is off.  Consider enabling SSL to protect user credentials and data with encryption.
-2022-10-17 06:52:48.376 INFO  (main) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
-2022-10-17 06:52:48.382 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
-2022-10-17 06:52:48.511 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-17 06:52:48.512 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-17 06:52:48.521 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-17 06:52:48.595 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr
-2022-10-17 06:52:48.597 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [04_KNOW_HOW_A, 01_MANDATS_VAL_A]
-2022-10-17 06:52:48.701 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrResourceLoader Added 63 libs to classloader, from paths: [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/contrib/clustering/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/contrib/extraction/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/contrib/langid/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/contrib/velocity/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/dist]
-2022-10-17 06:52:48.701 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrResourceLoader Added 63 libs to classloader, from paths: [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/contrib/clustering/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/contrib/extraction/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/contrib/langid/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/contrib/velocity/lib, /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/dist]
-2022-10-17 06:52:48.765 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@47605f2f{/solr,file:///home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr-webapp/webapp/,AVAILABLE}{/home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr-webapp/webapp}
-2022-10-17 06:52:48.782 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@cd1d761{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
-2022-10-17 06:52:48.783 INFO  (main) [   ] o.e.j.s.Server Started @5326ms
-2022-10-17 06:52:49.194 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.3.0
-2022-10-17 06:52:49.194 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrConfig Using Lucene MatchVersion: 8.3.0
-2022-10-17 06:52:49.471 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.s.IndexSchema Schema name=default-config
-2022-10-17 06:52:49.471 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.s.IndexSchema Schema name=default-config
-2022-10-17 06:52:49.614 WARN  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrResourceLoader Solr loaded a deprecated plugin/analysis class [solr.WordDelimiterFilterFactory]. Please consult documentation how to replace it accordingly.
-2022-10-17 06:52:49.614 WARN  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrResourceLoader Solr loaded a deprecated plugin/analysis class [solr.WordDelimiterFilterFactory]. Please consult documentation how to replace it accordingly.
-2022-10-17 06:52:49.833 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2022-10-17 06:52:49.833 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.s.IndexSchema Loaded schema default-config/1.6 with uniqueid field id
-2022-10-17 06:52:49.972 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.CoreContainer Creating SolrCore '01_MANDATS_VAL_A' using configuration from instancedir /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A, trusted=true
-2022-10-17 06:52:49.974 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.CoreContainer Creating SolrCore '04_KNOW_HOW_A' using configuration from instancedir /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A, trusted=true
-2022-10-17 06:52:50.014 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.01_MANDATS_VAL_A' (registry 'solr.core.01_MANDATS_VAL_A') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-17 06:52:50.014 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.core.04_KNOW_HOW_A' (registry 'solr.core.04_KNOW_HOW_A') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
-2022-10-17 06:52:50.043 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrCore [[01_MANDATS_VAL_A] ] Opening new SolrCore at [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A], dataDir=[/home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A/data/]
-2022-10-17 06:52:50.043 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.c.SolrCore [[04_KNOW_HOW_A] ] Opening new SolrCore at [/home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A], dataDir=[/home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A/data/]
-2022-10-17 06:52:50.106 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
-2022-10-17 06:52:50.106 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.r.XSLTResponseWriter xsltCacheLifetimeSeconds=5
-2022-10-17 06:52:51.295 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2022-10-17 06:52:51.295 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.UpdateHandler Using UpdateLog implementation: org.apache.solr.update.UpdateLog
-2022-10-17 06:52:51.296 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2022-10-17 06:52:51.298 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.UpdateLog Initializing UpdateLog: dataDir= defaultSyncLevel=FLUSH numRecordsToKeep=100 maxNumLogsToKeep=10 numVersionBuckets=65536
-2022-10-17 06:52:51.342 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
-2022-10-17 06:52:51.343 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2022-10-17 06:52:51.347 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.CommitTracker Hard AutoCommit: if uncommitted for 15000ms; 
-2022-10-17 06:52:51.348 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.u.CommitTracker Soft AutoCommit: disabled
-2022-10-17 06:52:51.559 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr/04_KNOW_HOW_A/conf
-2022-10-17 06:52:51.598 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2022-10-17 06:52:51.611 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2022-10-17 06:52:51.642 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
-2022-10-17 06:52:51.645 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.r.ManagedResourceStorage File-based storage initialized to use dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr/01_MANDATS_VAL_A/conf
-2022-10-17 06:52:51.646 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.h.c.SpellCheckComponent Initializing spell checkers
-2022-10-17 06:52:51.647 INFO  (coreLoadExecutor-13-thread-1) [   x:04_KNOW_HOW_A] o.a.s.u.UpdateLog Could not find max version in index or recent updates, using new clock 1746916681079324672
-2022-10-17 06:52:51.647 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.s.DirectSolrSpellChecker init: {name=default,field=_text_,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
-2022-10-17 06:52:51.650 INFO  (coreLoadExecutor-13-thread-2) [   x:01_MANDATS_VAL_A] o.a.s.h.ReplicationHandler Commits will be reserved for 10000 ms
-2022-10-17 06:52:51.654 INFO  (searcherExecutor-17-thread-1-processing-x:04_KNOW_HOW_A) [   x:04_KNOW_HOW_A] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2022-10-17 06:52:51.654 INFO  (searcherExecutor-17-thread-1-processing-x:04_KNOW_HOW_A) [   x:04_KNOW_HOW_A] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2022-10-17 06:52:51.666 INFO  (searcherExecutor-16-thread-1-processing-x:01_MANDATS_VAL_A) [   x:01_MANDATS_VAL_A] o.a.s.c.QuerySenderListener QuerySenderListener done.
-2022-10-17 06:52:51.666 INFO  (searcherExecutor-16-thread-1-processing-x:01_MANDATS_VAL_A) [   x:01_MANDATS_VAL_A] o.a.s.h.c.SpellCheckComponent Loading spell index for spellchecker: default
-2022-10-17 06:52:51.681 INFO  (searcherExecutor-16-thread-1-processing-x:01_MANDATS_VAL_A) [   x:01_MANDATS_VAL_A] o.a.s.c.SolrCore [01_MANDATS_VAL_A]  Registered new searcher autowarm time: 0 ms
-2022-10-17 06:52:51.681 INFO  (searcherExecutor-17-thread-1-processing-x:04_KNOW_HOW_A) [   x:04_KNOW_HOW_A] o.a.s.c.SolrCore [04_KNOW_HOW_A]  Registered new searcher autowarm time: 0 ms
-2022-10-17 06:54:29.966 INFO  (qtp1168924571-21) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1665989584054} status=0 QTime=7
-2022-10-17 06:54:29.994 INFO  (qtp1168924571-47) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1665989584054} status=0 QTime=37
-2022-10-17 07:26:45.982 INFO  (qtp1168924571-23) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1665989584054} status=0 QTime=1
-2022-10-17 07:26:46.013 INFO  (qtp1168924571-49) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1665989584054} status=0 QTime=17
-2022-10-17 07:26:46.029 INFO  (qtp1168924571-23) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1665989584054&ts=1665989584054} status=503 QTime=6
-2022-10-17 07:26:46.030 INFO  (qtp1168924571-21) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/replication params={wt=json&command=details&_=1665991605923} status=0 QTime=20
-2022-10-17 07:26:46.032 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1665991605922} status=0 QTime=23
-2022-10-17 07:26:46.037 INFO  (qtp1168924571-24) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/admin/system params={wt=json&_=1665991605922} status=0 QTime=28
-2022-10-17 08:04:55.005 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=dsds&wt=javabin&version=2} hits=0 status=0 QTime=54
-2022-10-17 08:07:39.379 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&wt=javabin&version=2} hits=62 status=0 QTime=14
-2022-10-17 08:08:16.359 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=10&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:08:25.602 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=2&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:18:59.783 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=2&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:19:51.398 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=2&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:20:03.438 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=2&wt=javabin&version=2} hits=62 status=0 QTime=0
-2022-10-17 08:20:04.790 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=2&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:28:07.778 INFO  (qtp1168924571-45) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=2&wt=javabin&version=2} hits=62 status=0 QTime=0
-2022-10-17 08:29:11.411 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=2&wt=javabin&version=2} hits=62 status=0 QTime=0
-2022-10-17 08:29:44.371 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=2&wt=javabin&version=2} hits=62 status=0 QTime=0
-2022-10-17 08:42:56.113 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=10&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:44:46.247 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=10&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:44:49.718 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=10&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:46:06.513 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=10&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:46:10.230 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=10&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:47:04.914 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=10&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:48:10.571 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=10&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:48:12.601 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=d&start=0&rows=10&wt=javabin&version=2} hits=62 status=0 QTime=1
-2022-10-17 08:55:32.478 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=4
-2022-10-17 09:08:59.010 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-17 09:09:00.375 INFO  (qtp1168924571-45) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 09:13:46.751 INFO  (qtp1168924571-53) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-17 09:13:54.835 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 09:14:07.586 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 09:14:52.916 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 09:16:01.733 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 09:16:16.963 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 09:16:23.428 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 09:51:35.202 INFO  (qtp1168924571-53) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-17 09:51:37.543 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 09:51:39.542 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 11:50:48.925 INFO  (qtp1168924571-53) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-17 11:50:50.564 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 11:50:52.403 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 11:51:13.261 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 11:51:15.003 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 11:52:28.987 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 11:54:17.768 INFO  (qtp1168924571-45) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 11:54:20.819 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 11:57:20.627 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 12:14:29.013 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-17 12:14:29.791 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-17 12:19:11.620 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 12:19:13.265 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 12:22:41.785 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 12:58:59.712 INFO  (qtp1168924571-53) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:23:52.256 INFO  (qtp1168924571-45) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:23:59.493 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:24:07.799 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:27:05.627 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:33:46.221 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:34:32.727 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:44:41.946 INFO  (qtp1168924571-53) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:45:00.841 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:45:04.018 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:45:55.321 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:46:36.672 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:46:37.483 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:47:59.291 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:48:00.521 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:50:06.593 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:50:23.614 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:50:25.199 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=3
-2022-10-17 13:50:28.738 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:50:31.532 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:50:32.579 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:50:34.144 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 13:54:37.373 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 13:57:59.824 INFO  (qtp1168924571-45) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 14:01:13.224 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 14:02:22.358 INFO  (qtp1168924571-26) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 14:04:05.890 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 14:04:15.180 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 14:05:12.888 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 14:05:22.735 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 14:05:23.766 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 14:33:15.735 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 14:36:03.670 INFO  (qtp1168924571-55) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1666017363481} status=0 QTime=1
-2022-10-17 14:36:03.672 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/admin/luke params={numTerms=0&show=index&wt=json&_=1666017363626} status=0 QTime=2
-2022-10-17 14:36:03.675 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/replication params={wt=json&command=details&_=1666017363626} status=0 QTime=3
-2022-10-17 14:36:03.678 INFO  (qtp1168924571-59) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/admin/ping params={action=status&wt=json&_=1666017363481&ts=1666017363481} status=503 QTime=1
-2022-10-17 14:36:03.720 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/admin/system params={wt=json&_=1666017363626} status=0 QTime=47
-2022-10-17 14:36:03.722 INFO  (qtp1168924571-56) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1666017363481} status=0 QTime=52
-2022-10-17 14:42:57.536 INFO  (qtp1168924571-57) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 14:42:58.701 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 14:42:59.672 INFO  (qtp1168924571-52) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 14:43:00.880 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 14:57:46.427 INFO  (qtp1168924571-55) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 14:58:45.927 INFO  (qtp1168924571-58) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 14:59:24.615 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 14:59:25.560 INFO  (qtp1168924571-58) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 15:08:40.515 INFO  (qtp1168924571-55) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 15:08:42.083 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 15:10:54.216 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 15:11:50.375 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 15:12:03.720 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 15:17:08.909 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-17 15:17:10.773 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 15:17:12.230 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-17 15:17:13.621 INFO  (qtp1168924571-49) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-18 07:12:41.562 INFO  (qtp1168924571-55) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-18 08:41:05.910 INFO  (qtp1168924571-59) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=2
-2022-10-18 08:41:10.112 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-18 08:41:13.935 INFO  (qtp1168924571-55) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-18 10:54:27.473 INFO  (qtp1168924571-19) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-18 11:00:25.763 INFO  (qtp1168924571-57) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-18 11:26:02.197 INFO  (qtp1168924571-47) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-18 11:26:19.944 INFO  (qtp1168924571-50) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=0
-2022-10-19 11:15:46.200 INFO  (qtp1168924571-54) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-19 11:18:47.299 INFO  (qtp1168924571-58) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-19 11:18:49.741 INFO  (qtp1168924571-55) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-19 11:18:52.559 INFO  (qtp1168924571-58) [   x:01_MANDATS_VAL_A] o.a.s.c.S.Request [01_MANDATS_VAL_A]  webapp=/solr path=/select params={q=fenetre&start=0&rows=10&wt=javabin&version=2} hits=17 status=0 QTime=1
-2022-10-20 06:07:30.387 INFO  (Thread-0) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@cd1d761{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
-2022-10-20 06:07:30.388 INFO  (Thread-0) [   ] o.e.j.s.session node0 Stopped scavenging
-2022-10-20 06:07:30.403 INFO  (Thread-0) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=2041263297
-2022-10-20 06:07:30.407 INFO  (coreCloseExecutor-27-thread-2) [   ] o.a.s.c.SolrCore [01_MANDATS_VAL_A]  CLOSING SolrCore org.apache.solr.core.SolrCore@282fb1ff
-2022-10-20 06:07:30.407 INFO  (coreCloseExecutor-27-thread-1) [   ] o.a.s.c.SolrCore [04_KNOW_HOW_A]  CLOSING SolrCore org.apache.solr.core.SolrCore@557ab906
-2022-10-20 06:07:30.407 INFO  (coreCloseExecutor-27-thread-2) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.01_MANDATS_VAL_A tag=SolrCore@282fb1ff
-2022-10-20 06:07:30.408 INFO  (coreCloseExecutor-27-thread-2) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@647be6e6: rootName = null, domain = solr.core.01_MANDATS_VAL_A, service url = null, agent id = null] for registry solr.core.01_MANDATS_VAL_A/com.codahale.metrics.MetricRegistry@5084ca24
-2022-10-20 06:07:30.434 INFO  (coreCloseExecutor-27-thread-1) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.core.04_KNOW_HOW_A tag=SolrCore@557ab906
-2022-10-20 06:07:30.434 INFO  (coreCloseExecutor-27-thread-1) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@149a5ceb: rootName = null, domain = solr.core.04_KNOW_HOW_A, service url = null, agent id = null] for registry solr.core.04_KNOW_HOW_A/com.codahale.metrics.MetricRegistry@67ac664
-2022-10-20 06:07:30.463 INFO  (coreCloseExecutor-27-thread-2) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
-2022-10-20 06:07:30.465 INFO  (coreCloseExecutor-27-thread-1) [   ] o.a.s.u.DirectUpdateHandler2 Committing on IndexWriter.close()  ... SKIPPED (unnecessary).
-2022-10-20 06:07:30.480 INFO  (Thread-0) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
-2022-10-20 06:07:30.480 INFO  (Thread-0) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@57cb70be: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@7578beb0
-2022-10-20 06:07:30.484 INFO  (Thread-0) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
-2022-10-20 06:07:30.484 INFO  (Thread-0) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@201c3cda: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@744ef643
-2022-10-20 06:07:30.486 INFO  (Thread-0) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
-2022-10-20 06:07:30.486 INFO  (Thread-0) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@4c86da0c: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@778599c6
-2022-10-20 06:07:30.499 INFO  (Thread-0) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@47605f2f{/solr,null,UNAVAILABLE}{/home/sunny/Documents/CCHE/CCHSEARCH_DEV/backend/solr-8.6.2/server/solr-webapp/webapp}
+2022-10-31 09:34:34.947 INFO  (main) [   ] o.e.j.s.Server jetty-9.4.27.v20200227; built: 2020-02-27T18:37:21.340Z; git: a304fd9f351f337e7c0e2a7c28878dd536149c6c; jvm 18+36-2087
+2022-10-31 09:34:34.980 INFO  (main) [   ] o.e.j.d.p.ScanningAppProvider Deployment monitor [file:///home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/contexts/] at interval 0
+2022-10-31 09:34:35.320 INFO  (main) [   ] o.e.j.w.StandardDescriptorProcessor NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+2022-10-31 09:34:35.337 INFO  (main) [   ] o.e.j.s.session DefaultSessionIdManager workerName=node0
+2022-10-31 09:34:35.337 INFO  (main) [   ] o.e.j.s.session No SessionScavenger set, using defaults
+2022-10-31 09:34:35.340 INFO  (main) [   ] o.e.j.s.session node0 Scavenging every 660000ms
+2022-10-31 09:34:35.428 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter Using logger factory org.apache.logging.slf4j.Log4jLoggerFactory
+2022-10-31 09:34:35.437 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter  ___      _       Welcome to Apache Solr™ version 8.6.2
+2022-10-31 09:34:35.437 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter / __| ___| |_ _   Starting in cloud mode on port 8983
+2022-10-31 09:34:35.437 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter \__ \/ _ \ | '_|  Install dir: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2
+2022-10-31 09:34:35.438 INFO  (main) [   ] o.a.s.s.SolrDispatchFilter |___/\___/_|_|    Start time: 2022-10-31T09:34:35.438239255Z
+2022-10-31 09:34:35.461 INFO  (main) [   ] o.a.s.c.SolrPaths Using system property solr.solr.home: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr
+2022-10-31 09:34:35.468 INFO  (main) [   ] o.a.s.c.SolrXmlConfig Loading container configuration from /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/solr.xml
+2022-10-31 09:34:35.612 INFO  (main) [   ] o.a.s.c.SolrXmlConfig MBean server found: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753, but no JMX reporters were configured - adding default JMX reporter.
+2022-10-31 09:34:36.787 INFO  (main) [   ] o.a.s.h.c.HttpShardHandlerFactory Host whitelist initialized: WhitelistHostChecker [whitelistHosts=null, whitelistHostCheckingEnabled=true]
+2022-10-31 09:34:37.015 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@15f8701f[provider=null,keyStore=null,trustStore=null]
+2022-10-31 09:34:37.015 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@15f8701f[provider=null,keyStore=null,trustStore=null]
+2022-10-31 09:34:37.246 WARN  (main) [   ] o.e.j.u.s.S.config Trusting all certificates configured for Client@6438a7fe[provider=null,keyStore=null,trustStore=null]
+2022-10-31 09:34:37.246 WARN  (main) [   ] o.e.j.u.s.S.config No Client EndPointIdentificationAlgorithm configured for Client@6438a7fe[provider=null,keyStore=null,trustStore=null]
+2022-10-31 09:34:37.317 INFO  (main) [   ] o.a.s.c.SolrZkServerProps Reading configuration from: /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr/zoo.cfg
+2022-10-31 09:34:37.322 INFO  (main) [   ] o.a.s.c.SolrZkServer STARTING EMBEDDED STANDALONE ZOOKEEPER SERVER at port 9983
+2022-10-31 09:34:37.322 WARN  (main) [   ] o.a.s.c.SolrZkServer Embedded Zookeeper is not recommended in production environments. See Reference Guide for details.
+2022-10-31 09:34:37.823 INFO  (main) [   ] o.a.s.c.ZkContainer Zookeeper client=localhost:9983
+2022-10-31 09:34:37.880 INFO  (main) [   ] o.a.s.c.c.ConnectionManager Waiting for client to connect to ZooKeeper
+2022-10-31 09:34:37.924 INFO  (zkConnectionManagerCallback-11-thread-1) [   ] o.a.s.c.c.ConnectionManager zkClient has connected
+2022-10-31 09:34:37.924 INFO  (main) [   ] o.a.s.c.c.ConnectionManager Client is connected to ZooKeeper
+2022-10-31 09:34:38.509 INFO  (main) [   ] o.a.s.c.OverseerElectionContext I am going to be the leader 127.0.1.1:8983_solr
+2022-10-31 09:34:38.516 INFO  (main) [   ] o.a.s.c.Overseer Overseer (id=72062012106276864-127.0.1.1:8983_solr-n_0000000000) starting
+2022-10-31 09:34:38.653 INFO  (main) [   ] o.a.s.c.ZkController Register node as live in ZooKeeper:/live_nodes/127.0.1.1:8983_solr
+2022-10-31 09:34:38.657 INFO  (OverseerStateUpdate-72062012106276864-127.0.1.1:8983_solr-n_0000000000) [   ] o.a.s.c.Overseer Starting to work on the main queue : 127.0.1.1:8983_solr
+2022-10-31 09:34:38.691 INFO  (zkCallback-10-thread-1) [   ] o.a.s.c.c.ZkStateReader Updated live nodes from ZooKeeper... (0) -> (1)
+2022-10-31 09:34:38.729 INFO  (main) [   ] o.a.s.p.PackageLoader /packages.json updated to version -1
+2022-10-31 09:34:38.765 WARN  (main) [   ] o.a.s.c.CoreContainer Not all security plugins configured!  authentication=disabled authorization=disabled.  Solr is only as secure as you make it. Consider configuring authentication/authorization before exposing Solr to users internal or external.  See https://s.apache.org/solrsecurity for more info
+2022-10-31 09:34:38.972 INFO  (main) [   ] o.a.s.h.a.MetricsHistoryHandler No .system collection, keeping metrics history in memory.
+2022-10-31 09:34:39.094 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.node' (registry 'solr.node') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
+2022-10-31 09:34:39.095 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jvm' (registry 'solr.jvm') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
+2022-10-31 09:34:39.102 INFO  (main) [   ] o.a.s.m.r.SolrJmxReporter JMX monitoring for 'solr.jetty' (registry 'solr.jetty') enabled at server: com.sun.jmx.mbeanserver.JmxMBeanServer@7ef82753
+2022-10-31 09:34:39.157 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Found 2 core definitions underneath /home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr
+2022-10-31 09:34:39.158 INFO  (main) [   ] o.a.s.c.CorePropertiesLocator Cores are: [04_KNOW_HOW_A, 01_MANDATS_VAL_A]
+2022-10-31 09:34:39.167 INFO  (coreLoadExecutor-23-thread-1-processing-n:127.0.1.1:8983_solr) [   ] o.a.s.c.TransientSolrCoreCacheDefault Allocating transient cache for 2147483647 transient cores
+2022-10-31 09:34:39.175 ERROR (coreLoadExecutor-23-thread-1-processing-n:127.0.1.1:8983_solr) [c:01_MANDATS_VAL_A   x:01_MANDATS_VAL_A] o.a.s.c.ZkController  => org.apache.solr.common.SolrException: Could not find collection : 01_MANDATS_VAL_A
+	at org.apache.solr.common.cloud.ClusterState.getCollection(ClusterState.java:116)
+org.apache.solr.common.SolrException: Could not find collection : 01_MANDATS_VAL_A
+	at org.apache.solr.common.cloud.ClusterState.getCollection(ClusterState.java:116) ~[?:?]
+	at org.apache.solr.core.CoreContainer.repairCoreProperty(CoreContainer.java:2101) ~[?:?]
+	at org.apache.solr.cloud.ZkController.checkStateInZk(ZkController.java:1840) ~[?:?]
+	at org.apache.solr.cloud.ZkController.preRegister(ZkController.java:1777) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1378) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$14(CoreContainer.java:837) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:212) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2022-10-31 09:34:39.175 ERROR (coreLoadExecutor-23-thread-2-processing-n:127.0.1.1:8983_solr) [c:04_KNOW_HOW_A   x:04_KNOW_HOW_A] o.a.s.c.ZkController  => org.apache.solr.common.SolrException: Could not find collection : 04_KNOW_HOW_A
+	at org.apache.solr.common.cloud.ClusterState.getCollection(ClusterState.java:116)
+org.apache.solr.common.SolrException: Could not find collection : 04_KNOW_HOW_A
+	at org.apache.solr.common.cloud.ClusterState.getCollection(ClusterState.java:116) ~[?:?]
+	at org.apache.solr.core.CoreContainer.repairCoreProperty(CoreContainer.java:2101) ~[?:?]
+	at org.apache.solr.cloud.ZkController.checkStateInZk(ZkController.java:1840) ~[?:?]
+	at org.apache.solr.cloud.ZkController.preRegister(ZkController.java:1777) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1378) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$14(CoreContainer.java:837) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:212) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2022-10-31 09:34:39.177 ERROR (coreContainerWorkExecutor-2-thread-1-processing-n:127.0.1.1:8983_solr) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be loaded on startup => org.apache.solr.common.SolrException: Unable to create core [01_MANDATS_VAL_A]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1408)
+org.apache.solr.common.SolrException: Unable to create core [01_MANDATS_VAL_A]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1408) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$14(CoreContainer.java:837) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:212) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: org.apache.solr.common.SolrException: 
+	at org.apache.solr.cloud.ZkController.preRegister(ZkController.java:1810) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1378) ~[?:?]
+	... 7 more
+Caused by: org.apache.solr.common.SolrException: Could not find collection : 01_MANDATS_VAL_A
+	at org.apache.solr.common.cloud.ClusterState.getCollection(ClusterState.java:116) ~[?:?]
+	at org.apache.solr.core.CoreContainer.repairCoreProperty(CoreContainer.java:2101) ~[?:?]
+	at org.apache.solr.cloud.ZkController.checkStateInZk(ZkController.java:1840) ~[?:?]
+	at org.apache.solr.cloud.ZkController.preRegister(ZkController.java:1777) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1378) ~[?:?]
+	... 7 more
+2022-10-31 09:34:39.177 ERROR (coreContainerWorkExecutor-2-thread-1-processing-n:127.0.1.1:8983_solr) [   ] o.a.s.c.CoreContainer Error waiting for SolrCore to be loaded on startup => org.apache.solr.common.SolrException: Unable to create core [04_KNOW_HOW_A]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1408)
+org.apache.solr.common.SolrException: Unable to create core [04_KNOW_HOW_A]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1408) ~[?:?]
+	at org.apache.solr.core.CoreContainer.lambda$load$14(CoreContainer.java:837) ~[?:?]
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202) ~[metrics-core-4.1.5.jar:4.1.5]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:264) ~[?:?]
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:212) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) ~[?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) ~[?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: org.apache.solr.common.SolrException: 
+	at org.apache.solr.cloud.ZkController.preRegister(ZkController.java:1810) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1378) ~[?:?]
+	... 7 more
+Caused by: org.apache.solr.common.SolrException: Could not find collection : 04_KNOW_HOW_A
+	at org.apache.solr.common.cloud.ClusterState.getCollection(ClusterState.java:116) ~[?:?]
+	at org.apache.solr.core.CoreContainer.repairCoreProperty(CoreContainer.java:2101) ~[?:?]
+	at org.apache.solr.cloud.ZkController.checkStateInZk(ZkController.java:1840) ~[?:?]
+	at org.apache.solr.cloud.ZkController.preRegister(ZkController.java:1777) ~[?:?]
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1378) ~[?:?]
+	... 7 more
+2022-10-31 09:34:39.319 INFO  (main) [   ] o.e.j.s.h.ContextHandler Started o.e.j.w.WebAppContext@47605f2f{/solr,file:///home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr-webapp/webapp/,AVAILABLE}{/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr-webapp/webapp}
+2022-10-31 09:34:39.329 INFO  (main) [   ] o.e.j.s.AbstractConnector Started ServerConnector@cd1d761{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-10-31 09:34:39.330 INFO  (main) [   ] o.e.j.s.Server Started @6325ms
+2022-10-31 09:34:48.737 INFO  (qtp1168924571-25) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST and sendToOCPQueue=true
+2022-10-31 09:34:48.738 INFO  (qtp1168924571-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST} status=0 QTime=29
+2022-10-31 09:34:52.020 INFO  (qtp1168924571-19) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST and sendToOCPQueue=true
+2022-10-31 09:34:52.021 INFO  (qtp1168924571-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST} status=0 QTime=1
+2022-10-31 09:35:52.151 ERROR (qtp1168924571-18) [   ] o.a.s.s.HttpSolrCall null:org.apache.solr.core.SolrCoreInitializationException: SolrCore '01_MANDATS_VAL_A' is not available due to init failure: 
+	at org.apache.solr.core.CoreContainer.getCore(CoreContainer.java:1875)
+	at org.apache.solr.servlet.HttpSolrCall.init(HttpSolrCall.java:258)
+	at org.apache.solr.servlet.HttpSolrCall.call(HttpSolrCall.java:546)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:415)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:345)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1596)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:545)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:143)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:590)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:235)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1610)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:233)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1300)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:188)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:485)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1580)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:186)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1215)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:141)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:221)
+	at org.eclipse.jetty.server.handler.InetAccessHandler.handle(InetAccessHandler.java:177)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:146)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.rewrite.handler.RewriteHandler.handle(RewriteHandler.java:322)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:127)
+	at org.eclipse.jetty.server.Server.handle(Server.java:500)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$1(HttpChannel.java:383)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:547)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:375)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:273)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:311)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:117)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:336)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:313)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:171)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.produce(EatWhatYouKill.java:135)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:806)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:938)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+Caused by: org.apache.solr.common.SolrException: 
+	at org.apache.solr.cloud.ZkController.preRegister(ZkController.java:1810)
+	at org.apache.solr.core.CoreContainer.createFromDescriptor(CoreContainer.java:1378)
+	at org.apache.solr.core.CoreContainer.lambda$load$14(CoreContainer.java:837)
+	at com.codahale.metrics.InstrumentedExecutorService$InstrumentedCallable.call(InstrumentedExecutorService.java:202)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.apache.solr.common.util.ExecutorUtil$MDCAwareThreadPoolExecutor.lambda$execute$0(ExecutorUtil.java:212)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	... 1 more
+Caused by: org.apache.solr.common.SolrException: Could not find collection : 01_MANDATS_VAL_A
+	at org.apache.solr.common.cloud.ClusterState.getCollection(ClusterState.java:116)
+	at org.apache.solr.core.CoreContainer.repairCoreProperty(CoreContainer.java:2101)
+	at org.apache.solr.cloud.ZkController.checkStateInZk(ZkController.java:1840)
+	at org.apache.solr.cloud.ZkController.preRegister(ZkController.java:1777)
+	... 8 more
+
+2022-10-31 09:36:17.407 INFO  (qtp1168924571-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1667208977018} status=0 QTime=3
+2022-10-31 09:36:17.433 INFO  (qtp1168924571-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1667208977019} status=0 QTime=27
+2022-10-31 09:36:17.560 INFO  (qtp1168924571-78) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1667208977018 and sendToOCPQueue=true
+2022-10-31 09:36:17.561 INFO  (qtp1168924571-78) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1667208977018} status=0 QTime=0
+2022-10-31 09:36:17.711 INFO  (qtp1168924571-26) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :listaliases with params action=LISTALIASES&wt=json&_=1667208977018 and sendToOCPQueue=true
+2022-10-31 09:36:17.717 INFO  (qtp1168924571-26) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1667208977018} status=0 QTime=5
+2022-10-31 09:36:25.641 INFO  (qtp1168924571-26) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1667208977018} status=0 QTime=0
+2022-10-31 09:36:25.643 INFO  (qtp1168924571-19) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :clusterstatus with params action=CLUSTERSTATUS&wt=json&_=1667208977018 and sendToOCPQueue=true
+2022-10-31 09:36:25.651 INFO  (qtp1168924571-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=CLUSTERSTATUS&wt=json&_=1667208977018} status=0 QTime=7
+2022-10-31 09:36:25.660 INFO  (qtp1168924571-78) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1667208977019} status=0 QTime=19
+2022-10-31 09:36:25.733 INFO  (qtp1168924571-78) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=javabin&version=2&_=1667208977019} status=0 QTime=20
+2022-10-31 09:36:25.742 INFO  (qtp1168924571-18) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1667208977018 and sendToOCPQueue=true
+2022-10-31 09:36:25.742 INFO  (qtp1168924571-18) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1667208977018} status=0 QTime=0
+2022-10-31 09:36:25.742 INFO  (qtp1168924571-19) [   ] o.a.s.h.a.AdminHandlersProxy Fetched response from 1 nodes: [127.0.1.1:8983_solr]
+2022-10-31 09:36:25.743 INFO  (qtp1168924571-19) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={nodes=127.0.1.1:8983_solr&wt=json&_=1667208977019} status=0 QTime=48
+2022-10-31 09:36:25.766 INFO  (qtp1168924571-24) [   ] o.a.s.h.a.AdminHandlersProxy Fetched response from 1 nodes: [127.0.1.1:8983_solr]
+2022-10-31 09:36:25.771 INFO  (qtp1168924571-20) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :listaliases with params action=LISTALIASES&wt=json&_=1667208977018 and sendToOCPQueue=true
+2022-10-31 09:36:25.775 INFO  (qtp1168924571-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1667208977018} status=0 QTime=4
+2022-10-31 09:36:34.151 INFO  (qtp1168924571-26) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/cores params={indexInfo=false&wt=json&_=1667208977018} status=0 QTime=0
+2022-10-31 09:36:34.162 INFO  (qtp1168924571-25) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/live_nodes&wt=json&_=1667208985588} status=0 QTime=9
+2022-10-31 09:36:34.178 INFO  (qtp1168924571-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/info/system params={wt=json&_=1667208977019} status=0 QTime=24
+2022-10-31 09:36:34.199 INFO  (qtp1168924571-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/zookeeper params={path=/clusterstate.json&view=graph&detail=true&wt=json&_=1667208985588} status=0 QTime=9
+2022-10-31 09:36:34.206 INFO  (qtp1168924571-20) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :list with params action=LIST&wt=json&_=1667208977018 and sendToOCPQueue=true
+2022-10-31 09:36:34.207 INFO  (qtp1168924571-20) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LIST&wt=json&_=1667208977018} status=0 QTime=1
+2022-10-31 09:36:34.241 INFO  (qtp1168924571-24) [   ] o.a.s.h.a.CollectionsHandler Invoked Collection Action :listaliases with params action=LISTALIASES&wt=json&_=1667208977018 and sendToOCPQueue=true
+2022-10-31 09:36:34.243 INFO  (qtp1168924571-24) [   ] o.a.s.s.HttpSolrCall [admin] webapp=null path=/admin/collections params={action=LISTALIASES&wt=json&_=1667208977018} status=0 QTime=2
+2022-10-31 09:36:51.559 INFO  (ShutdownMonitor) [   ] o.e.j.s.AbstractConnector Stopped ServerConnector@cd1d761{HTTP/1.1, (http/1.1, h2c)}{0.0.0.0:8983}
+2022-10-31 09:36:51.559 INFO  (ShutdownMonitor) [   ] o.e.j.s.session node0 Stopped scavenging
+2022-10-31 09:36:51.567 INFO  (ShutdownMonitor) [   ] o.a.s.c.CoreContainer Shutting down CoreContainer instance=2041263297
+2022-10-31 09:36:51.567 INFO  (ShutdownMonitor) [   ] o.a.s.c.ZkController Remove node as live in ZooKeeper:/live_nodes/127.0.1.1:8983_solr
+2022-10-31 09:36:51.581 INFO  (ShutdownMonitor) [   ] o.a.s.c.ZkController Publish this node as DOWN...
+2022-10-31 09:36:51.581 INFO  (ShutdownMonitor) [   ] o.a.s.c.ZkController Publish node=127.0.1.1:8983_solr as DOWN
+2022-10-31 09:36:51.594 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.node tag=null
+2022-10-31 09:36:51.596 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@656f62dc: rootName = null, domain = solr.node, service url = null, agent id = null] for registry solr.node/com.codahale.metrics.MetricRegistry@2ee03c3d
+2022-10-31 09:36:51.615 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jvm tag=null
+2022-10-31 09:36:51.616 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@6b63e6ad: rootName = null, domain = solr.jvm, service url = null, agent id = null] for registry solr.jvm/com.codahale.metrics.MetricRegistry@7601712b
+2022-10-31 09:36:51.621 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.jetty tag=null
+2022-10-31 09:36:51.622 INFO  (ShutdownMonitor) [   ] o.a.s.m.r.SolrJmxReporter Closing reporter [org.apache.solr.metrics.reporters.SolrJmxReporter@7beae796: rootName = null, domain = solr.jetty, service url = null, agent id = null] for registry solr.jetty/com.codahale.metrics.MetricRegistry@1e7a5293
+2022-10-31 09:36:51.624 INFO  (ShutdownMonitor) [   ] o.a.s.m.SolrMetricManager Closing metric reporters for registry=solr.cluster tag=null
+2022-10-31 09:36:51.631 INFO  (closeThreadPool-29-thread-1) [   ] o.a.s.c.Overseer Overseer (id=72062012106276864-127.0.1.1:8983_solr-n_0000000000) closing
+2022-10-31 09:36:51.632 INFO  (OverseerAutoScalingTriggerThread-72062012106276864-127.0.1.1:8983_solr-n_0000000000) [   ] o.a.s.c.a.OverseerTriggerThread OverseerTriggerThread woken up but we are closed, exiting.
+2022-10-31 09:36:51.633 INFO  (OverseerStateUpdate-72062012106276864-127.0.1.1:8983_solr-n_0000000000) [   ] o.a.s.c.Overseer Overseer Loop exiting : 127.0.1.1:8983_solr
+2022-10-31 09:36:51.636 INFO  (closeThreadPool-29-thread-2) [   ] o.a.s.c.Overseer Overseer (id=72062012106276864-127.0.1.1:8983_solr-n_0000000000) closing
+2022-10-31 09:36:51.745 INFO  (ShutdownMonitor) [   ] o.a.s.c.Overseer Overseer (id=72062012106276864-127.0.1.1:8983_solr-n_0000000000) closing
+2022-10-31 09:36:51.746 WARN  (Thread-12) [   ] o.a.z.s.ZooKeeperServerMain Server interrupted => java.lang.InterruptedException
+	at java.base/java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1048)
+java.lang.InterruptedException: null
+	at java.util.concurrent.locks.AbstractQueuedSynchronizer.acquireSharedInterruptibly(AbstractQueuedSynchronizer.java:1048) ~[?:?]
+	at java.util.concurrent.CountDownLatch.await(CountDownLatch.java:230) ~[?:?]
+	at org.apache.zookeeper.server.ZooKeeperServerMain.runFromConfig(ZooKeeperServerMain.java:162) ~[?:?]
+	at org.apache.solr.cloud.SolrZkServer$1.run(SolrZkServer.java:121) ~[?:?]
+2022-10-31 09:36:51.746 INFO  (Thread-12) [   ] o.a.s.c.SolrZkServer ZooKeeper Server exited.
+2022-10-31 09:36:51.750 INFO  (ShutdownMonitor) [   ] o.e.j.s.h.ContextHandler Stopped o.e.j.w.WebAppContext@47605f2f{/solr,null,UNAVAILABLE}{/home/sunny/Documents/CCHE/CCHSEARCH_DEV/CCHSearch/backend/solr-8.6.2/server/solr-webapp/webapp}
