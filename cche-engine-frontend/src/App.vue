@@ -9,7 +9,7 @@ import FilterMenu from "./components/FilterMenu.vue";
 
 <template >
   <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
-
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
   <head>
 
   </head>

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 
 import { ref } from 'vue'
-import Dropdown from '../Dropdown.vue'
+import Dropdown from './Dropdown.vue'
 import { searchStore } from '@/stores/search';
 
 const search = searchStore();
