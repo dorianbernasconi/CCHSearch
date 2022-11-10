@@ -39,7 +39,9 @@ import FilterMenu from "./components/FilterMenu.vue";
 
 <style >
 
-
+.header-background-color{
+  background-color: #343a40 !important;
+}
 .text{
     color:rgb(65, 65, 65);
     font-family: Inter;

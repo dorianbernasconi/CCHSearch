@@ -2,7 +2,7 @@
 
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref,onBeforeMount } from 'vue'
 import { getDocuments } from "../api/elasticService"
 import Preview from "../components/Preview.vue";
 import Cards from "../components/Cards.vue";
@@ -32,6 +32,10 @@ preview.$subscribe(() => {
 
 search.$subscribe(() => {
   getNewDetails();
+})
+
+onBeforeMount(() => {
+  search.filterType = "elastic";
 })
 
 getNewDetails();

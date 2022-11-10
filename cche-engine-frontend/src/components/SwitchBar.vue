@@ -6,14 +6,14 @@ import { RouterLink } from 'vue-router'
     
 <template>
 
-<div id="bar">
+<div id="bar" class="header-background-color">
       <div class="micro-bar">
   <nav>
-        <RouterLink class="switch-button" to="/">Tous</RouterLink>
-        <RouterLink class="switch-button" to="/detail">Detail</RouterLink>
-        <RouterLink class="switch-button" to="/plan">Plan</RouterLink>
-        <RouterLink class="switch-button" to="/image">Image</RouterLink>
-        <RouterLink class="switch-button" to="/autre">Autre</RouterLink>
+        <RouterLink class="switch-button header-background-color" to="/">Tous</RouterLink>
+        <RouterLink class="switch-button header-background-color" to="/plan">Plan</RouterLink>
+        <RouterLink class="switch-button header-background-color" to="/detail">Detail</RouterLink>
+        <RouterLink class="switch-button header-background-color" to="/image">Image</RouterLink>
+        <RouterLink class="switch-button header-background-color" to="/autre">Autre</RouterLink>
 
       </nav>
     </div>
@@ -22,29 +22,29 @@ import { RouterLink } from 'vue-router'
     
 <style  scoped>
 #bar {
-  background-color: white;
   width: 100%;
   align-items: center;
   height: 60px;
   z-index: 1;
+  border-bottom: 1px solid grey;
 }
 
 .micro-bar {
   top:20px;
   min-width: 230px;
-  margin-left: 410px;
+  margin-left: 530px;
 }
 
 .switch-button {
-  background-color: white;
-  color: #969ba1;
+  background-color: #464646;
+  color: #d6dbe1;
   border: none;
   margin :  10px;
   font-size: 20px;
 }
 
 .switch-button:focus {
-  background-color: white;
+  background-color: #464646;
   color: #4f92ff;
 }
 

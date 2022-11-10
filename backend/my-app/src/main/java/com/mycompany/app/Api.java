@@ -84,14 +84,14 @@ public class Api {
         });
 
 
-        post("query/solr/fieldnumber/:query:q:core:start?:rows?", (req, res) -> {
+        post("query/solr/fieldnumber/:query:q:core:field?", (req, res) -> {
             System.out.println("SOLR FIELDNUMNER");
 
             String core = req.queryParams("core");
             String field = req.queryParams("field");
 
             JSONObject response = apiRequest.getFieldOptionList(core,field);
-            System.out.println(response);
+            System.out.println("field : " + response);
             return response;
         });
 

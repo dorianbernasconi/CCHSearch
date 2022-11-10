@@ -37,6 +37,10 @@ export type CardElement = {
     jpgname: string
 }
 
+export type FieldCounter = {
+    name: string,
+    count: number
+}
 /*
 // Document from Solr
 export interface SolrElement = {

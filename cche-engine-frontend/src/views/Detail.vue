@@ -2,7 +2,7 @@
 
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue'
+import { onBeforeMount, ref } from 'vue'
 import { getDocuments } from "../api/elasticService"
 import Preview from "../components/Preview.vue";
 import Cards from "../components/Cards.vue";
@@ -24,10 +24,11 @@ function getNewDetails() {
 }
 
 function updatePreview(page: CardElement) {
+  console.log("updatePREV")
   preview.card = page
 }
 
-onMounted(() => {
+onBeforeMount(() => {
   search.filterType = "elastic";
 })
 

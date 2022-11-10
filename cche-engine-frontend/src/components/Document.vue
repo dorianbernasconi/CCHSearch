@@ -37,7 +37,7 @@ const props = defineProps(
 
         </dl>
 
-                <img class="item-img" :src="(`src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg`)" >
+                <img class="item-img card-img card-medium-img" :src="(`src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg`)" >
 
     </div>
 </template>
@@ -47,13 +47,28 @@ const props = defineProps(
 <style scoped>
 
 
+.card-medium-img {
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.13);
+  
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: var(--card_border_radius);
+  background-color: white;
+}
+
+.card-img {
+  border: 2px solid #e7e7e7;
+  border-radius: 5px;
+  padding: 0.5rem;
+  height: auto;
+
+}
 .text-element{
     text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
 }
 .element{
-    width: 50%;
+    width: 60%;
     float: left;
 }
 

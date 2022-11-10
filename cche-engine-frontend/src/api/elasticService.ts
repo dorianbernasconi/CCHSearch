@@ -25,7 +25,7 @@ export function getSimilarity(filepath: string,){
       q: filepath
   }).toString()
 
-  return fetch('http://localhost:4567/query/elastic/request/string?' + params, {
+  return fetch('http://localhost:4567/query/elastic/similarity/string?' + params, {
       method: "POST",
   
     })

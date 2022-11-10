@@ -17,10 +17,19 @@ export const searchStore = defineStore('search', () => {
 
 
   const fieldSelector = ref("Tous");
-
   const filterType = ref("solr");
 
 
+  // fq
+  const affaire = ref<string>("");
+  const ftype = ref("");
+  const kh = ref("");
+  const age = ref("");
 
-  return { keyword, manda,start,rows  ,filterType,fieldSelector}
+
+
+
+
+
+  return { affaire,ftype,kh,age,keyword, manda,start,rows  ,filterType,fieldSelector}
 })

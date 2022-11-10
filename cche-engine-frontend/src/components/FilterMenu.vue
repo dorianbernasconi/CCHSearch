@@ -38,7 +38,7 @@ search.$subscribe(() => {
 
 <template>
   <div  id="mySidenav" :class='["sidenav",sidenavClass]'>
-    <a href="javascript:void(0)" class="closebtn" v-html="closeButtonValue" @click="switchStateFilterWindow"></a>
+    <a href="javascript:void(0)" id="sidenavTriggerBtn" class="sidenavTriggerBtn" v-html="closeButtonValue" @click="switchStateFilterWindow"></a>
     <label class="switch_index">
       <span class="slider round"></span>
     </label>
@@ -51,6 +51,10 @@ search.$subscribe(() => {
 
 
 <style  scoped>
+
+#mySidenav{
+  color: rgb(249, 249, 249);
+}
 .sidenav-open {
   width: 360px;
   height: 75%;
@@ -75,7 +79,7 @@ search.$subscribe(() => {
   z-index: 1;
   position: fixed;
   padding-top: 60px;
-  top: 110px;
+  top: 80px;
 }
 
 .sidenav a {
@@ -91,7 +95,8 @@ search.$subscribe(() => {
   background-color:  rgb(255, 255, 255);
 }
 
- .closebtn {
+ #sidenavTriggerBtn {
+  color: rgb(220, 223, 226);
   position: absolute;
   z-index: 1;
   top: 0;

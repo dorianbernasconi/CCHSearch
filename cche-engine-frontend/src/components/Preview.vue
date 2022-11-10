@@ -26,6 +26,8 @@ function getPreviewInfo() {
     lastModificationDate.value = preview.card?.lastModificationDate
     echelle.value = preview.card?.echelle
     emplacement.value = preview.card?.filepath
+    getSimilarityCard();
+
 }
 
 

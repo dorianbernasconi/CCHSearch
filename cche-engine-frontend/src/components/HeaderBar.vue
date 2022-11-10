@@ -13,20 +13,42 @@ function search(){
 </script>
 
 <template>
+  <div class="nav-bar header-background-color" role="navigation">
+    <div class="nav-bar-el header-bar-element">
 
-  <div class="nav-bar" role="navigation">
-    <div class="nav-bar-el">
-      <CCHEWhiteIcon />
+      <img class="" src="src/components/icons/logo.png" />
     </div>
-    <div class="nav-bar-el ">
+    <div id="navbar" class="nav-bar-el ">
       <input  v-model="value" v-on:keyup.enter="search()"  id="search_box" type="text" placeholder='&#x1F50E'>
     </div>
     <!--<button @click="search()" > SEARCH </button>-->
   </div>
 
+<!--
+  <div class="nav-bar header-background-color" role="navigation">
+    <div class="nav-bar-el">
+      <CCHEWhiteIcon />
+      <img src="src/components/icons/logo.png" />
+    </div>
+    <div id="navbar" class="nav-bar-el ">
+      <input  v-model="value" v-on:keyup.enter="search()"  id="search_box" type="text" placeholder='&#x1F50E'>
+    </div>
+    <button @click="search()" > SEARCH </button>
+  </div>
+-->
 </template>
 
 <style  scoped>
+
+img{
+  width: 70%;
+  display: inline-block;
+  vertical-align: middle
+}
+.header-bar-element{
+
+
+}
 .nav-bar-brand {
   margin-left: 80px;
 }
@@ -36,13 +58,12 @@ function search(){
   display: flex;
   justify-content: normal;
   align-items: center;
-  height: 110px;
-  background-color: #464646;
+  height: 80px;
 
 }
 
 .nav-bar-input {
-  padding-left: 100px;
+  padding-left: 0px;
   width: 30%;
 }
 
@@ -57,5 +78,10 @@ function search(){
   border-radius: 30px;
   font-size: 1.5rem;
   color: #464646;
+}
+
+#navbar{
+  padding-left: 120px;
+
 }
 </style>

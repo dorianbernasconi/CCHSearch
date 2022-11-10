@@ -4,7 +4,7 @@ import { searchStore } from "../stores/search"
 import { ref } from 'vue'
 import { getDocuments } from "../api/solrService";
 import Pagination from "../components/Pagination.vue";
-import { onMounted } from "vue";
+import { onMounted ,onBeforeMount} from "vue";
 
 
 const store = searchStore()
@@ -19,7 +19,7 @@ let totalPages = ref(0)
 let per = 10;
 
 function getNewDocument() {
-  getDocuments(store.manda,store.keyword,   ((currentPage.value.valueOf() - 1)* rows).toString(), rows.toString()).then( (documentsJson : any) => {
+  getDocuments().then( (documentsJson : any) => {
     lines.value = documentsJson["documents"];
     totalPages.value = Math.round(documentsJson["nbFound"] / 10)
   })
@@ -36,11 +36,12 @@ function selectPage(newCurrentPage: number) {
     getNewDocument();
   }
 }
-onMounted(() => {
+onBeforeMount(() => {
   store.filterType = "solr";
+  store.ftype = "";
+
   console.log(store.filterType)
 })
-
 store.$subscribe(() => {
   getNewDocument();
 })
@@ -65,6 +66,7 @@ getNewDocument();
    
   
 <style scoped>
+
 .cards {
   padding-left: 200px;
   padding-bottom: 100px;

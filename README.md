@@ -1,40 +1,42 @@
-Frontend : "cche-engine-frontend"
-Constitution a respecter des fichiers .Vue
 
-<script>
-    Props
-    Emits
-    Store
-    Variable
-    Fonction
-    Subscribe
-    Appel de fonction
-</script>
+# Project Title
 
-<template>
-</template>
-
-<style>
-</style>
+A brief description of what this project does and who it's for
 
 
-Backend 
+## Installation
 
-Champs d'un document dans elastic Search:
-- score
-- lastModificationDate
-- filename
-- wordlist
-- echelle
-- filepath
-- src : Chemin à notre image 
-- affaire
-- id
-- affairename
-- pagenumber
-- jpgname
+Install my-project with npm
+
+```bash
+  npm install my-project
+  cd my-project
+```
+    
+## Documentation
+
+[Documentation](https://linktodocumentation)
 
 
+## Deployment
 
-Solr :
+To deploy this project run
+
+```bash
+  npm run deploy
+```
+
+
+## Usage/Examples
+
+
+ElastiSearch list document
+```javascript
+import Component from 'my-project'
+
+function App() {
+  return <Component />
+}
+```
+
 

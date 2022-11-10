@@ -1,12 +1,36 @@
-export function getDocuments(mandat:string, keyWord:string, start:string, rows:string): Promise<Element[]> {
+import {searchStore} from "../stores/search"
+
+export function getDocuments(): Promise<Element[]> {
+  const store = searchStore();
+
+  let mandat:string = store.manda;
+  let keyWord:string = store.keyword;
+  let start:string = store.start;
+  let rows:string = store.rows;
+
+  let fq :String[] = [""];
+  
+  if(store.affaire != ""){
+    fq.push("affaire:" + store.affaire)
+  }
+  else   if(store.age != ""){
+    fq.push(store.age)
+  }
+  else   if(store.ftype != ""){
+    fq.push("ftype:" + store.ftype)
+  }
+  else   if(store.kh != ""){
+    fq.push(store.kh)
+  }
 
     let params = new URLSearchParams({
         q: keyWord,
         core: mandat,
         start: start,
-        rows: rows
+        rows: rows,
+        fq:fq.toString()
     }).toString()
-    return fetch('http://localhost:4567/query/solr/string?' + params, {
+    return fetch('http://localhost:4567/query/solr/requestadv/string?' + params, {
       method: "POST",
 
     })
@@ -15,14 +39,18 @@ export function getDocuments(mandat:string, keyWord:string, start:string, rows:s
     })
 }
 
-export function getAllAffaire(core:string){
+export function getFieldValues(field:string): Promise<Element[]> {
+  const store = searchStore();
 
-  let params = new URLSearchParams({ core:core}) .toString()
+  let core :string = store.manda;
 
-  return fetch('http://localhost:4567/query/solr/string?' + params, {
+  let params = new URLSearchParams({ core:core,field:field}) .toString()
+
+  return fetch('http://localhost:4567/query/solr/fieldnumber/string?' + params, {
     method: "POST",
   })
   .then(res => {
+   
     return res.json();
 })
 }
