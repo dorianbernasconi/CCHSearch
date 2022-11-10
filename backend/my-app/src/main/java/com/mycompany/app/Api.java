@@ -46,19 +46,17 @@ public class Api {
 
     public static void main(String[] args) {
 
-        SolrjClient s = new SolrjClient("01_MANDATS_VAL_A");
-        System.out.println(s.getAllAffaire());
-        System.out.println(s.querySpecificField());
-
-
         ApiRequest apiRequest = new ApiRequest();
+
+        
 
         after((Filter) (request, response) -> {
             response.header("Access-Control-Allow-Origin", "*");
             response.header("Access-Control-Allow-Methods", "GET");
         });
 
-        post("query/solr/:query:q:core:start?:rows?", (req, res) -> {
+        post("query/solr/request/:query:q:core:start?:rows?", (req, res) -> {
+            System.out.println("SOLR");
 
             String core = req.queryParams("core");
             String keyword = req.queryParams("q");
@@ -66,32 +64,63 @@ public class Api {
             String rows = req.queryParams("rows");
 
             JSONObject response = apiRequest.solrRequest(core,keyword,start,rows);
+
+            return response;
+        });
+
+
+        post("query/solr/requestadv/:query:q:core:start?:rows?:fq?", (req, res) -> {
+            System.out.println("SOLR ADV");
+
+            String core = req.queryParams("core");
+            String keyword = req.queryParams("q");
+            String start = req.queryParams("start");
+            String rows = req.queryParams("rows");
+            String fq = req.queryParams("fq");
+
+
+            JSONObject response = apiRequest.solrRequestAdv(core,keyword,start,rows,fq);
+            return response;
+        });
+
+
+        post("query/solr/fieldnumber/:query:q:core:start?:rows?", (req, res) -> {
+            System.out.println("SOLR FIELDNUMNER");
+
+            String core = req.queryParams("core");
+            String field = req.queryParams("field");
+
+            JSONObject response = apiRequest.getFieldOptionList(core,field);
+            System.out.println(response);
             return response;
         });
 
 
         post("query/elastic/request/:query:q:all:min:max", (req, res) -> {
             System.out.println("Request Elastic");
+            System.out.println(req.queryParams());
 
             String keyword = req.queryParams("q");
             String field = req.queryParams("field");
             Integer min = Integer.parseInt(req.queryParams("min"));
             Integer max = Integer.parseInt(req.queryParams("max"));
-
-            System.out.println("Request Elastic");
+            System.out.println(keyword + " " + field + " " + min + " " + max);
 
             JSONObject response = apiRequest.elasticRequest(keyword, 10, field, min, max);
-            System.out.println(response);
+
             return response;
         });
 
 
-        post("query/elastic/similarity/:query:q:all:min:max:size", (req, res) -> {
-            System.out.println("SIMILARITY");
+        post("query/elastic/similarity/:query:filepath", (req, res) -> {
+            System.out.println("Request SIM");
 
-            String documentPath = req.queryParams("documentPath");
+            String documentPath = req.queryParams("filepath");
+            System.out.println("Request 2SIM");
 
             JSONObject response = apiRequest.elasticSimilitude(documentPath);
+            System.out.println("SIMILARITY RESPONSE : " + response);
+
             return response;
         });
     }

@@ -12,6 +12,7 @@ import org.apache.solr.common.params.CollectionParams.CollectionAction;
 import org.json.JSONObject;
 import org.json.simple.*;
 import org.json.simple.parser.JSONParser;
+import org.apache.commons.math3.util.Pair;
 
 import java.util.Map;
 
@@ -48,7 +49,23 @@ public class ApiRequest {
         try {
 
             SolrjClient client = SolrjMap.getSolrClient(core);
-            response = client.solrRequest(keyword, start, rows, "");
+            response = client.solrRequest( "",keyword, start, rows);
+        } catch (Exception e) {
+            System.out.println("API REQUEST SOLR_REQUEST : " + e);
+        }
+        return response;
+
+    }
+
+    public JSONObject solrRequestAdv(String core, String keyword, String start, String rows, String filter) {
+
+
+        JSONObject response = new JSONObject();
+        try {
+            // convert the array to a list of pairs (key, value)
+
+            SolrjClient client = SolrjMap.getSolrClient(core);
+            response = client.solrRequestAdv( "",keyword, start, rows,filter);
         } catch (Exception e) {
             System.out.println("API REQUEST SOLR_REQUEST : " + e);
         }
@@ -75,12 +92,28 @@ public class ApiRequest {
         return pageListToJsonObject(ws.getSortList());
     }
 
+    public JSONObject getFieldOptionList(String core,String field) {
+
+        JSONObject response = new JSONObject();
+        try {
+            SolrjClient client = SolrjMap.getSolrClient(core);
+            response = client.getFieldOptionList(field);
+        } catch (Exception e) {
+            System.out.println("API REQUEST GET FIELD OPTION LIST : " + e);
+        }
+        return response;
+    }
+
     public JSONObject elasticSimilitude(String query) {
 
         List<Page> lsP = new ArrayList<>();
+        System.out.println( "query"+query);
+
         for (Map.Entry<Page, List<Page>> entry : map.entrySet()) {
 
             if (entry.getKey().getJpgName().equals(query)) {
+                System.out.println( "if");
+
                 return pageListToJsonObject(entry.getValue());
             }
         }

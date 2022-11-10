@@ -67,10 +67,7 @@ public class ElasticClient {
 
                 fields.add("fileNameDecomposed");
                 fields.add("filePath");
-                
-                System.out.println("FIELD : " + field);
                 if (field.equals("Tous")) {
-                        System.out.println(" wordList ");
 
                         fields.add("wordList");
                 }
