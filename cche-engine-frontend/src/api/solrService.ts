@@ -1,10 +1,8 @@
 import {searchStore} from "../stores/search"
-
-const ip = "localhost"
-
+const store = searchStore();
 export function getDocuments(): Promise<Element[]> {
   console.log("OY")
-  const store = searchStore();
+
 
   let mandat:string = store.manda;
   let keyWord:string = store.keyword;
@@ -33,7 +31,7 @@ export function getDocuments(): Promise<Element[]> {
         rows: rows,
         fq:fq.toString()
     }).toString()
-    return fetch('http://'+ ip +':4567/query/solr/requestadv/string?' + params, {
+    return fetch('http://'+ store.ip +':4567/query/solr/requestadv/string?' + params, {
       method: "POST",
 
     })
@@ -44,13 +42,11 @@ export function getDocuments(): Promise<Element[]> {
 }
 
 export function getFieldValues(field:string): Promise<Element[]> {
-  const store = searchStore();
-
   let core :string = store.manda;
 
   let params = new URLSearchParams({ core:core,field:field}) .toString()
 
-  return fetch('http://'+ ip +':4567/query/solr/fieldnumber/string?' + params, {
+  return fetch('http://'+ store.ip  +':4567/query/solr/fieldnumber/string?' + params, {
     method: "POST",
   })
   .then(res => {

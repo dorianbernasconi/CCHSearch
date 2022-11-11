@@ -9,13 +9,13 @@ const search = searchStore();
 
 let isSidenavOpen = ref(false);
 let sidenavClass = ref("sidenav-close")
-let closeButtonValue = ref('FILTRE')
+let closeButtonValue = ref('&#9776;')
 let filterMenu = shallowRef(SolrFilter)
 
 function switchStateFilterWindow() {
   if(isSidenavOpen.value){
     sidenavClass.value = "sidenav-close";
-    closeButtonValue.value = "FILTRE";
+    closeButtonValue.value = "&#9776;";
   }else{
     sidenavClass.value = "sidenav-open";
     closeButtonValue.value = "&times;";
@@ -38,7 +38,7 @@ search.$subscribe(() => {
 
 <template>
   <div  id="mySidenav" :class='["sidenav",sidenavClass]'>
-    <a href="javascript:void(0)" id="sidenav-trigger-btn" class="sidenav-trigger-btn" v-html="closeButtonValue" @click="switchStateFilterWindow"></a>
+    <a href="javascript:void(0)" id="sidenavTriggerBtn" class="sidenavTriggerBtn" v-html="closeButtonValue" @click="switchStateFilterWindow"></a>
     <label class="switch_index">
       <span class="slider round"></span>
     </label>
@@ -83,6 +83,7 @@ search.$subscribe(() => {
 }
 
 .sidenav a {
+  padding: 8px 8px 8px 32px;
   text-decoration: none;
   color: #000000;
   display: block;
@@ -94,7 +95,7 @@ search.$subscribe(() => {
   background-color:  rgb(255, 255, 255);
 }
 
- #sidenav-trigger-btn {
+ #sidenavTriggerBtn {
   color: rgb(220, 223, 226);
   position: absolute;
   z-index: 1;

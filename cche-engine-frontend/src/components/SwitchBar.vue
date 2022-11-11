@@ -11,7 +11,7 @@ import { RouterLink } from 'vue-router'
   <nav>
         <RouterLink class="switch-button header-background-color" to="/">Tous</RouterLink>
         <RouterLink class="switch-button header-background-color" to="/plan">Plan</RouterLink>
-        <RouterLink class="switch-button header-background-color" to="/detail">Detail</RouterLink>
+        <RouterLink class="switch-button header-background-color" to="/detail">Détail</RouterLink>
         <RouterLink class="switch-button header-background-color" to="/image">Image</RouterLink>
         <RouterLink class="switch-button header-background-color" to="/autre">Autre</RouterLink>
 

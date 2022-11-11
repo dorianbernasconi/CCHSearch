@@ -76,6 +76,11 @@ function pages() {
             <li class="pagination-item">
                 <input v-on:keyup.enter="$emit('selectPage', inputValue)" v-model="inputValue" class="button-item  input-element" />
             </li>
+            <li class="pagination-item">
+                <button class="button-item" type="button" @click="$emit('selectPage', totalPages)">
+                    {{ props.totalPages }}
+                </button>
+            </li>
         </ul>
     </div>
 
@@ -99,7 +104,9 @@ function pages() {
 
 }
 
-
+input { 
+    text-align: center; 
+}
 
 .button-item {
     --size: 42px;
@@ -124,7 +131,7 @@ function pages() {
 
 .input-element {
     max-width: auto;
-    width: 50px;
+    width: 40px;
     color: white;
 
 

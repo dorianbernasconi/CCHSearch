@@ -15,8 +15,9 @@ const props = defineProps(
 <template>
     <div class="item ">
         <dl>
+            <h1 class="is-size-4  document-title" text-element>{{ props.ind }}. {{ props.obj!.filename }}</h1>
             <div class="element">
-                <h1 class="is-size-4" text-element>{{ props.ind }}. {{ props.obj!.filename }}</h1>
+                
                 <div class="el">                
                     <dt class="">Affaire:  </dt>
                     <dd class="text-element">{{ props.obj!.affaire }}</dd>
@@ -36,9 +37,10 @@ const props = defineProps(
             </div>
 
         </dl>
+               <img class="item-img card-img card-medium-img" :src="props.obj?.thumbnail" >
 
-                <img class="item-img card-img card-medium-img" :src="(`src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg`)" >
-
+               <!--<img class="item-img card-img card-medium-img" :src="(`src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg`)" >--> 
+               
     </div>
 </template>
 
@@ -46,7 +48,9 @@ const props = defineProps(
 
 <style scoped>
 
-
+.document-title{
+    font-weight: bold;
+}
 .card-medium-img {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.13);
   
@@ -73,7 +77,7 @@ overflow: hidden;
 }
 
 .download{
-    padding-left: 170px;
+    padding-left: 0px;
 }
 /* make image fit in item */
 .item-img{
@@ -89,7 +93,7 @@ overflow: hidden;
 
 dt {
   float: left;
-  width: 30%;
+  width: 14%;
   text-align: right;
   padding-right: 15px;
   margin: 0
@@ -97,7 +101,7 @@ dt {
 
 dd {
   float: left;
-  width: 70%;
+  width: 86%;
   padding: 0;
   margin: 0
 }

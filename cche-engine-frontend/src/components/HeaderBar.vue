@@ -68,11 +68,12 @@ img{
 }
 
 .nav-bar-el{
-  padding-left: 100px;
+  padding-left: 50px;
   width: fit-content;
 }
 
 #search_box {
+  padding-left: 10px;
   height: 40px;
   width: 700px;
   border-radius: 30px;
@@ -81,7 +82,7 @@ img{
 }
 
 #navbar{
-  padding-left: 120px;
+  padding-left: 170px;
 
 }
 </style>
