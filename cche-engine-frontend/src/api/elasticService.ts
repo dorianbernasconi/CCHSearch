@@ -1,9 +1,9 @@
 import type { CardElement } from "./type"
 import {searchStore} from "../stores/search"
 
-const store = searchStore();
 
 export function getDocuments(keyWord:string, index:string, min:string, max:string, field:string){
+  const store = searchStore();
 
     let params = new URLSearchParams({
         q: keyWord,
@@ -23,6 +23,7 @@ export function getDocuments(keyWord:string, index:string, min:string, max:strin
 }
 
 export function getSimilarity(filepath: string,){
+  const store = searchStore();
 
   let params = new URLSearchParams({
       q: filepath
