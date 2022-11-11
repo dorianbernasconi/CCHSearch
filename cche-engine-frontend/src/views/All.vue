@@ -4,10 +4,12 @@ import { searchStore } from "../stores/search"
 import { ref } from 'vue'
 import { getDocuments } from "../api/solrService";
 import Pagination from "../components/Pagination.vue";
-import { onMounted ,onBeforeMount} from "vue";
+import { onMounted ,onBeforeMount,onBeforeUnmount} from "vue";
 
 
 const store = searchStore()
+
+const storeIsStillActive = ref(true)
 
 const lines: any = ref("");
 const rows = 10;
@@ -39,14 +41,18 @@ function selectPage(newCurrentPage: number) {
 onBeforeMount(() => {
   store.filterType = "solr";
   store.ftype = "";
-
-  console.log(store.filterType)
-})
-store.$subscribe(() => {
-  getNewDocument();
 })
 
-getNewDocument();
+store.$subscribe((e :any) => {
+    if (storeIsStillActive.value) {
+      getNewDocument();
+    }
+})
+// If the router is gonna switch to another page, we don't want to update the store
+onBeforeUnmount(() => {
+  storeIsStillActive.value = false
+})
+
 
 
 

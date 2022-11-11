@@ -3,6 +3,7 @@ import {searchStore} from "../stores/search"
 const ip = "localhost"
 
 export function getDocuments(): Promise<Element[]> {
+  console.log("OY")
   const store = searchStore();
 
   let mandat:string = store.manda;

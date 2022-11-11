@@ -68,7 +68,7 @@ white-space: nowrap;
 overflow: hidden;
 }
 .element{
-    width: 60%;
+    width: 80%;
     float: left;
 }
 

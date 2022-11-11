@@ -4,10 +4,12 @@ import { searchStore } from "../stores/search"
 import { ref } from 'vue'
 import { getDocuments } from "../api/solrService";
 import Pagination from "../components/Pagination.vue";
-import { onMounted, onBeforeMount} from "vue";
+import { onMounted, onBeforeMount,onBeforeUnmount} from "vue";
 
 
 const store = searchStore()
+
+const storeIsStillActive = ref(true)
 
 const lines: any = ref("");
 const rows = 10;
@@ -19,6 +21,7 @@ let totalPages = ref(0)
 let per = 10;
 
 function getNewDocument() {
+
   getDocuments().then( (documentsJson : any) => {
     lines.value = documentsJson["documents"];
     totalPages.value = Math.round(documentsJson["nbFound"] / 10)
@@ -39,16 +42,20 @@ function selectPage(newCurrentPage: number) {
 onBeforeMount(() => {
   store.filterType = "solr";
   store.ftype = "Image";
+})
+// If the router is gonna switch to another page, we don't want to update the store
 
-  console.log(store.filterType)
+onBeforeUnmount(() => {
+  storeIsStillActive.value = false
+
 })
 
-
-store.$subscribe(() => {
-  getNewDocument();
+store.$subscribe((e:any) => {
+    if (storeIsStillActive.value) {
+      getNewDocument();
+    }
 })
 
-getNewDocument();
 
 
 

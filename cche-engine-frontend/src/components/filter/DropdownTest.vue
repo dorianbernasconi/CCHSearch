@@ -10,15 +10,24 @@ const props = defineProps({
     labelId : String,
     dropdownArray : Array as PropType<Array<string>>
 })
-defineEmits(["fieldSelector"])
+const emit = defineEmits(["fieldSelector","getCurrentElement"])
 
 const array = ref<Array<string>>()
-
+const currentElement = ref<string>("");
 let isDroping = ref(false)
+/*
 
-getFieldValues("affaire").then( (o : any) => {
-    array.value = o["facet"];
-    console.log(array.value)
+*/
+const setCurrentElement = ((name:string) => {
+    currentElement.value = name;
+})
+
+const removeCurrentElement = (() => {
+    currentElement.value = "";
+})
+
+const emitCurrentElement = (() => {
+    emit("getCurrentElement",currentElement.value)
 })
 
 </script>
@@ -29,7 +38,7 @@ getFieldValues("affaire").then( (o : any) => {
         <input  type="checkbox"  class="touch" id="touch ">
 
         <ul class="slide" :class="{'drop' : isDroping } ">
-            <DropdownElement  v-for="element in array" :name="element"></DropdownElement>
+            <DropdownElement @set-current-element="setCurrentElement" @remove-current-element="removeCurrentElement"  v-for="element in props.dropdownArray" :name="element" :current-element="currentElement"></DropdownElement>
         </ul>
 
     </nav>

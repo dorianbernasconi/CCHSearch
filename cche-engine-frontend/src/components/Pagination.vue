@@ -50,7 +50,6 @@ function pages() {
     const range = [];
     for (
         let i = startPage();
-        console.log("I : " + i),
         i <= Math.min(startPage() + props.maxVisibleButtons! - 1, props.totalPages!);
         i++
     ) {

@@ -22,7 +22,7 @@ import FilterMenu from "./components/FilterMenu.vue";
     <div class="">
       <SwitchBar /> 
     </div>
-    <FilterMenu/>
+   <FilterMenu/>
     <div class="main-container">
       <RouterView />
     </div>

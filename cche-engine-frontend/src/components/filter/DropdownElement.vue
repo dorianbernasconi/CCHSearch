@@ -6,11 +6,17 @@ import { ref } from 'vue'
 import type { FieldCounter } from '@/api/type';
 import type {PropType} from "vue";
 
-const props = defineProps({
+defineProps({
+    currentElement: String,
     name: String,
     count: Number,
 });
 
+defineEmits(["setCurrentElement","removeCurrentElement"]);
+
+
+
+/** 
 const isActive = ref<Boolean>(false);
 
 const setActive = () => {
@@ -19,7 +25,7 @@ const setActive = () => {
 
 const removeActive = () => {
     isActive.value = !isActive.value;
-};
+};*/
 
 
 </script>
@@ -27,12 +33,12 @@ const removeActive = () => {
 <template>
 
     <div >
-        <span @click="setActive()" class="facet-label"><a >TEST</a></span>
+        <span @click="$emit('setCurrentElement',name)" class="facet-label"><a >{{name}}</a></span>
         <a class="facet-select"></a>
-        <a  v-if="isActive" >
-           <span @click="removeActive()" class="remove-icon">✖</span>
+        <a  v-if="name == currentElement" >
+           <span @click="$emit('removeCurrentElement')" class="remove-icon">✖</span>
         </a>
-        <span @click="setActive()" class="facet-label"><a >10</a></span>
+        <span  @click="$emit('setCurrentElement',name)" class="facet-label"><a >{{count}}</a></span>
     </div>
 
 </template>
