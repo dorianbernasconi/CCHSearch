@@ -6,9 +6,10 @@ import { ref } from 'vue'
 import type {PropType} from "vue";
 import DropdownElement from './DropdownElement.vue';
 import { getFieldValues } from "../../api/solrService";
+import type { FieldCounter } from '@/api/type';
 const props = defineProps({
     labelId : String,
-    dropdownArray : Array as PropType<Array<string>>
+    dropdownArray : Array as PropType<Array<FieldCounter>>
 })
 const emit = defineEmits(["fieldSelector","getCurrentElement"])
 
@@ -34,11 +35,11 @@ const emitCurrentElement = (() => {
 
 <template>
     <nav>
-        <label  @click="isDroping = !isDroping" ><span>{{ labelId }}</span></label>
+        <label  @click="isDroping = !isDroping"   ><span class="text" >{{ labelId }}</span></label>
         <input  type="checkbox"  class="touch" id="touch ">
 
         <ul class="slide" :class="{'drop' : isDroping } ">
-            <DropdownElement @set-current-element="setCurrentElement" @remove-current-element="removeCurrentElement"  v-for="element in props.dropdownArray" :name="element" :current-element="currentElement"></DropdownElement>
+            <DropdownElement @set-current-element="setCurrentElement" @remove-current-element="removeCurrentElement"  v-for="element in props.dropdownArray" :obj="element" :current-element="currentElement"></DropdownElement>
         </ul>
 
     </nav>
@@ -53,21 +54,21 @@ body {
 
 
 ul {
-    font-size: 0.5em;
+    font-size: 0.8em;
     cursor: pointer;
 
     list-style-type: none;
+    
+
 }
 
 li a {
-
-    color: #2d2f31;
-    width: 100%;
 
 }
 
 
 nav {
+    border-radius: 3px;
     width: 200px;
     background: #d9d9d9;
     margin: 20px auto;
@@ -77,17 +78,27 @@ span {
     padding: 10px;
     background-color: #464646;
     color: white;
-    font-size: 0.5em;
+    font-size: 0.8em;
     font-variant: small-caps;
     cursor: pointer;
     display: block;
+    border-radius: 4px;
+    
 }
 
 span::after {
     float: right;
     right: 10%;
-    content: "+";
+    content: "❯";
 }
+
+
+
+.collapsed{
+    transform: rotate(90deg);
+
+}
+
 
 .slide {
     clear: both;
@@ -95,7 +106,9 @@ span::after {
     height: 0px;
     overflow: hidden;
     text-align: center;
+    overflow-y: scroll;
     transition: height .4s ease;
+    border-radius: 5;
 }
 
 .slide li {

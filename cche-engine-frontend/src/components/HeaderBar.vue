@@ -68,7 +68,7 @@ img{
 }
 
 .nav-bar-el{
-  padding-left: 50px;
+  padding-left: 20px;
   width: fit-content;
 }
 

@@ -44,7 +44,7 @@ body {
 
 
 ul {
-    font-size: 0.5em;
+    font-size: 0.8em;
     cursor: pointer;
 
     list-style-type: none;
@@ -68,7 +68,8 @@ span {
     padding: 10px;
     background-color: #464646;
     color: white;
-    font-size: 0.5em;
+    font-size: 0.8em;
+    border-radius: 3px;
     font-variant: small-caps;
     cursor: pointer;
     display: block;

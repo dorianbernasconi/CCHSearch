@@ -74,7 +74,7 @@ onBeforeUnmount(() => {
 <style scoped>
 
 .cards {
-  padding-left: 100px;
+  padding-left: 70px;
   padding-bottom: 100px;
 }
 </style>

@@ -6,34 +6,49 @@ import { searchStore } from '@/stores/search'
 import DropdownAutocomplete from './DropdownAutocomplete.vue'
 import DropdownTest from './DropdownTest.vue'
 import {getFieldValues} from '../../api/solrService'
+import type { FieldCounter } from '@/api/type'
 
 const search = searchStore();
 const fieldArray = ["Tous","Titre"]
-const knowHow = ["Know","Unknow"]
-const affaire = ref<Array<string>>([""])
+const affaire = ref<Array<FieldCounter>>([])
+const age = ref<Array<FieldCounter>>([])
+const knowHow = ref<Array<FieldCounter>>([])
+
+
 function modifyfieldSelector(field:string){
     search.fieldSelector = field;
     console.log(field)
 }
 
-const aff = ref<string>("Affaire")
+const affaireId = ref<string>("Affaire")
+const ageId = ref<string>("age")
+const knowHowId = ref<string>("knowHow")
 
 
 
 onMounted(() => {
     getFieldValues("affaire").then( (o : any) => {
         console.log( o["facet"]);
-    affaire.value = o["facet"];
+    affaire.value = o["facet"]; 
+})
+getFieldValues("modtime").then( (o : any) => {
+        console.log( o["facet"]);
+        age.value = o["facet"]; 
+    console.log(age.value)
+})
+getFieldValues("kh").then( (o : any) => {
+        console.log( o["facet"]);
+        knowHow.value = o["facet"]; 
     console.log(affaire.value)
-})})
+})
+})
 
 function modifyKnowHow(field:string){
-    // Modify here to add know how elastic   
+    search.kh = field;
 }
 
 const getCurrentElementAffaire = (element:string) => {
     search.affaire = element;
-    console.log("Choose Element",element)
 }
 
 </script>
@@ -41,7 +56,11 @@ const getCurrentElementAffaire = (element:string) => {
 <template>
 
     <div class="filter">
-        <DropdownTest :dropdownArray="affaire" @getCurrentElement="getCurrentElementAffaire" :labelId="aff"/>
+        <DropdownTest class="filter-element" :dropdownArray="affaire" @getCurrentElement="getCurrentElementAffaire" :labelId="affaireId"/>
+        <DropdownTest class="filter-element" :dropdownArray="knowHow" @getCurrentElement="modifyKnowHow" :labelId="knowHowId"/>
+        <DropdownTest class="filter-element" :dropdownArray="age" @getCurrentElement="getCurrentElementAffaire" :labelId="ageId"/>
+
+
     </div>
 
     
