@@ -11,24 +11,31 @@ import { searchStore } from "../stores/search"
 import type { CardElement } from "../api/type"
 
 const store = searchStore();
+const emit = defineEmits(["startpage"]);
 
 let value = ref("");
 
 function search(){
   store.keyword = value.value;
+  emit("startpage");
 }
 
 </script>
 
 <template>
-  <div class="nav-bar header-background-color" role="navigation">
-    <div class="nav-bar-el header-bar-element">
+  <div class="page" role="navigation">
+    <div class="center" >
+
+   <div class="img-on-top-of-inpu">
 
       <img class="" src="src/components/icons/logo.png" />
-    </div>
-    <div id="navbar" class="nav-bar-el ">
+    </div> 
+
+    <div >
       <input  v-model="value" v-on:keyup.enter="search()"  id="search_box" type="text" placeholder='&#x1F50E'>
     </div>
+    </div>
+
     <!--<button @click="search()" > SEARCH </button>-->
   </div>
 
@@ -36,55 +43,57 @@ function search(){
  
 <style scoped>
 
+
+
 img{
-  width: 70%;
+  left: 30%;
+  padding-bottom: 50px;
+  width: 40%;
   display: inline-block;
   vertical-align: middle
 }
-.header-bar-element{
 
 
-}
-.nav-bar-brand {
-  margin-left: 80px;
-}
-
-.nav-bar {
-  width: 100px;
-    height: 100px;
-    background-color: red;
-    
-    position: absolute;
-    top:0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    
-    margin: auto;
-
-}
-
-.nav-bar-input {
-  padding-left: 0px;
-  width: 30%;
-}
-
-.nav-bar-el{
-  padding-left: 20px;
-  width: fit-content;
+.page{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  font-family: "Open Sans", sans-serif;
 }
 
 #search_box {
   padding-left: 10px;
   height: 40px;
   width: 700px;
-  border-radius: 30px;
-  font-size: 1.5rem;
-  color: #464646;
+  padding: 6px;
+  border-radius: 26px;
+     font-size: 20px;
+     border-width: 0px;
+  background-color: #FFFFFF;
+     color: #000000;
+     box-shadow: 0px 0px 2px rgba(66,66,66,.79);
+     text-shadow: 0px 0px 0px rgba(66,66,66,.75);
+}
+.css-input {
+     padding: 6px;
+     font-size: 18px;
+     border-width: 0px;
+     border-color: #CCCCCC;
+     background-color: #FFFFFF;
+     color: #000000;
+     border-style: solid;
+     border-radius: 26px;
+     box-shadow: 0px 0px 2px rgba(66,66,66,.79);
+     text-shadow: 0px 0px 0px rgba(66,66,66,.75);
+}
+ .css-input:focus {
+     outline:none;
 }
 
-#navbar{
-  padding-left: 170px;
 
-}
+
+
 </style>

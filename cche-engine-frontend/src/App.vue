@@ -6,6 +6,9 @@ import SwitchBar from "./components/SwitchBar.vue";
 import FilterMenu from "./components/FilterMenu.vue";
 import StartPage from "./views/StartPage.vue";
 
+import { ref } from 'vue'
+let zIndex = ref(10);
+
 </script>
 
 <template >
@@ -15,9 +18,9 @@ import StartPage from "./views/StartPage.vue";
 
   </head>
   <body>
-    <!-- <div class="start">
-    <StartPage/>
-  </div> -->
+     <div id="start" v-bind:style="{ zIndex:zIndex  }" class="start">
+    <StartPage  @startpage="zIndex = 0" />
+  </div>
   <div class="main">
     <div class="">
       <HeaderBar/>
@@ -40,7 +43,7 @@ import StartPage from "./views/StartPage.vue";
 
 .start{
   opacity:    1; 
-  background: #000; 
+  background: rgb(255, 255, 255); 
   width:      100%;
   height:     100%; 
   z-index:    10;

@@ -7,9 +7,11 @@ const store = searchStore();
 
 let value = ref("");
 
+
 function search(){
-  store.keyword = value.value;
+  store.keyword = value.value;  
 }
+
 </script>
 
 <template>
@@ -19,7 +21,7 @@ function search(){
       <img class="" src="src/components/icons/logo.png" />
     </div>
     <div id="navbar" class="nav-bar-el ">
-      <input  v-model="value" v-on:keyup.enter="search()"  id="search_box" type="text" placeholder='&#x1F50E'>
+      <input  v-model="value" v-on:keyup.enter="search()"  id="search_box" type="text" vmodel="store.keyword" placeholder='&#x1F50E' >
     </div>
     <!--<button @click="search()" > SEARCH </button>-->
   </div>
@@ -74,13 +76,21 @@ img{
 
 #search_box {
   padding-left: 10px;
+  outline: 0 none;
   height: 40px;
   width: 700px;
-  border-radius: 30px;
-  font-size: 1.5rem;
-  color: #464646;
+  padding: 6px;
+  border-radius: 26px;
+     font-size: 20px;
+     border-width: 0px;
+  background-color: #FFFFFF;
+     color: #000000;
+     box-shadow: 0px 0px 2px rgba(66,66,66,.79);
+     text-shadow: 0px 0px 0px rgba(66,66,66,.75);
 }
-
+#search_box:hover {
+  box-shadow: 0 0 11px rgba(33,33,33,.2); 
+}
 #navbar{
   padding-left: 170px;
 

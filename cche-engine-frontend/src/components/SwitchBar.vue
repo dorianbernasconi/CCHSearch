@@ -32,7 +32,7 @@ import { RouterLink } from 'vue-router'
 .micro-bar {
   top:20px;
   min-width: 230px;
-  margin-left: 530px;
+  margin-left: 500px;
 }
 
 .switch-button {
