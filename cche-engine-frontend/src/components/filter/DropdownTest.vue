@@ -82,7 +82,7 @@ span {
     font-variant: small-caps;
     cursor: pointer;
     display: block;
-    border-radius: 4px;
+    border-radius: 3px;
     
 }
 

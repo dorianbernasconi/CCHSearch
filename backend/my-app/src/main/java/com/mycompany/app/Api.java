@@ -74,10 +74,16 @@ public class Api {
             System.out.println("SOLR ADV");
 
             String core = req.queryParams("core");
+            System.out.println("core : " + core);
+
             String keyword = req.queryParams("q");
+            System.out.println("keyword : " + keyword);
             String start = req.queryParams("start");
+            System.out.println("start : " + start);
             String rows = req.queryParams("rows");
+            System.out.println("rows : " + rows);
             String fq = req.queryParams("fq");
+            System.out.println("fq : " + fq);
 
 
             JSONObject response = apiRequest.solrRequestAdv(core,keyword,start,rows,fq);
@@ -92,7 +98,6 @@ public class Api {
             String field = req.queryParams("field");
 
             JSONObject response = apiRequest.getFieldOptionList(core,field);
-            System.out.println("field : " + response);
             return response;
         });
 
