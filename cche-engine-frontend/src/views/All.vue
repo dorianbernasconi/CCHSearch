@@ -21,7 +21,7 @@ let totalPages = ref(0)
 let per = 10;
 
 function getNewDocument() {
-  getDocuments().then( (documentsJson : any) => {
+  getDocuments(currentPage.value.toString()).then( (documentsJson : any) => {
     lines.value = documentsJson["documents"];
     totalPages.value = Math.round(documentsJson["nbFound"] / 10)
   })
@@ -44,6 +44,7 @@ onBeforeMount(() => {
 })
 
 store.$subscribe((e :any) => {
+  console.log("NEW DOCUMENT")
     if (storeIsStillActive.value) {
       getNewDocument();
     }
@@ -63,19 +64,27 @@ onBeforeUnmount(() => {
 <template>
 
   <div class="cards">
-    <div>
+    <div class="defilement">
       <Document v-for="(line,i) in lines" :ind="((currentPage.valueOf()  - 1)* rows) + i" :obj="line"></Document>
     </div>
   </div>
-  <Pagination v-if="totalPages > 0" @selectPage="selectPage" @onClickNextPage="onClickNextPage" :max-visible-buttons=maxVisibleButtons :total-pages=totalPages :per-page=per :current-page=currentPage.valueOf()></Pagination>
+  <Pagination id="pagination" v-if="totalPages > 0" @selectPage="selectPage" @onClickNextPage="onClickNextPage" :max-visible-buttons=maxVisibleButtons :total-pages=totalPages :per-page=per :current-page=currentPage.valueOf()></Pagination> 
 </template>
    
   
 <style scoped>
 
+#pagination{
+  padding-bottom: 50px;
+}
 .cards {
   padding-left: 70px;
   padding-bottom: 100px;
+  padding-top: 20px;
+}
+
+.defilement {
+  height: 100%;
 }
 </style>
   

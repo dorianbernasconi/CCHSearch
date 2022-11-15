@@ -30,9 +30,9 @@ import { RouterLink } from 'vue-router'
 }
 
 .micro-bar {
-  top:20px;
+  top:15px;
   min-width: 230px;
-  margin-left: 500px;
+  margin-left: 630px;
 }
 
 .switch-button {
@@ -40,6 +40,7 @@ import { RouterLink } from 'vue-router'
   color: #d6dbe1;
   border: none;
   margin :  10px;
+  margin-right: 30px;
   font-size: 20px;
 }
 
@@ -50,7 +51,6 @@ import { RouterLink } from 'vue-router'
 
 .switch-button:hover {
   cursor: pointer;
-
 }
 
 .active{

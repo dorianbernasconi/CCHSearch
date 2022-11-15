@@ -1,12 +1,12 @@
 import {searchStore} from "../stores/search"
 
-export function getDocuments(): Promise<Element[]> {
+export function getDocuments(currentPage:string): Promise<Element[]> {
   console.log("OY")
   const store = searchStore();
 
   let mandat:string = store.manda;
   let keyWord:string = store.keyword;
-  let start:string = store.start;
+  let start:string = currentPage;
   let rows:string = store.rows;
 
   let fq :String[] = [""];

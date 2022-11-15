@@ -61,6 +61,9 @@ overflow-wrap: break-word;
 -o-hyphens: auto;
 -ms-hyphens: auto;
 hyphens: auto;
+-ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
 }
 .facet-count{
     width: 30%;
@@ -72,16 +75,28 @@ text-decoration: none;
 background-color: transparent;
 }
 .drop-el{
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     font-size: 15px;
     padding: 0.5em;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid #ffffff;
     cursor: pointer;
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 .remove-icon{
+
+}
+
+.drop-el::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.drop-el {
 
 }
 

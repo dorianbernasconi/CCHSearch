@@ -24,11 +24,10 @@ function search(){
 
 <template>
   <div class="page" role="navigation">
-    <div class="center" >
 
    <div class="img-on-top-of-inpu">
 
-      <img class="" src="src/components/icons/logo.png" />
+      <img class="" src="src/components/icons/logovec.png" />
     </div> 
 
     <div >
@@ -37,7 +36,7 @@ function search(){
     </div>
 
     <!--<button @click="search()" > SEARCH </button>-->
-  </div>
+
 
 </template>
  
@@ -46,9 +45,9 @@ function search(){
 
 
 img{
-  left: 30%;
+  left: 29%;
   padding-bottom: 50px;
-  width: 40%;
+  width: 20%;
   display: inline-block;
   vertical-align: middle
 }
@@ -60,20 +59,19 @@ img{
   align-items: center;
   height: 100%;
   width: 100%;
-  background-color: #ffffff;
+  background-color: #343a40 !important;
   font-family: "Open Sans", sans-serif;
 }
 
 #search_box {
-  padding-left: 10px;
+  padding-left: 0px;
   height: 40px;
   width: 700px;
   padding: 6px;
   border-radius: 26px;
      font-size: 20px;
      border-width: 0px;
-  background-color: #FFFFFF;
-     color: #000000;
+          color: #000000;
      box-shadow: 0px 0px 2px rgba(66,66,66,.79);
      text-shadow: 0px 0px 0px rgba(66,66,66,.75);
 }

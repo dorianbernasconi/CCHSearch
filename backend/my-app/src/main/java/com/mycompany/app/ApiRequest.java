@@ -79,7 +79,7 @@ public class ApiRequest {
 
         try {
             ElasticClient client = new ElasticClient();
-            pageList = client.query(keyword, 10, field, min, max);
+            pageList = client.query(keyword, 100, field, min, max);
 
         } catch (Exception e) {
             System.out.println("API REQUEST ELASTIC REQUEST" + e);

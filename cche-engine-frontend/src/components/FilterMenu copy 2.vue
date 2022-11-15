@@ -43,6 +43,7 @@ search.$subscribe(() => {
       <span class="slider round"></span>
     </label>
 
+    <component class="" :is="filterMenu"></component>
   </div>
 </template>
 
@@ -55,7 +56,7 @@ search.$subscribe(() => {
   color: rgb(249, 249, 249);
 }
 .sidenav-open {
-  width: 360px;
+  width: 250px;
   height: 75%;
   border-radius: 5px;
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.13);
@@ -75,17 +76,29 @@ search.$subscribe(() => {
 }
 
 .sidenav{
-  z-index: 0;
+    height: 100%;
+  width: 100;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  z-index: 1;
   position: fixed;
   padding-top: 60px;
-  top: 80px;
-  transition: all 0.25s;
-    -webkit-transition: all 0.85s;
+  top: 120px;
+  left: 0;
+  transition: 0.3s;
+
 }
 
 .sidenav a:hover {
   color: #000000;
-  background-color: rgba(0, 0, 0, 0);}
+  background-color: rgba(0, 0, 0, 0);
+}
 
  #sidenav-trigger-btn {
   color: rgb(220, 223, 226);
@@ -98,7 +111,7 @@ search.$subscribe(() => {
 .sidenav-trigger-close-btn{
   width: fit-content;
 
-  color: rgb(255, 255, 255);
+  color: rgb(49, 48, 48);
   position: absolute;
   z-index: 1;
   top: 23px;
@@ -116,3 +129,71 @@ search.$subscribe(() => {
   right: 25px;
 }
 </style>
+
+
+#mySidenav{
+  color: rgb(249, 249, 249);
+}
+.sidenav-open {
+  width: 250px;
+  height: 75%;
+  border-radius: 5px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.13);
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  transition: 0.5s;
+}
+
+.sidenav-close {
+  
+  height: 30px;
+  overflow-y: hidden;
+  overflow-x: hidden;
+  transition: 0.5s;
+  font-size: 25px;
+
+}
+
+.sidenav{
+  z-index: 1;
+  position: fixed;
+  padding-top: 60px;
+  top: 120px;
+  left: 0;
+  transition: 0.3s;
+
+}
+
+.sidenav a:hover {
+  color: #000000;
+  background-color: rgba(0, 0, 0, 0);}
+
+ #sidenav-trigger-btn {
+  color: rgb(220, 223, 226);
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 25px;
+}
+
+.sidenav-trigger-close-btn{
+  width: fit-content;
+
+  color: rgb(49, 48, 48);
+  position: absolute;
+  z-index: 1;
+  top: 23px;
+  content: "❯";
+  border-radius: "2";
+  left: 25px;
+}
+
+.sidenav-trigger-open-btn{
+  color: rgb(65, 63, 63);
+  font-size: 30px;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 25px;
+}
+

@@ -4,10 +4,14 @@ import { RouterView } from 'vue-router'
 import HeaderBar from "./components/HeaderBar.vue";
 import SwitchBar from "./components/SwitchBar.vue";
 import FilterMenu from "./components/FilterMenu.vue";
+import FilterMenu2 from "./components/FilterMenu2.vue";
+
+import FooterBar from "./components/Footerbar.vue";
+
 import StartPage from "./views/StartPage.vue";
 
 import { ref } from 'vue'
-let zIndex = ref(10);
+let zIndex = ref(0);
 
 </script>
 
@@ -17,30 +21,61 @@ let zIndex = ref(10);
   <head>
 
   </head>
-  <body>
+  <body> 
      <div id="start" v-bind:style="{ zIndex:zIndex  }" class="start">
-    <StartPage  @startpage="zIndex = 0" />
+     <StartPage  @startpage="zIndex = 0" />
   </div>
   <div class="main">
-    <div class="">
-      <HeaderBar/>
-    </div>
 
-    <div class="">
-      <SwitchBar /> 
-    </div>
-   <FilterMenu/>
-    <div class="main-container">
-      <RouterView />
-    </div>
+      <div class="">
+        <HeaderBar/>
+      </div>
+      <FilterMenu2/>
+      <div id="main-view" class="main-container"  >
+        <RouterView />
+      </div>
 
-  </div>
+      
+    <div class="foot">
+     <FooterBar/> 
+    </div> 
+
+  </div>    
+
 </body>
+
 </template>
 
 
 <style >
 
+
+
+.main {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  background-color: rgb(255, 255, 255);
+  
+}
+.main-container {
+  display: inline;
+  min-width: 600px;
+  overflow-y: scroll;
+  width: 100%;
+  z-index: 1;
+  float:left;
+  height: 100%;
+  padding-left: 00px;
+}
+
+
+.foot{
+  bottom: 0;
+
+}
 .start{
   opacity:    1; 
   background: rgb(255, 255, 255); 
@@ -58,23 +93,6 @@ let zIndex = ref(10);
     color:rgb(65, 65, 65);
     font-family: Inter;
     font-size: 20px;
-}
-.main {
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  position: fixed;
-  background-color: rgb(255, 255, 255);
-  
-}
-.main-container {
-  display: inline;
-  min-width: 600px;
-  overflow-y: scroll;
-  width: 100%;
-  float:left;
-  height: 100%;
 }
 
 

@@ -48,38 +48,49 @@ ul {
     cursor: pointer;
 
     list-style-type: none;
+    
+
 }
 
 li a {
-
-    color: #2d2f31;
-    width: 100%;
 
 }
 
 
 nav {
-    width: 200px;
+    border-radius: 3px;
+    width: 230px;
     background: #d9d9d9;
     margin: 20px auto;
 }
 
 span {
     padding: 10px;
-    background-color: #464646;
-    color: white;
-    font-size: 0.8em;
-    border-radius: 3px;
+    background-color: #ffffff;
+    color: rgb(23, 23, 23);
+    font-size: 1em;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-weight: 500;
     font-variant: small-caps;
     cursor: pointer;
     display: block;
+    border-radius: px;
+    
 }
 
 span::after {
     float: right;
     right: 10%;
-    content: "+";
+    content: "❯";
 }
+
+
+
+.collapsed{
+    transform: rotate(90deg);
+
+}
+
 
 .slide {
     clear: both;
@@ -87,7 +98,16 @@ span::after {
     height: 0px;
     overflow: hidden;
     text-align: center;
+    overflow-y: scroll;
     transition: height .4s ease;
+    border-radius: 5;
+    -ms-overflow-style: none; /* for Internet Explorer, Edge */
+    scrollbar-width: none; /* for Firefox */
+    overflow-y: scroll; 
+    background-color: white;
+
+    border: 1px solid rgba(0,0,0,0.10);
+
 }
 
 .slide li {

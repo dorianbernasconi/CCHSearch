@@ -15,9 +15,9 @@ const props = defineProps(
 <template>
     <div class="item ">
         <dl>
-            <h1 class="is-size-4  document-title" text-element>{{ props.ind }}. {{ props.obj!.filename }}</h1>
             <div class="element">
-                
+                <h1 class="is-size-4  document-title" text-element>{{ props.ind }}. {{ props.obj!.filename }}</h1>
+
                 <div class="el">                
                     <dt class="">Affaire:  </dt>
                     <dd class="text-element">{{ props.obj!.affaire }}</dd>
@@ -72,7 +72,7 @@ white-space: nowrap;
 overflow: hidden;
 }
 .element{
-    width: 80%;
+    width: 60%;
     float: left;
 }
 
@@ -109,6 +109,7 @@ dd {
 .item{
     height: 250px;
     max-height: 300px;
+    margin-bottom: 10px;
    /* min-width: 1000px;*/
 }
 

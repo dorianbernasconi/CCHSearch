@@ -22,7 +22,7 @@ let per = 10;
 
 function getNewDocument() {
 
-  getDocuments().then( (documentsJson : any) => {
+  getDocuments(currentPage.value.toString()).then( (documentsJson : any) => {
     lines.value = documentsJson["documents"];
     totalPages.value = Math.round(documentsJson["nbFound"] / 10)
   })
@@ -75,9 +75,19 @@ store.$subscribe((e:any) => {
    
   
 <style scoped>
+#pagination{
+  padding-bottom: 50px;
+}
 .cards {
-  padding-left: 200px;
+  padding-left: 70px;
   padding-bottom: 100px;
+  padding-top: 20px;
+
+  
+}
+
+.defilement {
+  height: 100%;
 }
 </style>
   
