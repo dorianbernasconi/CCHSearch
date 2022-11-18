@@ -14,6 +14,10 @@ function search(){
   store.keyword = value.value;  
 }
 
+store.$subscribe(() =>{
+  value.value = store.keyword;
+})
+
 </script>
 
 <template>

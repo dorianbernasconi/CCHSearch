@@ -44,8 +44,9 @@ export function getDocuments(currentPage:string): Promise<Element[]> {
 export function getFieldValues(field:string): Promise<Element[]> {
   const store = searchStore();
   let core :string = store.manda;
+  let keyword :string = store.keyword;
 
-  let params = new URLSearchParams({ core:core,field:field}) .toString()
+  let params = new URLSearchParams({ q:keyword,core:core,field:field}) .toString()
 
   return fetch('http://'+ store.ip  +':4567/query/solr/fieldnumber/string?' + params, {
     method: "POST",

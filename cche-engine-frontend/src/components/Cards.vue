@@ -25,11 +25,11 @@
 .cards {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
     grid-gap: 2rem;
     right: 0;
     left: 0;
-    padding: 50px;
+    padding: 30px;
     padding-bottom: 200px;
 }
 </style>

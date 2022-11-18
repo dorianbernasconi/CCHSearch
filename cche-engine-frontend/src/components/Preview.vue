@@ -1,4 +1,4 @@
-<script setup lang="ts">
+5<script setup lang="ts">
 import type {CardElement} from "../api/type"
 import {getSimilarity} from "../api/elasticService";
 import { previewStore } from "../stores/preview"
@@ -32,8 +32,8 @@ function getPreviewInfo() {
 
 
 function getSimilarityCard() {
-  getSimilarity(preview.card.id).then((o => {
-    console.log(o);
+  getSimilarity(preview.card.filepath).then((o => {
+    console.log("SIM" +o);
     cards.value = o;
   }))
 }
@@ -133,14 +133,14 @@ getSimilarityCard();
 }
 
 .right {
-    width: 80%;
+    width: 70%;
     float: right;
     color: black;
 }
 
 .left {
     color: gray;
-    width: 20%;
+    width: 30%;
     float: left;
 }
 </style>

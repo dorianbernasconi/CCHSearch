@@ -41,7 +41,9 @@ function a() {
   border: 2px solid #e7e7e7;
   border-radius: 5px;
   padding: 0.5rem;
-  height: 420px;
+  height: 380px;
+  font-size: 15px;
+
 
 }
 
@@ -70,7 +72,7 @@ function a() {
 }
 
 .dots{
-  font-size: 30px;
+  font-size: 25px;
   margin-bottom: -10px;
   font-weight:bold}
 </style>

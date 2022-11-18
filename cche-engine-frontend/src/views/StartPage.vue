@@ -23,6 +23,10 @@ function search(){
 </script>
 
 <template>
+
+
+
+<!--
   <div class="page" role="navigation">
 
    <div class="img-on-top-of-inpu">
@@ -34,22 +38,37 @@ function search(){
       <input  v-model="value" v-on:keyup.enter="search()"  id="search_box" type="text" placeholder='&#x1F50E'>
     </div>
     </div>
+  -->
 
     <!--<button @click="search()" > SEARCH </button>-->
+  <div class="page" role="navigation">
+    <ul>
+      <li>
+        <img class="" src="src/components/icons/logovec.png" />
 
+      </li>
+      <li>
+        <input  v-model="value" v-on:keyup.enter="search()"  id="search_box" type="text" placeholder='&#x1F50E'>
 
+      </li>
+    </ul>
+  </div>  
 </template>
  
 <style scoped>
 
 
 
+ul{
+  text-align: center;
+}
+
 img{
-  left: 29%;
   padding-bottom: 50px;
   width: 20%;
   display: inline-block;
   vertical-align: middle
+  
 }
 
 

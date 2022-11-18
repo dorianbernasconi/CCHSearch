@@ -9,6 +9,8 @@ const props = defineProps(
 
 });
 
+console.log(props.obj!.modtime)
+
 </script>
   
 
@@ -16,7 +18,7 @@ const props = defineProps(
     <div class="item ">
         <dl>
             <div class="element">
-                <h1 class="is-size-4  document-title" text-element>{{ props.ind }}. {{ props.obj!.filename }}</h1>
+                <h1 class="is-size-4  document-title text-element">{{ props.ind }}. {{ props.obj!.filename }}</h1>
 
                 <div class="el">                
                     <dt class="">Affaire:  </dt>
@@ -28,8 +30,8 @@ const props = defineProps(
                 </div>
 
                 <div class="el">
-                    <dt class="">Date de Modification: </dt>
-                    <dd class="text-element">{{ props.obj!.modtime }}</dd>
+                    <dt class="dt-affaire">Date de Modification: </dt>
+                    <dd class="text-element">{{ props.obj!.modtime.split(" ")[5] }}</dd>
                 </div>
                 <div class="el download">
                     <a :href="`${props.obj!.link}`">Télécharger le fichier</a>
@@ -50,6 +52,7 @@ const props = defineProps(
 
 .document-title{
     font-weight: bold;
+    padding-bottom: 10px;
 }
 .card-medium-img {
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.13);
@@ -70,9 +73,11 @@ const props = defineProps(
     text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
+
+        text-overflow: clip;
 }
 .element{
-    width: 60%;
+    width: 68%;
     float: left;
 }
 
@@ -88,20 +93,27 @@ overflow: hidden;
     display: block;
 }
 .el{
-    padding-top: 30px;
+    margin-top: 20px;
+    text-align: left;
 }
+
+
 
 dt {
   float: left;
-  width: 14%;
-  text-align: right;
+  width: 16%;
+  text-align: left;
   padding-right: 15px;
-  margin: 0
+  margin: 0;
+  text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+
 }
 
 dd {
   float: left;
-  width: 86%;
+  width: 83%;
   padding: 0;
   margin: 0
 }

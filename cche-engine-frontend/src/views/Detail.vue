@@ -82,11 +82,11 @@ getNewDetails();
 }
 
 .cards-container-half {
-  width: 50%;
+  width: 60%;
 }
 
 .preview-container-half {
-  width: 50%;
+  width: 40%;
   height: 100%;
 }
 

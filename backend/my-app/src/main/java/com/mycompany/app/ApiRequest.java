@@ -41,7 +41,7 @@ import java.util.Map;
 
 public class ApiRequest {
 
-    private Map<Page, List<Page>> map;
+    private Map<Page, List<Page>> map = new HashMap<>();
 
     public JSONObject solrRequest(String core, String keyword, String start, String rows) {
 
@@ -88,6 +88,7 @@ public class ApiRequest {
         WordSimilarity ws = new WordSimilarity();
         ws.removeListSimilarity(pageList);
         map = ws.getMap();
+        System.out.println(map.size());
 
         return pageListToJsonObject(ws.getSortList());
     }
@@ -107,11 +108,11 @@ public class ApiRequest {
     public JSONObject elasticSimilitude(String query) {
 
         List<Page> lsP = new ArrayList<>();
-        System.out.println( "query"+query);
+        System.out.println( "map"+map);
 
         for (Map.Entry<Page, List<Page>> entry : map.entrySet()) {
 
-            if (entry.getKey().getJpgName().equals(query)) {
+            if (entry.getKey().getFilePath().equals(query)) {
                 System.out.println( "if");
 
                 return pageListToJsonObject(entry.getValue());

@@ -122,7 +122,7 @@ public class Api {
             System.out.println("Request SIM");
 
             String documentPath = req.queryParams("filepath");
-            System.out.println("Request 2SIM");
+            System.out.println("Request " + documentPath);
 
             JSONObject response = apiRequest.elasticSimilitude(documentPath);
             System.out.println("SIMILARITY RESPONSE : " + response);

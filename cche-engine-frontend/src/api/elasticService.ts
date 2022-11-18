@@ -25,8 +25,9 @@ export function getDocuments(keyWord:string, index:string, min:string, max:strin
 export function getSimilarity(filepath: string,){
   const store = searchStore();
 
+  console.log(filepath)
   let params = new URLSearchParams({
-      q: filepath
+      filepath: filepath
   }).toString()
 
   return fetch('http://'+store.ip+':4567/query/elastic/similarity/string?' + params, {

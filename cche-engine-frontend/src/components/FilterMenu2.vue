@@ -33,13 +33,13 @@ search.$subscribe(() => {
   }
 });
 function openNav() {
-  document.getElementById("mySidenav")!.style.width = "250px";
-  document.getElementById("main-view")!.style.marginLeft = "250px";
+  document.getElementById("mySidenav")!.style.width = "20%";
+  document.getElementById("main-view")!.style.width = "80%";
 }
 
 function closeNav() {
-  document.getElementById("mySidenav")!.style.width = "0";
-  document.getElementById("main-view")!.style.marginLeft= "0";
+  document.getElementById("mySidenav")!.style.width = "0%";
+  document.getElementById("main-view")!.style.width= "100%";
 }
 
 </script>

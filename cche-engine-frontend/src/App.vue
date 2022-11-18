@@ -11,7 +11,7 @@ import FooterBar from "./components/Footerbar.vue";
 import StartPage from "./views/StartPage.vue";
 
 import { ref } from 'vue'
-let zIndex = ref(0);
+let zIndex = ref(10);
 
 </script>
 
@@ -66,9 +66,10 @@ let zIndex = ref(0);
   overflow-y: scroll;
   width: 100%;
   z-index: 1;
-  float:left;
+  float:right;
   height: 100%;
   padding-left: 00px;
+  transition: 0.5s;
 }
 
 
@@ -92,7 +93,7 @@ let zIndex = ref(0);
 .text{
     color:rgb(65, 65, 65);
     font-family: Inter;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 
