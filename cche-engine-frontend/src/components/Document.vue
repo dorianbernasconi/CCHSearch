@@ -39,9 +39,9 @@ console.log(props.obj!.modtime)
             </div>
 
         </dl>
-               <img class="item-img card-img card-medium-img" :src="props.obj?.thumbnail" >
+              <!-- <img class="item-img card-img card-medium-img" :src="props.obj?.thumbnail" >--> 
 
-               <!--<img class="item-img card-img card-medium-img" :src="(`src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg`)" >--> 
+               <img class="item-img card-img card-medium-img" :src="(`src/assets/0449_DETAIL_MENUISERIE_CUISINES_31.jpg`)" >
                
     </div>
 </template>
@@ -62,6 +62,11 @@ console.log(props.obj!.modtime)
   background-color: white;
 }
 
+dt{
+    color: black;
+
+}
+
 .card-img {
   border: 2px solid #e7e7e7;
   border-radius: 5px;
@@ -73,11 +78,14 @@ console.log(props.obj!.modtime)
     text-overflow: ellipsis;
 white-space: nowrap;
 overflow: hidden;
-
-        text-overflow: clip;
+    padding-bottom: 3px;
+        text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+color: black;
 }
 .element{
-    width: 68%;
+    width: 57.2%;
     float: left;
 }
 
@@ -93,7 +101,7 @@ overflow: hidden;
     display: block;
 }
 .el{
-    margin-top: 20px;
+    margin-top: 40px;
     text-align: left;
 }
 
@@ -101,7 +109,7 @@ overflow: hidden;
 
 dt {
   float: left;
-  width: 16%;
+  width: 22.5%;
   text-align: left;
   padding-right: 15px;
   margin: 0;
@@ -113,15 +121,16 @@ overflow: hidden;
 
 dd {
   float: left;
-  width: 83%;
+  width: 72%;
   padding: 0;
-  margin: 0
+  margin: 0;
+
 }
 
 .item{
-    height: 250px;
+    height: 178px;
     max-height: 300px;
-    margin-bottom: 10px;
+    margin-bottom: 63px;
    /* min-width: 1000px;*/
 }
 

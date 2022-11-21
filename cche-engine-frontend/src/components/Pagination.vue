@@ -74,7 +74,7 @@ function pages() {
                 </button>
             </li>
             <li class="pagination-item">
-                <input v-on:keyup.enter="$emit('selectPage', inputValue)" v-model="inputValue" class="button-item  input-element" />
+                <input v-on:keyup.enter="$emit('selectPage', inputValue)" v-model="inputValue" class="button-item  input-element" placeholder='...' />
             </li>
             <li class="pagination-item">
                 <button class="button-item" type="button" @click="$emit('selectPage', totalPages)">
@@ -112,19 +112,19 @@ input {
     --size: 42px;
     --margin: 6px;
     margin: 4px;
-    border-radius: 6px;
-    background: #202020;
+    background: #ffffff;
     max-width: auto;
     min-width: var(--size);
-    color: gray;
+    color: rgb(0, 0, 0);
     height: var(--size);
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
     padding: 0 6px;
-    font-weight: bold;
     font-size: 18px;
+    border: rgba(166, 170, 168);
+
 }
 
 
@@ -132,7 +132,8 @@ input {
 .input-element {
     max-width: auto;
     width: 40px;
-    color: white;
+    color: rgb(0, 0, 0);
+   
 
 
 }
@@ -141,7 +142,8 @@ input {
     outline: none;
 }
 .active {
-    color: #ffffff;
+    color: #000000;
+    font-weight: bold;
 }
 
 

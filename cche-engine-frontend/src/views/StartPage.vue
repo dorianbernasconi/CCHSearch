@@ -64,11 +64,11 @@ ul{
 }
 
 img{
+  top: 3px;
   padding-bottom: 50px;
-  width: 20%;
+  width: 10%;
   display: inline-block;
-  vertical-align: middle
-  
+  vertical-align: middle,
 }
 
 

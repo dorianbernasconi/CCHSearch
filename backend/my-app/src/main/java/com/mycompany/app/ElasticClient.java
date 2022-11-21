@@ -32,6 +32,8 @@ import org.apache.http.HttpHost;
 import org.elasticsearch.client.RestClient;
 
 import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.*;
 import java.util.Map.*;
 
@@ -108,11 +110,15 @@ public class ElasticClient {
                                         Page.class);
 
                         for (Hit<Page> p : search.hits().hits()) {
-                                Page page = p.source();
-                                page.setScore(p.score());
-                                //page.setWordPerTfIdf(this.documentInformationQuery(p.id()));
-                                page.setId(p.id());
-                                pageList.add(page);
+                                File f = new File("/Users/dorianbernasconi/Documents/CCHE/graph/CCHSearch/cche-engine-frontend/pdfJpg/" + p.source().getJpgName());
+                                if(f.exists()) {
+                                        Page page = p.source();
+                                        page.setScore(p.score());
+                                        //page.setWordPerTfIdf(this.documentInformationQuery(p.id()));
+                                        page.setId(p.id());
+                                        pageList.add(page);
+                                }
+
 
                         }
 

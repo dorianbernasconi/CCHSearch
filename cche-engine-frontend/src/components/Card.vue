@@ -17,12 +17,16 @@ function a() {
 
 <template>
   <div class="card card_medium">
-    <p @onclick="a()" class="dots" style="text-align: right;">&#8942</p>
+    <p @onclick="a()" class="dots" style="text-align: right;">&#9776</p>
     <img class="img_card" :src="img_val" alt="" />
 
-    <p id="affaire-name" class="item_etiquette text">{{ props.obj!.affaire.join("-") }}</p>
-    <p class="item_etiquette text">{{ props.obj!.filename }}</p>
+    <div class="text-center">
+
+    <p id="title" class="item_etiquette text" >{{ props.obj!.filename }}</p>
+    <p class="item_etiquette text">{{ props.obj!.affaire.join("-") }}</p>
+
     <p class="item_etiquette text">{{ props.obj!.echelle }}</p>
+  </div>
 
 
   </div>
@@ -64,17 +68,28 @@ function a() {
   overflow: hidden;
   text-align: left;
   margin-left: 5px;
+  color: rgba(166, 170, 168);
+  
+}
+#title{
+  padding-top: 10.5px;
+  font-weight: bold;
+  font-size: 1rem;
+  padding-bottom: 7px;
+  color: rgb(0, 0, 0);
+
 }
 
 #affaire-name{
-  font-weight: bold;
-  font-size: 1.2rem;
+
 }
 
 .dots{
   font-size: 25px;
   margin-bottom: -10px;
-  font-weight:bold}
+  font-weight:bold;
+  color: rgba(166, 170, 168);
+}
 </style>
 
 box-shadow: 5px 3px 15px 1px #c2c2c2;

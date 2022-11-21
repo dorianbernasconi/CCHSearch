@@ -15,7 +15,7 @@
 
 <template>
     <div class="cards">
-        <Card @click="props.callback!(page)"  v-for="(page, i) in props.cards!" :obj="page" :key="page.id"/>
+        <Card  @click="props.callback!(page)"  v-for="(page, i) in props.cards!" :obj="page" :key="page.id"/>
 
     </div>
 </template>
@@ -25,11 +25,12 @@
 .cards {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
     grid-gap: 2rem;
     right: 0;
     left: 0;
     padding: 30px;
     padding-bottom: 200px;
+    z-index: 0;
 }
 </style>

@@ -68,14 +68,18 @@ li a {
 
 
 nav {
-    border-radius: 3px;
     width: 230px;
-    background: #d9d9d9;
+    background: #ffffff;
     margin: 20px auto;
+    margin-top: 0px ;
+    margin-bottom: 0px;
+
 }
 
 span {
     padding: 10px;
+    padding-bottom: 0;
+    padding-top: 0;
     background-color: #ffffff;
     color: rgb(23, 23, 23);
     font-size: 1em;
@@ -83,9 +87,7 @@ span {
     font-weight: 500;
     font-variant: small-caps;
     cursor: pointer;
-    display: block;
-    border-radius: px;
-    
+    display: block;    
 }
 
 span::after {
@@ -102,28 +104,29 @@ span::after {
 }
 
 
+
+
 .slide {
     clear: both;
-    width: 100%;
+    width: 92%;
     height: 0px;
     overflow: hidden;
     text-align: center;
     overflow-y: scroll;
     transition: height .4s ease;
     border-radius: 5;
-    -ms-overflow-style: none; /* for Internet Explorer, Edge */
-    scrollbar-width: none; /* for Firefox */
+    -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
     overflow-y: scroll; 
     background-color: white;
-
-    border: 1px solid rgba(0,0,0,0.10);
+    margin-left:10px;
 
 }
 
 .slide li {
-    padding-top: 20px;
+    padding-top: 00px;
     padding-right: 40px;
-    padding-bottom: 20px;
+    padding-bottom: 00px;
 
 }
 

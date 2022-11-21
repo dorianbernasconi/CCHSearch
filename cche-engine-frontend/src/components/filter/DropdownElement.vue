@@ -64,13 +64,14 @@ hyphens: auto;
 -ms-overflow-style: none; /* for Internet Explorer, Edge */
     scrollbar-width: none; /* for Firefox */
     overflow-y: scroll; 
+    
 }
 .facet-count{
     width: 30%;
     float: right;
 }
 a{
-    color: #040910;
+    color: rgba(166, 170, 168);
 text-decoration: none;
 background-color: transparent;
 }

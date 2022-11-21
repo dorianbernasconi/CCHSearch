@@ -57,7 +57,7 @@
 }
 
 .maine {
-  padding: 10px;
+  padding: 20px;
   margin-bottom: 10px;
 }
 </style>

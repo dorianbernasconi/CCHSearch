@@ -66,6 +66,8 @@ getNewDetails();
   overflow-y: scroll;
   height: 100%;
   min-width: 800px;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 .preview-container {
@@ -75,6 +77,10 @@ getNewDetails();
   float: right;
   overflow-y: scroll;
   overflow-x: hidden;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  border-left: 1px solid rgba(0,0,0,0.16);
+
 }
 
 .cards-container-full {
@@ -82,11 +88,11 @@ getNewDetails();
 }
 
 .cards-container-half {
-  width: 60%;
+  width: 67.2%;
 }
 
 .preview-container-half {
-  width: 40%;
+  width: 32.8%;
   height: 100%;
 }
 

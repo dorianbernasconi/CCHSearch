@@ -72,14 +72,13 @@ getNewDetails();
 }
 
 .cards-container-half {
-  width: 60%;
+  width: 67.2%;
 }
 
 .preview-container-half {
-  width: 40%;
+  width: 32.8%;
   height: 100%;
 }
-
 
 .preview-container-none {
   width: 0%;

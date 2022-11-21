@@ -77,8 +77,8 @@ z-index: 2;
 
 #logo{
   position: fixed;
-  left: 30px;
-  min-width: 150px;
+  left: 50px;
+  min-width: 120px;
   width: 10%;
 }
 
@@ -142,7 +142,7 @@ z-index: 2;
 }
 
 
-
+img{}
 .micro-switch-bar {
   min-width: 230px;
 

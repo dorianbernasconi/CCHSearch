@@ -33,8 +33,8 @@ search.$subscribe(() => {
   }
 });
 function openNav() {
-  document.getElementById("mySidenav")!.style.width = "20%";
-  document.getElementById("main-view")!.style.width = "80%";
+  document.getElementById("mySidenav")!.style.width = "12.7%";
+  document.getElementById("main-view")!.style.width = "87.3%";
 }
 
 function closeNav() {
@@ -53,29 +53,43 @@ function closeNav() {
 
 </div>
 
-<div id="main">
-  <span style="font-size:20px;cursor:pointer" @click="openNav()">&#9776; Filtres</span> 
+<div id="main" class="filter-button">
+  <span style="font-size:20p3x;cursor:pointer" @click="openNav()">&#9776; Filtres</span> 
 
   
 </div>
 
 </template>
 
-<style>
+<style scoped>
 body {
   font-family: "Lato", sans-serif;
 }
 
-.sidenav {
+nav{
+  background-color: #ffffff;
+}
+
+.sidenav::-webkit-scrollbar {
+  display: none;
+}
+
+.filter-button{
+  position: fixed;
+  z-index: 2;
+}
+  .sidenav {
   height: 100%;
   width: 0;
   position: fixed;
-  z-index: 1;
+  z-index: 0;
   left: 0;
   background-color: #ffffff !important;  overflow-x: hidden;
   padding-top: 60px;
   border-right: 1px solid rgba(0,0,0,0.16);
   transition:  .5s;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
 }
 
 
@@ -83,14 +97,18 @@ body {
 .sidenav .closebtn {
   position: absolute;
   top: 0;
-  right: 25px;
+  right: 9px;
   font-size: 36px;
   margin-left: 50px;
+margin-top: -8px;
+color: rgba(166, 170, 168);
+
 }
 
 #main {
   transition: margin-left .5s;
   padding: 16px;
+  width: 100px;
 }
 
 </style>

@@ -22,7 +22,7 @@ function modifyfieldSelector(field:string){
 
 const affaireId = ref<string>("Affaire")
 const ageId = ref<string>("age")
-const knowHowId = ref<string>("knowHow")
+const knowHowId = ref<string>("know How")
 
 
 

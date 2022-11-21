@@ -47,21 +47,21 @@ getSimilarityCard();
 </script>
 
 <template>
-    <div class="preview-conainer">
-        <button id="close-button" @click="$emit('close')"> &#x2715 </button>
+    <div class="prev">
+        <button id="close-button" @click="$emit('close')"> &times; </button>
         <div class="preview-top">
 
             <div class="img-container">
                 <img class="img-main" :src=img_preview.valueOf() alt="" />
             </div>
 
-            <p class="titre"> Titre : {{ titre }}</p>
+            <p class="titre text"> Titre : {{ titre }}</p>
             <div>
-                <div class="preview-text-element">
+                <div class="preview-text-element text">
                     <p class="left gray-text">Titre de l'affaire : </p>
                     <p class="right black-text">{{ affaire }}</p>
                 </div>
-                <div class="preview-text-element">
+                <div class="preview-text-element text">
                     <p class="left gray-text">Emplacement : </p>
                     <p class=" right black-text">{{ emplacement }}</p>
                 </div>
@@ -99,24 +99,54 @@ getSimilarityCard();
     max-height: 800px;
     margin-left: auto;
     margin-right: auto;
-    display: block
+    display: block;
+    padding-bottom: 30px;
 }
 
 #close-button {
-    height: 40px;
-    width: 40px;
+
+    border: none;
     font-size: 25px;
-    color: aliceblue;
-    background-color: rgb(41, 40, 40);
+    color: rgba(166, 170, 168);
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    font-size: 36px;
+    top: -5px;
+    left: 3px;
 }
 
+.preview-top {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.13);
+    width: 89%;
+    height: 95%;
+    margin:auto;
+    margin-top: -10px;
+}
+
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 9px;
+  font-size: 36px;
+  margin-left: 50px;
+margin-top: -8px;
+color: rgba(166, 170, 168);
+
+}
+
+
+.prev{
+    background-color: white;
+
+}
 .titre {
-    font-size: 20px;
+    font-size: 1rem;
     font-weight: bold;
+    color: black;
+    padding-bottom: 10px;
 }
 
 .preview-container {
-    margin-bottom: 200px;
 
 }
 
@@ -126,6 +156,7 @@ getSimilarityCard();
     width: 100%;
     margin-left: 20px;
     text-align: left;
+    
 }
 
 .preview-bottom{
@@ -133,14 +164,22 @@ getSimilarityCard();
 }
 
 .right {
-    width: 70%;
+    margin-right: 30px;
+    width: 60%;
     float: right;
-    color: black;
+    color: rgba(166, 170, 168);
+    font-size: 0.8rem;
+    text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+
 }
 
 .left {
-    color: gray;
+    color: rgba(166, 170, 168);
     width: 30%;
     float: left;
+    font-size: 0.8rem;
+
 }
 </style>

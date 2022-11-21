@@ -70,6 +70,7 @@ let zIndex = ref(10);
   height: 100%;
   padding-left: 00px;
   transition: 0.5s;
+  position: relative;
 }
 
 
@@ -91,9 +92,9 @@ let zIndex = ref(10);
   background-color: #343a40 !important;
 }
 .text{
-    color:rgb(65, 65, 65);
+    color:rgb(0, 0, 0);
     font-family: Inter;
-    font-size: 15px;
+    font-size: 0.8rem;
 }
 
 
