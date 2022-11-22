@@ -108,9 +108,10 @@ public class ElasticClient {
                                         request,
 
                                         Page.class);
-
+                        System.out.println(search.hits().hits().size());
                         for (Hit<Page> p : search.hits().hits()) {
                                // File f = new File("/Users/dorianbernasconi/Documents/CCHE/graph/CCHSearch/cche-engine-frontend/pdfJpg/" + p.source().getJpgName());
+                               System.out.println(p.source().getJpgName());
                                 File f = new File("/home/dorianbernasconi/CCHSearch/cche-engine-frontend/pdfJpg/" + p.source().getJpgName());
 
                                if(f.exists()) {
