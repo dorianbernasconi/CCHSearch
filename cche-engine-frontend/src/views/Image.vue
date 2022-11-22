@@ -79,11 +79,9 @@ store.$subscribe((e:any) => {
   padding-bottom: 50px;
 }
 .cards {
-  padding-left: 70px;
+  padding-left: 240px;
   padding-bottom: 100px;
-  padding-top: 20px;
-
-  
+  margin-top: 20px;
 }
 
 .defilement {

@@ -6,7 +6,7 @@ import { defineStore } from 'pinia'
 // And 
 export const searchStore = defineStore('search', () => {
 
-  const ip = "localhost";
+  const ip = "10.0.14.9";
   // For All Router Link component
   const keyword = ref("");
 

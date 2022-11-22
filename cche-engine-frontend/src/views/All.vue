@@ -80,7 +80,7 @@ onBeforeUnmount(() => {
 .cards {
   padding-left: 240px;
   padding-bottom: 100px;
-  margin-top: 0px;
+  margin-top: 20px;
 }
 
 .defilement {
